@@ -24,6 +24,19 @@ def func_timer(start, end=None):
     return diff
 
 
+def plotly_data_prep(vertex_coords, face_names):
+    """
+    Converts vertex coordinates and point names to useable data for plotly 3D plots
+    """
+    x_points = [i[1][0] for i in vertex_coords]
+    y_points = [i[1][1] for i in vertex_coords]
+    z_points = [i[1][2] for i in vertex_coords]
+    i_val = [point_name[0] for point_name in face_names]
+    j_val = [point_name[1] for point_name in face_names]
+    k_val = [point_name[2] for point_name in face_names]
+    return x_points, y_points, z_points, i_val, j_val, k_val
+
+
 def plotly_3d(x_points, y_points, z_points, i_val, j_val, k_val,
               show_mesh=True, show_scatter=True, show_connections=False, show_lines=True):
     layout = go.Layout(

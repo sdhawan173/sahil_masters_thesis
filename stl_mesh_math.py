@@ -217,8 +217,8 @@ def extend_reformat_mesh(meshpy_mesh):
     return gudhi_ready_mesh_list
 
 
-def modify_gudhi_elements(gudhi_complex, gudhi_simplex_tree, meshpy_mesh,
-                          complex_type, verbose=True):
+def modify_alpha_complex(gudhi_complex, gudhi_simplex_tree, meshpy_mesh,
+                         complex_type, verbose=True):
     """
     fixes a gudhi complex
     :param gudhi_complex: gudhi complex element
