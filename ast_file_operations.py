@@ -1,5 +1,5 @@
 import networkx as nx
-import stl_code_analysis as sca
+import data_analysis as sca
 
 
 def print_file(file_path):

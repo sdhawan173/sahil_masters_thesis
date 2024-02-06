@@ -8,7 +8,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from tqdm import tqdm
-import stl_code_analysis as sca
+import data_analysis as sca
+import  random
 
 
 def meshpy_switch_creator(file_name, file_path,
@@ -45,6 +46,42 @@ def meshpy_switch_creator(file_name, file_path,
     return meshpy_switch
 
 
+def unique_search(full_list, check_list=None):
+    if check_list is None:
+        check_list = []
+    for item in full_list:
+        if len(check_list) == 0:
+            check_list.append(item)
+        elif not check_list.__contains__(item):
+            check_list.append(item)
+    return check_list
+
+
+def unique_random_meshphy(unique_coords):
+    all_points = []
+    for coord in unique_coords:
+        for point in coord:
+            all_points.append(point)
+    unique_points = unique_search(all_points)
+
+    random_unique = []
+    random.seed(666)
+    for i in range(len(unique_points)):
+        random_unique.append(unique_points[i] + np.random.uniform(0.0, 1*1e-8))
+    return unique_points, random_unique
+
+
+def alter_meshpy_random(meshinfo, unique_points, random_unique):
+    random_unique_meshpy = []
+    for coord in meshinfo.points:
+        temp_coord = []
+        for point in coord:
+            point_index = unique_points.index(point)
+            temp_coord.append(random_unique[point_index])
+        random_unique_meshpy.append(temp_coord)
+    return random_unique_meshpy
+
+
 def meshpy_from_file(file_name, file_path, switch,
                      verbose=True):
     """
@@ -69,9 +106,13 @@ def meshpy_from_file(file_name, file_path, switch,
         shutil.copy(src_dir, dst_dir)
         meshinfo.load_stl(dst_dir)
 
-    if file_name[-4:] == '.ply':
-        # print(os.path.exists("ant.ply"))
-        meshinfo.load_ply(file_path)
+    # ADD NOISE FOR SPECIFIC POINTS
+    unique_coords = unique_search(meshinfo.points)
+    unique_points, random_unique = unique_random_meshphy(unique_coords)
+    random_unique_meshpy = alter_meshpy_random(meshinfo, unique_points, random_unique)
+    meshinfo.set_points(random_unique_meshpy)
+    for i in meshinfo.points:
+        print(i)
 
     object_mesh = tet.build(meshinfo, options=tet_options, verbose=verbose)
 
@@ -119,10 +160,8 @@ def plotly_from_meshpy(meshpy_mesh, file_name=None,
     i_val = [point_name[0] - 1 for point_name in tet_faces]
     j_val = [point_name[1] - 1 for point_name in tet_faces]
     k_val = [point_name[2] - 1 for point_name in tet_faces]
-
     fig = sca.plotly_3d(x_points, y_points, z_points,
                         i_val, j_val, k_val)
-
     if file_time and save_dir is not None and save_html:
         save_file_name = '{}/{}, ({}) meshpy plotly'.format(save_dir, file_time, file_name.split('.')[0])
         fig.write_html('{}.html'.format(save_file_name))
@@ -265,7 +304,7 @@ def modify_alpha_complex(gudhi_complex, gudhi_simplex_tree, meshpy_mesh,
     return gudhi_simplex_tree
 
 
-def plot_persdia_gudhi(gudhi_simplex_tree, file_name, show_legend=True,
+def plot_persdia_gudhi(gudhi_simplex_tree, file_name, meshpy_switch, show_legend=True,
                        save_plot=True, file_time=None, save_dir=None,
                        list_points=False, show_plot=True):
     """
@@ -290,7 +329,8 @@ def plot_persdia_gudhi(gudhi_simplex_tree, file_name, show_legend=True,
     ax = gudhi.plot_persistence_diagram(persistence,
                                         legend=show_legend,
                                         axes=ax)
-    ax.set_title('Persistence Diagram of \"{}\"'.format(file_name))
+    ax.set_title('Persistence Diagram of \"{}\"\n'
+                 'MeshPy Switch: \"{}\"'.format(file_name, meshpy_switch))
     ax.legend(handles=[
         mpatches.Patch(
             color=colormap[dim],
@@ -316,7 +356,6 @@ def plot_persdia_gudhi(gudhi_simplex_tree, file_name, show_legend=True,
                     xytext=(-5, 3),
                     textcoords='offset points',
                     fontsize=12)
-
     if list_points:
         for item in gudhi_simplex_tree.persistence():
             print(item)
