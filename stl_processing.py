@@ -3,18 +3,18 @@ import stl
 from stl import mesh
 
 
-def search_filetype(file_string, dir_string=os.getcwd()):
+def search_filetype(extension, dir_string=os.getcwd()):
     """
     searches a directory, with the current working directory as default, for a given filetype.
     :param dir_string: string of directory to search
-    :param file_string: string of filetype, input as a string in the format: '.type'
+    :param extension: string of filetype, input as a string in the format: '.type'
     :return: list of file names with extensions that match search term
     """
     file_list = []
 
     # Run through list and add files with .ast extension to ast_list
     for list_item in os.listdir(dir_string):
-        if list_item.__contains__(file_string):
+        if list_item.__contains__(extension):
             file_list.append(list_item)
     return sorted(file_list, key=str.casefold)
 
@@ -28,17 +28,6 @@ def print_file_list(file_list, input_dir):
             print(str(file_count) + ': ' + file_list[file_count])
 
 
-def list_files(input_dir, file_type):
-    """
-    Lists files in a directory with specific file type
-    :param input_dir: String of directory to read in files from
-    :param file_type: file type in format '.ext'
-    :return: String list of files
-    """
-    file_list = search_filetype(file_type, dir_string=input_dir)
-    return file_list
-
-
 def choose_file(input_dir, file_type, file_index=None, show_list=True):
     """
     gets file name and file path of selected file from list
@@ -49,7 +38,7 @@ def choose_file(input_dir, file_type, file_index=None, show_list=True):
     :return:
     """
     # List files with file_type in directory
-    file_list = list_files(input_dir, file_type)
+    file_list = search_filetype(file_type, input_dir)
     if show_list:
         print_file_list(file_list, input_dir)
     if file_index is None:
@@ -141,11 +130,4 @@ def create_simplex_names(parsed_file, vertex_coords):
             edge = sorted([face[0 - index], face[1 - index]])
             if not edge_names.__contains__(edge):
                 edge_names.append(edge)
-    for i in vertex_names:
-        vertex_names.append(i[0])
-        print(vertex_names[-1])
-    for i in edge_names:
-        print(i)
-    for i in face_names:
-        print(i)
     return vertex_names, edge_names, face_names
