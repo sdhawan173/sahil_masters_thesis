@@ -23,7 +23,7 @@
 \RequirePackage[noadjust]{cite}
 %\RequirePackage{indentfirst}  % if you want to indent first paragraph of a chapter.
 \RequirePackage[T1]{fontenc}
-\RequirePackage[top = 1.5in, right = 1in, left =  1.5in]{geometry}  % to set margins
+\RequirePackage[top = 1.5in, right = 1.5in, left =  1in]{geometry}  % to set margins
 
 %\RequirePackage{parskip}  % no indention on paragraphs.
 \RequirePackage[nottoc]{tocbibind} % Put bibliography in TOC

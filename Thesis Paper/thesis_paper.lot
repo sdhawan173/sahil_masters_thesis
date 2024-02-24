@@ -3,6 +3,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces MeshPy Plots displayed with Plotly of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }}{8}{table.caption.13}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Persistence Diagrams of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }}{9}{table.caption.14}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces MeshPy Plots displayed with Plotly of a rectangular prism ring with a cut that decreases to the original shape.\relax }}{10}{table.caption.15}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Persistence Diagrams of a rectangular prism ring with a cut that decreases to the original shape.\relax }}{11}{table.caption.16}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces MeshPy Plots displayed with Plotly of two cubes with three CAD pocket operations that move closer together until combining.\relax }}{12}{table.caption.18}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Persistence Diagrams of two cubes with three CAD pocket operations that move closer together until combining.\relax }}{13}{table.caption.19}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 
 \contentsfinish 

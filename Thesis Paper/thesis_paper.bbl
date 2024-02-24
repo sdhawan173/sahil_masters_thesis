@@ -1,8 +1,21 @@
 \begin{thebibliography}{1}
 
+\bibitem{STL_info}
+Adobe.
+\newblock Stl files explained | learn about the stl file format.
+\newblock
+  \url{https://www.adobe.com/creativecloud/file-types/image/vector/stl-file.html}.
+
 \bibitem{Hatcher_2001}
 Allen Hatcher.
 \newblock {\em Algebraic topology}.
 \newblock Cambridge University Press, 2001.
+
+\bibitem{tetgen}
+Hang Si.
+\newblock {\em TetGen, version 1.5, user’s Manual}.
+\newblock Weierstrass Institute, 2013.
+\newblock
+  \url{https://wias-berlin.de/software/tetgen/1.5/doc/manual/index.html}.
 
 \end{thebibliography}

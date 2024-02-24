@@ -1,101 +1,81 @@
 import os
-import time
-from datetime import datetime
-import stl_mesh_math as smm
+import file_operations as fo
 import data_analysis as da
-import ast_file_operations as afo
-import stl_processing as stlp
+import persdia_creator as pc
 
+file_ext = '.ast'
+complex_type = 'Alpha'
+meshpy_switch = 'pDq'  # 'pq10a100c'  # 'pDqa25'
+input_dir = '{}/stl_files'.format(os.getcwd())
+save_dir = '{}/code_output'.format(os.getcwd())
+file_list = fo.search_filetype(file_ext=file_ext, dir_string=input_dir)
+fo.print_file_list(file_list=file_list, input_dir=input_dir)
 
-def run_main_code(file_index, file_ext, switch_string,
-                  save_orig_plotly, show_orig_plotly,
-                  save_meshpy_plotly, show_meshpy_plotly,
-                  save_gudhi_persdia, show_gudhi_persdia,
-                  h1_h2_points_persdia,
-                  list_points_persdia, save_points_persdia,
-                  final_run=False):
-    time_stamp = 'Final Run'
-    if not final_run:
-        time_stamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S-%f")
-    total_start = time.time()
-    file, file_path = stlp.choose_file(input_dir=input_directory,
-                                       file_type=file_ext,
-                                       file_index=file_index,
-                                       show_list=False)
-    if file_ext == '.ast' and (show_orig_plotly or save_orig_plotly):
-        # afo.print_file(chosen_file_path)
-        ast_tuple = afo.read_object3d(file_path=file_path,
-                                      file_name=file)
-        # afo.print_object3d(ast_tuple)
-        afo.plotly_from_file(object_tuple=ast_tuple,
-                             file_name=file,
-                             save_html=save_orig_plotly,
-                             file_time=time_stamp,
-                             save_dir=output_directory,
-                             show_plot=show_orig_plotly)
-        # unique_vertices = afo.list_vertices(ast_tuple, unique=True)
-        # print('Unique Vertices in:  \"{}\": {}'.format(chosen_file, len(unique_vertices)))
-    tet_mesh = smm.meshpy_from_file(file_name=file,
-                                    file_path=file_path,
-                                    meshpy_switch=switch_string,
-                                    verbose=True)
-    if show_meshpy_plotly or save_meshpy_plotly:
-        smm.plotly_from_meshpy(meshpy_mesh=tet_mesh,
-                               file_name=file,
-                               save_html=save_meshpy_plotly,
-                               file_time=time_stamp,
-                               save_dir=output_directory,
-                               show_plot=show_meshpy_plotly)
-    obj3d_complex, obj3d_smplx_tree = smm.create_gudhi_elements(meshpy_mesh=tet_mesh,
-                                                                complex_type=complex_type_name)
-    if complex_type_name == 'Alpha':
-        obj3d_smplx_tree = smm.modify_alpha_complex(gudhi_complex=obj3d_complex,
-                                                    gudhi_simplex_tree=obj3d_smplx_tree,
-                                                    meshpy_mesh=tet_mesh,
-                                                    complex_type=complex_type_name,
-                                                    verbose=True)
-    smm.plot_persdia_gudhi(gudhi_simplex_tree=obj3d_smplx_tree,
-                           file_name=file,
-                           meshpy_switch=switch_string,
-                           show_legend=True,
-                           save_plot=save_gudhi_persdia,
-                           file_time=time_stamp,
-                           save_dir=output_directory,
-                           h1_h2_plot=h1_h2_points_persdia,
-                           list_points=list_points_persdia,
-                           save_points=save_points_persdia,
-                           show_plot=show_gudhi_persdia)
-    print('\nTotal Run Time:')
-    da.func_timer(total_start)
+# Lists of indices for final run 3D object examples
+equil_tri = list(reversed(range(10, 19)))  # equilateral triangle triangle hole
+rect_pris = list(reversed(range(22, 34)))  # rect prism ring
+two_cubes = list(reversed(range(46, 52)))  # two cubes, three pockets each
+final_run = [equil_tri, rect_pris, two_cubes]
 
-
-extension = '.ast'
-complex_type_name = 'Alpha'
-meshpy_switch = 'pDqa25'  # 'pq10a100c'  # 'pDqa25'
-input_directory = '{}/stl_files'.format(os.getcwd())
-output_directory = '{}/code_output'.format(os.getcwd())
-
-file_list = stlp.search_filetype(extension=extension, dir_string=input_directory)
-stlp.print_file_list(file_list=file_list, input_dir=input_directory)
-# chosen_file, chosen_file_path = stlp.choose_file(input_dir=input_directory, file_type=extension, show_list=False)
-# read_file = stlp.read_stl(chosen_file_path)
-# parsed_facets, vertex_coords = stlp.parse_stl_text(read_file)
-# vertex_names, edge_names, face_names = stlp.create_simplex_names(parsed_facets, vertex_coords)
-
-index_list = list(range(21, 33))
+index_list = [10]
+# If no list of indices is provided, choose one
 if len(index_list) == 0:
-    index = int(input('Choose ' + extension + ' file by entering the corresponding number:\n'))
+    index = int(input('Choose ' + file_ext + ' file by entering the corresponding number:\n'))
     index_list = [index]
-for index in index_list:
-    run_main_code(index, extension, meshpy_switch,
-                  save_orig_plotly=True,
-                  show_orig_plotly=False,
-                  save_meshpy_plotly=True,
-                  show_meshpy_plotly=False,
-                  save_gudhi_persdia=True,
-                  show_gudhi_persdia=False,
-                  h1_h2_points_persdia=True,
-                  save_points_persdia=True,
-                  list_points_persdia=False,
-                  final_run=True
-                  )
+
+for index_list in final_run:
+    multi_run = False
+    for index in index_list:
+        if len(index_list) > 1:
+            multi_run = True
+        multi_run = True
+        da.run_main_code(index, file_ext, input_dir, save_dir, meshpy_switch,
+                         save_orig_plotly=False,
+                         show_orig_plotly=False,
+                         save_meshpy_plotly=False,
+                         show_meshpy_plotly=False,
+                         complex_type=complex_type,
+                         save_persdia=True,
+                         show_persdia=False,
+                         save_points_persdia=False,
+                         list_points_persdia=False,
+                         final_run=True,
+                         multi_run=multi_run
+                         )
+    if multi_run:
+        # Load all save states into one list
+        all_save_states = []
+        for index in index_list:
+            file_name, file_path = fo.choose_file(input_dir=input_dir, file_type=file_ext,
+                                                  file_index=index, show_list=False)
+            save_state = pc.load_plot_state(save_dir, file_name)
+            all_save_states.append(save_state)
+
+        # Iterate over all save states to get max y tick values for consistent persistence diagrams
+        all_y_max_orig = []
+        all_y_max_tick = []
+        all_y_inf_tick = []
+        for iterate_index, file_index in enumerate(index_list):
+            all_y_max_orig.append(all_save_states[iterate_index][1])
+            all_y_max_tick.append(all_save_states[iterate_index][2])
+            all_y_inf_tick.append(all_save_states[iterate_index][3])
+        total_y_max_orig = max(all_y_max_orig)
+        total_y_max_tick = max(all_y_max_tick)
+        total_y_inf_tick = max(all_y_inf_tick)
+
+        for iterate_index, file_index in enumerate(index_list):
+            (persistence_points, y_max_orig, y_max_tick, y_inf_tick, inf_bool, save_dir, file_time,
+             file_name, save_plot, show_plot, save_points, list_points) = all_save_states[iterate_index]
+
+            pc.plot_persdia_main(persistence_points, file_name, meshpy_switch,
+                                 save_dir=save_dir,
+                                 file_time=file_time,
+                                 save_plot=save_plot,
+                                 show_plot=show_plot,
+                                 save_points=save_points,
+                                 list_points=list_points,
+                                 multi_run=False,
+                                 override_orig=total_y_max_orig,
+                                 y_max_tick=total_y_max_tick,
+                                 y_inf_tick=total_y_inf_tick,
+                                 all_y_inf_tick=all_y_inf_tick)
