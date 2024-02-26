@@ -17,7 +17,7 @@ rect_pris = list(reversed(range(22, 34)))  # rect prism ring
 two_cubes = list(reversed(range(46, 52)))  # two cubes, three pockets each
 final_run = [equil_tri, rect_pris, two_cubes]
 
-index_list = [10]
+index_list = []
 # If no list of indices is provided, choose one
 if len(index_list) == 0:
     index = int(input('Choose ' + file_ext + ' file by entering the corresponding number:\n'))
@@ -35,8 +35,8 @@ for index_list in final_run:
                          save_meshpy_plotly=False,
                          show_meshpy_plotly=False,
                          complex_type=complex_type,
-                         save_persdia=True,
-                         show_persdia=False,
+                         save_persdia=False,
+                         show_persdia=True,
                          save_points_persdia=False,
                          list_points_persdia=False,
                          final_run=True,

@@ -1,6 +1,5 @@
 import math
 import os
-
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
@@ -8,13 +7,13 @@ import matplotlib.patches as mpatches
 import pickle
 
 
-def create_base_plot(persistence_points, file_name, meshpy_switch, max_dim=1):
+def create_base_plot(persistence_points, file_name, meshpy_switch, max_dim):
     # Create Plot
     plt.rc(group='axes', labelsize=12)
     cmap = matplotlib.cm.Set1.colors
     fig, ax = plt.subplots()
     for point in persistence_points:
-        ax.scatter(point[1][0], point[1][1], color=cmap[point[0]], alpha=0.5, s=35, zorder=10, clip_on=False)
+        ax.scatter(point[1][0], point[1][1], color=cmap[point[0]], alpha=0.75, s=45, zorder=10, clip_on=False)
     ax.set_title('Persistence Diagram of\n\'"{}\"\nMeshPy Switch: \"{}\"'.format(file_name, meshpy_switch))
     ax.legend(
         handles=[mpatches.Patch(
@@ -29,7 +28,7 @@ def create_base_plot(persistence_points, file_name, meshpy_switch, max_dim=1):
     # Create annotations for overlapping points
     for index, text in enumerate(frequency_values):
         ax.annotate(text, (frequency_coords[index][0], frequency_coords[index][1]),
-                    xytext=(5, 3), textcoords='offset points', fontsize=12
+                    xytext=(5, 3), textcoords='offset points', fontsize=12, zorder=11
                     )
 
     plt.xlabel('Birth')
@@ -79,24 +78,17 @@ def infinity_handler(persistence_points, max_dim, max_factor=1.1, inf_factor=1.1
     if not len(y_values) == 1:
         # If persistence points contain infinity, repalce math.inf with math.nan
         if y_values.__contains__(math.inf):
-            for y in y_values:
-                if not math.isinf(y):
-                    y_no_inf.append(y)
-                if math.isinf(y):
-                    y_no_inf.append(math.nan)
-
             # Get maximum non-infinity y_value
-            y_max_orig = max(y_no_inf)
+            y_max_orig = max([val for val in y_values if not math.isinf(val)])
 
             # Increase maximum y_value by increase factors to create location for infinity, set alternate y_max
             y_max_tick = y_max_orig * max_factor
             y_inf_tick = y_max_orig * inf_factor
 
             # replace math.inf value with new y_max value
-            for index in range(len(y_no_inf)):
-                if math.isnan(y_no_inf[index]):
-                    y_no_inf[index] = y_inf_tick
-            y_values = y_no_inf.copy()
+            for index in range(len(y_values)):
+                if math.isinf(y_values[index]):
+                    y_values[index] = y_inf_tick
     elif len(y_values) == 1:
         y_values = [2]
         y_max_orig = 2
@@ -179,11 +171,12 @@ def plot_persdia_main(persistence_points, file_name, meshpy_switch, extension='.
         # Adjust dimensions to be shown
         persistence_points, y_max_orig, y_max_tick, y_inf_tick, inf_bool = infinity_handler(persistence_points, max_dim)
 
-        save_plot_state(persistence_points, y_max_orig, y_max_tick, y_inf_tick, inf_bool, save_dir, file_time,
-                        file_name, save_plot, show_plot, save_points, list_points)
+        if multi_run:
+            save_plot_state(persistence_points, y_max_orig, y_max_tick, y_inf_tick, inf_bool, save_dir, file_time,
+                            file_name, save_plot, show_plot, save_points, list_points)
     elif not multi_run:
         # Alter persistence diagram points to have infinity value consistent with highest infinity in list of files
-        if y_inf_tick is not None:
+        if all_y_inf_tick is not None:
             change_indices = []
             for point in persistence_points:
                 for inf_tick_value in all_y_inf_tick:
