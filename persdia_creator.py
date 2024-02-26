@@ -70,7 +70,6 @@ def infinity_handler(persistence_points, max_dim, max_factor=1.1, inf_factor=1.1
     y_values = [point[1][1] for point in persistence_points]
 
     # Set value for infinity line/infinity annotation by increasing tick height of max y value
-    y_no_inf = []
     y_max_orig = None
     y_max_tick = None
     y_inf_tick = None
