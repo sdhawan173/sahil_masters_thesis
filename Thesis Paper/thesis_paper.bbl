@@ -1,15 +1,72 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{STL_info}
-Adobe.
-\newblock Stl files explained | learn about the stl file format.
+\bibitem{TDA_MRI}
+Keri~L. Anderson, Jeffrey~S. Anderson, Sourabh Palande, and Bei Wang.
+\newblock Topological data analysis of functional mri connectivity in time and
+  space domains.
+\newblock In Guorong Wu, Islem Rekik, Markus~D. Schirmer, Ai~Wern Chung, and
+  Brent Munsell, editors, {\em Connectomics in NeuroImaging}, pages 67--77,
+  Cham, 2018. Springer International Publishing.
+\newblock \url{10.1007/978-3-030-00755-3_8}.
+
+\bibitem{chew1987constrained}
+L~Paul Chew.
+\newblock Constrained delaunay triangulations.
+\newblock In {\em Proceedings of the third annual symposium on Computational
+  geometry}, pages 215--222, 1987.
+
+\bibitem{deltri}
+Boris Delaunay et~al.
+\newblock Sur la sphere vide.
+\newblock {\em Izv. Akad. Nauk SSSR, Otdelenie Matematicheskii i Estestvennyka
+  Nauk}, 7(793-800):1--2, 1934.
+
+\bibitem{efficient_homology_preserving}
+Riccardo Fellegara, Federico Iuricich, Leila De~Floriani, and Ulderico Fugacci.
+\newblock Efficient homology‐preserving simplification of high‐dimensional
+  simplicial shapes.
+\newblock {\em Computer Graphics Forum}, 39(1):244–259, Aug 2019.
+
+\bibitem{geospatial_voting}
+Michelle Feng and Mason~A. Porter.
+\newblock Persistent homology of geospatial data: A case study with voting.
+\newblock {\em SIAM Review}, 63(1):67--99, 2021.
+\newblock \url{https://doi.org/10.1137/19M1241519}.
+
+\bibitem{gabriel}
+K~Ruben Gabriel and Robert~R Sokal.
+\newblock A new statistical approach to geographic variation analysis.
+\newblock {\em Systematic zoology}, 18(3):259--278, 1969.
+
+\bibitem{mesh_enhanced_persistent}
+Beno{\i}t Hudson, Gary~L Miller, Steve~Y Oudot, and Donald~R Sheehy.
+\newblock Mesh enhanced persistent homology.
+\newblock {\em Computer Science Department}, 1122, 2009.
+
+\bibitem{jocelyn_thesis}
+Jocelyn Ilagor.
+\newblock {\em Visualizing Arctic Ice Data with Optimal Transport}.
+\newblock PhD thesis, The University of North Carolina at Greensboro, 2023.
+
+\bibitem{3d_vol_iso_mesh}
+T.~Maquart, Y.~Wenfeng, T.~Elguedj, A.~Gravouil, and M.~Rochette.
+\newblock {3D} volumetric isotopological meshing for finite element and
+  isogeometric based reduced order modeling.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  362:112809, 2020.
 \newblock
-  \url{https://www.adobe.com/creativecloud/file-types/image/vector/stl-file.html}.
+  \url{https://www.sciencedirect.com/science/article/pii/S0045782519307017}.
 
-\bibitem{Hatcher_2001}
-Allen Hatcher.
-\newblock {\em Algebraic topology}.
-\newblock Cambridge University Press, 2001.
+\bibitem{Needham_2019}
+Tom Needham.
+\newblock Introduction to applied algebraic topology, 2019.
+\newblock \url{https://sites.google.com/site/tneedhammath/research}.
+
+\bibitem{homology_fem_computation}
+M.~Pellikka, S.~Suuriniemi, L.~Kettunen, and C.~Geuzaine.
+\newblock Homology and cohomology computation in finite element modeling.
+\newblock {\em SIAM Journal on Scientific Computing}, 35(5):B1195--B1214, 2013.
+\newblock \url{https://doi.org/10.1137/130906556}.
 
 \bibitem{tetgen}
 Hang Si.
@@ -17,5 +74,18 @@ Hang Si.
 \newblock Weierstrass Institute, 2013.
 \newblock
   \url{https://wias-berlin.de/software/tetgen/1.5/doc/manual/index.html}.
+
+\bibitem{analysis_of_stl}
+M.~Szilvśi-Nagy and Gy. Mátyási.
+\newblock Analysis of stl files.
+\newblock {\em Mathematical and Computer Modelling}, 38(7):945--960, 2003.
+\newblock
+  \url{https://www.sciencedirect.com/science/article/pii/S0895717703900793}.
+
+\bibitem{computpershom}
+Afra Zomorodian and Gunnar Carlsson.
+\newblock Computing persistent homology.
+\newblock In {\em Proceedings of the twentieth annual symposium on
+  Computational geometry}, pages 347--356, 2004.
 
 \end{thebibliography}

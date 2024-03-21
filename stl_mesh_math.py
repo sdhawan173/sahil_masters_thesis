@@ -89,7 +89,7 @@ def plotly_from_meshpy(meshpy_mesh, file_name=None, save_html=False, file_time=N
         if save_html:
             save_ext = 'html'
             fig.write_html('{}.{}'.format(save_file_name, save_ext))
-            print('Plotly MeshPy HTML file saved to {}.{}'.format(save_dir, save_ext))
+            print('Plotly MeshPy HTML file saved to {}'.format(save_dir))
     if show_plot:
         fig.show()
 

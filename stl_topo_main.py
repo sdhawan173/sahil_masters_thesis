@@ -5,7 +5,8 @@ import persdia_creator as pc
 
 file_ext = '.ast'
 complex_type = 'Alpha'
-meshpy_switch = 'pDq'  # 'pq10a100c'  # 'pDqa25'
+meshpy_switch = 'Yq'  # 'pDq'  # 'pq10a100c'  # 'pDqa25'
+max_dim = 1
 input_dir = '{}/stl_files'.format(os.getcwd())
 save_dir = '{}/code_output'.format(os.getcwd())
 file_list = fo.search_filetype(file_ext=file_ext, dir_string=input_dir)
@@ -15,28 +16,29 @@ fo.print_file_list(file_list=file_list, input_dir=input_dir)
 equil_tri = list(reversed(range(10, 19)))  # equilateral triangle triangle hole
 rect_pris = list(reversed(range(22, 34)))  # rect prism ring
 two_cubes = list(reversed(range(46, 52)))  # two cubes, three pockets each
-final_run = [equil_tri, rect_pris, two_cubes]
+run_list = [equil_tri, rect_pris, two_cubes]
+# run_list = [[1]]
 
-index_list = []
-# If no list of indices is provided, choose one
-if len(index_list) == 0:
-    index = int(input('Choose ' + file_ext + ' file by entering the corresponding number:\n'))
-    index_list = [index]
+# chosen_list = []
+# # If no list of indices is provided, choose one
+# if len(chosen_list) == 0:
+#     index = int(input('Choose ' + file_ext + ' file by entering the corresponding number:\n'))
+#     index_list = [index]
+#     run_list = [index_list]
 
-for index_list in final_run:
+for index_list in run_list:
     multi_run = False
     for index in index_list:
         if len(index_list) > 1:
             multi_run = True
         multi_run = True
-        da.run_main_code(index, file_ext, input_dir, save_dir, meshpy_switch,
+        da.run_main_code(index, file_ext, input_dir, save_dir, meshpy_switch, max_dim,
                          save_orig_plotly=False,
                          show_orig_plotly=False,
                          save_meshpy_plotly=False,
                          show_meshpy_plotly=False,
                          complex_type=complex_type,
                          save_persdia=False,
-                         show_persdia=True,
                          save_points_persdia=False,
                          list_points_persdia=False,
                          final_run=True,
@@ -65,13 +67,12 @@ for index_list in final_run:
 
         for iterate_index, file_index in enumerate(index_list):
             (persistence_points, y_max_orig, y_max_tick, y_inf_tick, inf_bool, save_dir, file_time,
-             file_name, save_plot, show_plot, save_points, list_points) = all_save_states[iterate_index]
+             file_name, save_plot, save_points, list_points) = all_save_states[iterate_index]
 
-            pc.plot_persdia_main(persistence_points, file_name, meshpy_switch,
+            pc.plot_persdia_main(persistence_points, file_name, meshpy_switch, max_dim,
                                  save_dir=save_dir,
                                  file_time=file_time,
                                  save_plot=save_plot,
-                                 show_plot=show_plot,
                                  save_points=save_points,
                                  list_points=list_points,
                                  multi_run=False,

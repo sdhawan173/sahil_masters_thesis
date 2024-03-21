@@ -1,0 +1,9 @@
+\frametitle{Methods, Implementation}
+\begin{enumerate}
+\item Creating STL Files with FreeCAD
+\item Parsing the STL File Data
+\item Creating a Constrained Delaunay Triangulation with \verb"meshpy"
+\item Creating and Modifying an Alpha Compplex with \verb"gudhi"
+\item Filtration Construction with \verb"gudhi"
+\item Persistence Diagram Construction
+\end{enumerate}

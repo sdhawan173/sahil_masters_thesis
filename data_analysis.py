@@ -216,14 +216,14 @@ def plotly_from_ast(object_tuple, file_name=None,
     if file_time and save_dir is not None and save_html:
         save_file_name = '{}/{}, ({}) ast plotly'.format(save_dir, file_time, file_name.split('.')[0])
         fig.write_html('{}.html'.format(save_file_name))
-        print('Plotly of .ast HTML file saved to {}.html'.format(save_dir))
+        print('Plotly of .ast HTML file saved to {}'.format(save_dir))
     if show_plot:
         fig.show()
 
 
-def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, save_orig_plotly, show_orig_plotly,
-                  save_meshpy_plotly, show_meshpy_plotly, complex_type, save_persdia, show_persdia, list_points_persdia,
-                  save_points_persdia, multi_run, max_dim=1, final_run=False):
+def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, max_dim, save_orig_plotly, show_orig_plotly,
+                  save_meshpy_plotly, show_meshpy_plotly, complex_type, save_persdia, list_points_persdia,
+                  save_points_persdia, multi_run, final_run=False):
     """
     :param file_index: Int index of file in file list to be run
     :param file_ext: String extension of file to be run, only '.ast' files supported currently
@@ -236,7 +236,6 @@ def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, save
     :param show_meshpy_plotly: Boolean to show the meshpy 3D Plotly of the meshed '.ast' file
     :param complex_type: String of complex to create, only 'Alpha' supported currently
     :param save_persdia: Boolean to save the persistence diagram of the meshed '.ast' file
-    :param show_persdia: Boolean to show the persistence diagram of the meshed '.ast' file
     :param max_dim: maximum dimension of points to be shown
     :param list_points_persdia: Boolean to list all points in the persistence diagram
     :param save_points_persdia: Boolean to save all points in the persistence diagram to a '.txt' file
@@ -261,12 +260,12 @@ def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, save
     # Run ast file operations code
     if file_ext == '.ast' and (show_orig_plotly or save_orig_plotly):
         # Print original file contents of '.ast' file
-        fo.print_file(file_path)
+        # fo.print_file(file_path)
 
         # Parse '.ast' file data into tuple
         ast_tuple = fo.read_object3d(file_path=file_path, file_name=file_name)
         # Print contents of '.ast' tuple
-        print_object3d(ast_tuple)
+        # print_object3d(ast_tuple)
 
         # Create 3D Plotly of '.ast' tuple data
         plotly_from_ast(object_tuple=ast_tuple, file_name=file_name, save_html=save_orig_plotly,
@@ -292,13 +291,12 @@ def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, save
     y_max_value = pc.plot_persdia_main(persistence_points=persistence_points,
                                        file_name=file_name,
                                        meshpy_switch=meshpy_switch,
+                                       max_dim=max_dim,
                                        save_plot=save_persdia,
                                        file_time=time_stamp,
                                        save_dir=save_dir,
-                                       max_dim=max_dim,
                                        list_points=list_points_persdia,
                                        save_points=save_points_persdia,
-                                       show_plot=show_persdia,
                                        multi_run=multi_run)
     print('\nTotal Run Time:')
     func_timer(total_start)

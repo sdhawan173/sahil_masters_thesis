@@ -24,11 +24,33 @@
     note="url{https://people.maths.ox.ac.uk/nanda/cat/TDANotes.pdf}"
 }
 
+@misc{Needham_2019,
+  title={Introduction to Applied Algebraic Topology},
+  author={Tom Needham},
+  year={2019},
+  note="\url{https://sites.google.com/site/tneedhammath/research}"
+}
+
 @misc{STL_info,
 	note="\url{https://www.adobe.com/creativecloud/file-types/image/vector/stl-file.html}",
-	title={STL files explained | Learn about the STL file format},
+	title={{STL} files explained | Learn about the {STL} file format},
 	author={Adobe}
 } 
+
+@article{analysis_of_stl,
+title = {Analysis of STL files},
+journal = {Mathematical and Computer Modelling},
+volume = {38},
+number = {7},
+pages = {945-960},
+year = {2003},
+issn = {0895-7177},
+doi = {https://doi.org/10.1016/S0895-7177(03)90079-3},
+note = "\url{https://www.sciencedirect.com/science/article/pii/S0895717703900793}",
+author = {M. Szilvśi-Nagy and Gy. Mátyási},
+keywords = {Rapid prototyping, STL file, Polyhedral data structure},
+abstract = {STL files produced by 3D modelling systems contain triangular facet representation of surfaces and have become standard data inputs of rapid prototyping and manufacturing systems. In rapid prototyping technology, physical objects are produced layer by layer, each layer a 2D cross-section of the 3D mesh in STL format. In current CAD systems, the surface tessellation frequently ends with errors in the data structure as gaps and holes leading to open loops in the cross-sections that cannot be manufactured as layers. In this paper, we present a method to detect defects in the surface representation and to analyse the shape of the approximated surface by constructing a polyhedral data structure from the STL file.}
+}
 
 @book{tetgen, 
 	note="\url{https://wias-berlin.de/software/tetgen/1.5/doc/manual/index.html}",
@@ -37,3 +59,130 @@
 	author={Si, Hang},
 	year={2013}
 	} 
+
+@article{geospatial_voting,
+author = {Feng, Michelle and Porter, Mason A.},
+title = {Persistent Homology of Geospatial Data: A Case Study with Voting},
+journal = {SIAM Review},
+volume = {63},
+number = {1},
+pages = {67-99},
+year = {2021},
+doi = {10.1137/19M1241519},
+note = "\url{https://doi.org/10.1137/19M1241519}",
+eprint = {https://doi.org/10.1137/19M1241519},
+abstract = { A crucial step in the analysis of persistent homology is the transformation of data into an appropriate topological object (which, in our case, is a simplicial complex). Software packages for computing persistent homology typically construct Vietoris--Rips or other distance-based simplicial complexes on point clouds because they are relatively easy to compute. We investigate alternative methods of constructing simplicial complexes and the effects of making associated choices during simplicial-complex construction on the output of persistent-homology algorithms. We present two new methods for constructing simplicial complexes from two-dimensional geospatial data (such as maps). We apply these methods to a California precinct-level voting data set, and we thereby demonstrate that our new constructions can capture geometric characteristics that are missed by distance-based constructions. Our new constructions can thus yield more interpretable persistence modules and barcodes for geospatial data. In particular, they are able to distinguish short-persistence features that occur only for a narrow range of distance scales (e.g., voting patterns in densely populated cities) from short-persistence noise by incorporating information about other spatial relationships between regions.}
+}
+
+@article{homology_fem_computation,
+author = {Pellikka, M. and Suuriniemi, S. and Kettunen, L. and Geuzaine, C.},
+title = {Homology and Cohomology Computation in Finite Element Modeling},
+journal = {SIAM Journal on Scientific Computing},
+volume = {35},
+number = {5},
+pages = {B1195-B1214},
+year = {2013},
+doi = {10.1137/130906556},
+note = "\url{https://doi.org/10.1137/130906556}",
+eprint = {https://doi.org/10.1137/130906556},
+abstract = {A homology and cohomology solver for finite element meshes is represented. It is an integrated part of the finite element mesh generator Gmsh. We demonstrate the exploitation of the cohomology computation results in a finite element solver and use an induction heating problem as a working example. The homology and cohomology solver makes the use of a vector-scalar potential formulation straightforward. This gives better overall performance than a vector potential formulation. Cohomology computation also clarifies the lumped parameter coupling of the problem and enables the user to obtain useful postprocessing data as a part of the finite element solution.}
+}
+
+@article{3d_vol_iso_mesh,
+title = {{3D} volumetric isotopological meshing for finite element and isogeometric based reduced order modeling},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+volume = {362},
+pages = {112809},
+year = {2020},
+issn = {0045-7825},
+doi = {https://doi.org/10.1016/j.cma.2019.112809},
+note = "\url{https://www.sciencedirect.com/science/article/pii/S0045782519307017}",
+author = {T. Maquart and Y. Wenfeng and T. Elguedj and A. Gravouil and M. Rochette},
+keywords = {Cuboid decomposition, Topology, Global parameterization, 3D B-Spline, Parametric geometry, Reduced order modeling},
+abstract = {This paper presents a generic framework to construct 3D structured volumetric meshes of complicated geometry and arbitrary topology. Structured meshes are well-suited for reduced order model applications with geometric parameters. For that purpose, we use the triangulated solid 3D model’s boundary provided from B-Rep CAD (Boundary-Representation in Computer Aided Design) models. The input triangulated mesh is decomposed into a set of cuboids in two steps: pants decomposition and cuboid decomposition. Both segmentations understand the geometry and features of meshes. Cuboid decomposition splits a surface into a set of quadrilateral patches which can define a volumetric layout of the associated boundary surface. Using aligned global parameterization, patches of the cuboid decomposition are re-positioned on the surface in a way to achieve low overall distortion, and alignment to principal curvature directions and sharp features. The optimization process is thought to design cross fields with topological and geometrical constraints. Using the optimized cuboid decomposition, a volumetric layout is extracted. Based on the global parameterization and the structured volumetric layout previously computed, a 3D volumetric parameterization is deducted. For different geometrical instances with the same topology but different geometries, the proposed method allows to have the same representation: 3D volumetric isotopological meshes holding the same connectivity. MEG-IsoHex method is introduced to compare fields on 3D hexahedral meshes. The efficiency and the robustness of the proposed approach are illustrated through a remeshing case for large deformations and reduced order models using isogeometric analysis.}
+}
+
+@article{efficient_homology_preserving,
+title={Efficient homology‐preserving simplification of high‐dimensional simplicial shapes},
+volume={39},
+DOI={10.1111/cgf.13764},
+number={1},
+journal={Computer Graphics Forum},
+author={Fellegara, Riccardo and Iuricich, Federico and De Floriani, Leila and Fugacci, Ulderico},
+year={2019},
+month={Aug},
+pages={244–259}
+} 
+
+@article{mesh_enhanced_persistent,
+  title={Mesh enhanced persistent homology},
+  author={Hudson, Beno{\i}t and Miller, Gary L and Oudot, Steve Y and Sheehy, Donald R},
+  journal={Computer Science Department},
+  volume={1122},
+  year={2009}
+}
+
+@phdthesis{jocelyn_thesis,
+  title={Visualizing Arctic Ice Data with Optimal Transport},
+  author={Ilagor, Jocelyn},
+  year={2023},
+  school={The University of North Carolina at Greensboro}
+}
+
+@InProceedings{TDA_MRI,
+author="Anderson, Keri L.
+and Anderson, Jeffrey S.
+and Palande, Sourabh
+and Wang, Bei",
+editor="Wu, Guorong
+and Rekik, Islem
+and Schirmer, Markus D.
+and Chung, Ai Wern
+and Munsell, Brent",
+title="Topological Data Analysis of Functional MRI Connectivity in Time and Space Domains",
+booktitle="Connectomics in NeuroImaging",
+year="2018",
+publisher="Springer International Publishing",
+address="Cham",
+pages="67--77",
+abstract="The functional architecture of the brain can be described as a dynamical system where components interact in flexible ways, constrained by physical connections between regions. Using correlation, either in time or in space, as an abstraction of functional connectivity, we analyzed resting state fMRI data from 1003 subjects. We compared several data preprocessing strategies and found that independent component-based nuisance regression outperformed other strategies, with the poorest reproducibility in strategies that include global signal regression. We also found that temporal vs. spatial functional connectivity can encode different aspects of cognition and personality. Topological analyses using persistent homology show that persistence barcodes are significantly correlated to individual differences in cognition and personality, with high reproducibility. Topological data analyses, including approaches to model connectivity in thew time domain, are promising tools for representing high-level aspects of cognition, development, and neuropathology.",
+isbn="978-3-030-00755-3",
+note="\url{10.1007/978-3-030-00755-3_8}"
+}
+
+@inproceedings{computpershom,
+  title={Computing persistent homology},
+  author={Zomorodian, Afra and Carlsson, Gunnar},
+  booktitle={Proceedings of the twentieth annual symposium on Computational geometry},
+  pages={347--356},
+  year={2004}
+}
+
+@article{deltri,
+  title={Sur la sphere vide},
+  author={Delaunay, Boris and others},
+  journal={Izv. Akad. Nauk SSSR, Otdelenie Matematicheskii i Estestvennyka Nauk},
+  volume={7},
+  number={793-800},
+  pages={1--2},
+  year={1934}
+}
+
+@article{gabriel,
+  title={A new statistical approach to geographic variation analysis},
+  author={Gabriel, K Ruben and Sokal, Robert R},
+  journal={Systematic zoology},
+  volume={18},
+  number={3},
+  pages={259--278},
+  year={1969},
+  publisher={Society of Systematic Zoology}
+}
+
+@inproceedings{chew1987constrained,
+  title={Constrained delaunay triangulations},
+  author={Chew, L Paul},
+  booktitle={Proceedings of the third annual symposium on Computational geometry},
+  pages={215--222},
+  year={1987}
+}

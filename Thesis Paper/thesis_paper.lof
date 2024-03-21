@@ -1,11 +1,16 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces The contents and 3D plot of an ASCII STL file for a tetrahedron.\relax }}{4}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Vietoris-Rips complex of a point cloud as radius $r$ increases.\relax }}{7}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Plot of a point cloud and persistence diagram of its Vietoris-Rips complex.\relax }}{7}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Plot of a Delaunay Complex and Voronoi Cells applied to a point cloud.\relax }}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Progression of the Alpha complex on a point cloud and the persistence diagram of the completed complex.\relax }}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Plot of a white square with a hole and persistence diagram of its Alpha Complex.\relax }}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Gabriel graph applied to a Delaunay triangulation of random points.\relax }}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces The contents and 3D plot of an ASCII STL file for a tetrahedron.\relax }}{12}{figure.caption.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 3D plot of an ASCII STL file of an individual cube with three pockets.\relax }}{12}{figure.caption.17}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Cube with three pockets.\relax }}{15}{figure.caption.14}%
 \addvspace {10\p@ }
 \contentsfinish 
 \contentsfinish 
