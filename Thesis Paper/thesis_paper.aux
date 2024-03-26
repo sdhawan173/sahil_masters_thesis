@@ -20,20 +20,27 @@
 \@nameuse{bbl@beforestart}
 \providecommand \oddpage@label [2]{}
 \babel@aux{english}{}
-\@writefile{toc}{\contentsline {chapter}{List of Tables}{vii}{chapter*.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{List of Figures}{viii}{chapter*.3}\protected@file@percent }
-\citation{geospatial_voting}
-\citation{jocelyn_thesis}
-\citation{TDA_MRI}
+\@writefile{toc}{\contentsline {chapter}{List of Figures}{vii}{chapter*.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {1.1}Related Works}{1}{section.1.1}\protected@file@percent }
+\citation{geospatial_voting}
+\citation{jocelyn_thesis}
+\citation{chung2020smooth}
+\citation{TDA_MRI}
+\citation{oballe2021tofu}
+\citation{zheng2021topological}
 \citation{homology_fem_computation}
 \citation{3d_vol_iso_mesh}
 \citation{efficient_homology_preserving}
 \citation{mesh_enhanced_persistent}
 \citation{efficient_homology_preserving}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Related Works}{2}{section.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Geospatial Data}{2}{subsubsection*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Image Data}{2}{subsubsection*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Medical/Neuroscience}{2}{subsubsection*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Deep Learning}{2}{subsubsection*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{3D Design, Finite Element Modeling (FEM), and Meshing}{2}{subsubsection*.7}\protected@file@percent }
 \citation{Needham_2019}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -42,75 +49,87 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Simplicial Homology}{4}{section.2.1}\protected@file@percent }
 \citation{computpershom}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Persistent Homology}{6}{section.2.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Vietoris-Rips complex of a point cloud as radius $r$ increases.\relax }}{7}{figure.caption.4}\protected@file@percent }
+\newlabel{def:persdia}{{2.18}{6}{Persistence Diagram}{theorem.2.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Vietoris-Rips complex of a point cloud as radius $r$ increases.\relax }}{7}{figure.caption.8}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:point_cloud_radii}{{2.1}{7}{Vietoris-Rips complex of a point cloud as radius $r$ increases.\relax }{figure.caption.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Plot of a point cloud and persistence diagram of its Vietoris-Rips complex.\relax }}{7}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:point_cloud_persdia}{{2.2}{7}{Plot of a point cloud and persistence diagram of its Vietoris-Rips complex.\relax }{figure.caption.5}{}}
+\newlabel{fig:point_cloud_radii}{{2.1}{7}{Vietoris-Rips complex of a point cloud as radius $r$ increases.\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Plot of a point cloud and persistence diagram of its Vietoris-Rips complex.\relax }}{7}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:point_cloud_persdia}{{2.2}{7}{Plot of a point cloud and persistence diagram of its Vietoris-Rips complex.\relax }{figure.caption.9}{}}
 \citation{deltri}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Plot of a Delaunay Complex and Voronoi Cells applied to a point cloud.\relax }}{8}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:point_cloud_del_persdia}{{2.3}{8}{Plot of a Delaunay Complex and Voronoi Cells applied to a point cloud.\relax }{figure.caption.6}{}}
-\newlabel{ex:point_cloud_alpha}{{2.25}{9}{Alpha Complex applied to a Point Cloud}{theorem.2.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Progression of the Alpha complex on a point cloud and the persistence diagram of the completed complex.\relax }}{9}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:point_cloud_alpha_complex}{{2.4}{9}{Progression of the Alpha complex on a point cloud and the persistence diagram of the completed complex.\relax }{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Plot of a white square with a hole and persistence diagram of its Alpha Complex.\relax }}{10}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:image_data_persdia}{{2.5}{10}{Plot of a white square with a hole and persistence diagram of its Alpha Complex.\relax }{figure.caption.8}{}}
-\citation{chew1987constrained}
 \citation{gabriel}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Triangulation}{11}{section.2.3}\protected@file@percent }
-\newlabel{def:cdt}{{2.27}{11}{Constrained Delaunay Triangulation}{theorem.2.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Gabriel graph applied to a Delaunay triangulation of random points.\relax }}{11}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:ast_tetrahedron}{{2.6}{11}{Gabriel graph applied to a Delaunay triangulation of random points.\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Plot of a Delaunay Complex and Voronoi Cells applied to a point cloud.\relax }}{8}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:point_cloud_del_voronoi}{{2.3}{8}{Plot of a Delaunay Complex and Voronoi Cells applied to a point cloud.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces A Gabriel graph compared to a graph which cannot be Gabriel.\relax }}{8}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:good_bad_gabriel}{{2.4}{8}{A Gabriel graph compared to a graph which cannot be Gabriel.\relax }{figure.caption.11}{}}
+\newlabel{ex:point_cloud_alpha}{{2.26}{10}{Alpha Complex applied to a Point Cloud}{theorem.2.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Progression of the Alpha complex on a point cloud and the persistence diagram of the completed complex.\relax }}{10}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:point_cloud_alpha_complex}{{2.5}{10}{Progression of the Alpha complex on a point cloud and the persistence diagram of the completed complex.\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Plot of a white square with a hole and persistence diagram of its Alpha Complex.\relax }}{11}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:image_data_persdia}{{2.6}{11}{Plot of a white square with a hole and persistence diagram of its Alpha Complex.\relax }{figure.caption.13}{}}
 \citation{analysis_of_stl}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Background on the STL Filetype}{12}{section.2.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces The contents and 3D plot of an ASCII STL file for a tetrahedron.\relax }}{12}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:ast_tetrahedron}{{2.7}{12}{The contents and 3D plot of an ASCII STL file for a tetrahedron.\relax }{figure.caption.10}{}}
-\citation{tetgen}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Background on the STL Filetype}{12}{section.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces The contents and 3D plot of an ASCII STL file for a tetrahedron.\relax }}{12}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:ast_tetrahedron}{{2.7}{12}{The contents and 3D plot of an ASCII STL file for a tetrahedron.\relax }{figure.caption.14}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Methods}{13}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chap:methods}{{3}{13}{Methods}{chapter.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Main Method}{13}{section.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Creating a Mesh from an STL file}{13}{subsection.3.1.1}\protected@file@percent }
+\newlabel{sec:mesh_from_stl}{{3.1.1}{13}{Creating a Mesh from an STL file}{subsection.3.1.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Creating and modifying an Alpha Complex}{13}{subsection.3.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Computing a Persistence Diagram}{13}{subsection.3.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Implementation}{13}{section.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Creating STL Files with FreeCAD}{13}{subsection.3.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Parsing the STL File Data}{14}{subsection.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}\input thesis_paper-1.cpt\relax }{14}{subsection.3.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Switch '-p'}{14}{subsubsection*.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Switch '-D'}{14}{subsubsection*.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Switch '-q'}{14}{subsubsection*.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}\input thesis_paper-2.cpt\relax }{14}{subsection.3.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}\input thesis_paper-3.cpt\relax }{14}{subsection.3.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.6}Persistence Diagram Construction}{14}{subsection.3.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Results}{15}{chapter.4}\protected@file@percent }
+\newlabel{sec:modify_alpha_complex}{{3.1.2}{13}{Creating and modifying an Alpha Complex}{subsection.3.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Computing a Persistence Diagram}{14}{subsection.3.1.3}\protected@file@percent }
+\newlabel{sec:compute_persdia}{{3.1.3}{14}{Computing a Persistence Diagram}{subsection.3.1.3}{}}
+\newlabel{fig:initial_stl}{{3.1a}{14}{\relax }{figure.caption.15}{}}
+\newlabel{sub@fig:initial_stl}{{a}{14}{\relax }{figure.caption.15}{}}
+\newlabel{fig:meshpy_of_stl}{{3.1b}{14}{\relax }{figure.caption.15}{}}
+\newlabel{sub@fig:meshpy_of_stl}{{b}{14}{\relax }{figure.caption.15}{}}
+\newlabel{fig:persdia_of_stl}{{3.1c}{14}{\relax }{figure.caption.15}{}}
+\newlabel{sub@fig:persdia_of_stl}{{c}{14}{\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces A triangular prism with a triangular hole, its Delaunay triangulated mesh, and the persistence diagram of the Delaunay triangulated mesh\relax }}{14}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:image_data_persdia}{{3.1}{14}{A triangular prism with a triangular hole, its Delaunay triangulated mesh, and the persistence diagram of the Delaunay triangulated mesh\relax }{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Implementation}{15}{section.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Creating STL Files with FreeCAD}{15}{subsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Parsing the STL File Data}{15}{subsection.3.2.2}\protected@file@percent }
+\citation{tetgen}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}\input thesis_paper-1.cpt\relax }{16}{subsection.3.2.3}\protected@file@percent }
+\newlabel{sec:implement_meshpy}{{3.2.3}{16}{\protect \input thesis_paper-1.cpt\relax }{subsection.3.2.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\input thesis_paper-2.cpt\relax }{16}{subsubsection*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\input thesis_paper-3.cpt\relax }{16}{subsubsection*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}\input thesis_paper-4.cpt\relax }{16}{subsection.3.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}\input thesis_paper-5.cpt\relax }{16}{subsection.3.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.6}Persistence Diagram Construction}{16}{subsection.3.2.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Persistence diagram of a tetrahedron.\relax }}{17}{figure.caption.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Results}{18}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Two Cubes with Three Pockets Moving Closer}{15}{section.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Cube with three pockets.\relax }}{15}{figure.caption.14}\protected@file@percent }
-\newlabel{fig:three_pocket_example}{{4.1}{15}{Cube with three pockets.\relax }{figure.caption.14}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces MeshPy Plots displayed with Plotly of two cubes with three CAD pocket operations that move closer together until combining.\relax }}{15}{table.caption.15}\protected@file@percent }
-\newlabel{fig:cube_two_cubes_meshpy_table}{{4.1}{15}{MeshPy Plots displayed with Plotly of two cubes with three CAD pocket operations that move closer together until combining.\relax }{table.caption.15}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Persistence Diagrams of two cubes with three CAD pocket operations that move closer together until combining.\relax }}{16}{table.caption.16}\protected@file@percent }
-\newlabel{fig:cube_two_cubes_persdia_table}{{4.2}{16}{Persistence Diagrams of two cubes with three CAD pocket operations that move closer together until combining.\relax }{table.caption.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Discussion}{17}{subsection.4.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Cube with Equilateral Triangle Hole}{18}{section.4.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces MeshPy Plots displayed with Plotly of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }}{18}{table.caption.17}\protected@file@percent }
-\newlabel{fig:cube_triangle_hole_meshpy_table}{{4.3}{18}{MeshPy Plots displayed with Plotly of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }{table.caption.17}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Persistence Diagrams of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }}{19}{table.caption.18}\protected@file@percent }
-\newlabel{fig:cube_triangle_hole_persdia_table}{{4.4}{19}{Persistence Diagrams of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }{table.caption.18}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Rectangular Prism Ring with Cut}{20}{section.4.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces MeshPy Plots displayed with Plotly of a rectangular prism ring with a cut that decreases to the original shape.\relax }}{20}{table.caption.19}\protected@file@percent }
-\newlabel{fig:rect_prism_ring_meshpy_table}{{4.5}{20}{MeshPy Plots displayed with Plotly of a rectangular prism ring with a cut that decreases to the original shape.\relax }{table.caption.19}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Persistence Diagrams of a rectangular prism ring with a cut that decreases to the original shape.\relax }}{21}{table.caption.20}\protected@file@percent }
-\newlabel{fig:rect_prism_ring_persdia_table}{{4.6}{21}{Persistence Diagrams of a rectangular prism ring with a cut that decreases to the original shape.\relax }{table.caption.20}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Discussion}{21}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Two Cubes with Three Pockets Moving Closer}{18}{section.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Cube with three pockets.\relax }}{18}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:three_pocket_example}{{4.1}{18}{Cube with three pockets.\relax }{figure.caption.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces MeshPy plots displayed with Plotly of two cubes with three CAD pocket operations that move closer together until combining.\relax }}{18}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:cube_two_cubes_MeshPy_table}{{4.2}{18}{MeshPy plots displayed with Plotly of two cubes with three CAD pocket operations that move closer together until combining.\relax }{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Persistence Diagrams of two cubes with three CAD pocket operations that move closer together until combining.\relax }}{19}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:cube_two_cubes_persdia_table}{{4.3}{19}{Persistence Diagrams of two cubes with three CAD pocket operations that move closer together until combining.\relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Discussion}{20}{subsection.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Cube with Equilateral Triangle Hole}{21}{section.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces MeshPy plots displayed with Plotly of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }}{21}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:cube_triangle_hole_MeshPy_table}{{4.4}{21}{MeshPy plots displayed with Plotly of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Persistence Diagrams of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }}{22}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:cube_triangle_hole_persdia_table}{{4.5}{22}{Persistence Diagrams of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Discussion}{22}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Rectangular Prism Ring with Cut}{23}{section.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces MeshPy plots displayed with Plotly of a rectangular prism ring with a cut that decreases to the original shape.\relax }}{23}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:rect_prism_ring_MeshPy_table}{{4.6}{23}{MeshPy plots displayed with Plotly of a rectangular prism ring with a cut that decreases to the original shape.\relax }{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Persistence Diagrams of a rectangular prism ring with a cut that decreases to the original shape.\relax }}{24}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:rect_prism_ring_persdia_table}{{4.7}{24}{Persistence Diagrams of a rectangular prism ring with a cut that decreases to the original shape.\relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Discussion}{24}{subsection.4.3.1}\protected@file@percent }
 \bibdata{thesis_bib}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{22}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{25}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Future Work}{22}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Findings}{25}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Future Work}{25}{section.5.2}\protected@file@percent }
 \bibcite{TDA_MRI}{1}
 \bibcite{chew1987constrained}{2}
 \bibcite{deltri}{3}
@@ -121,14 +140,14 @@
 \bibcite{jocelyn_thesis}{8}
 \bibcite{3d_vol_iso_mesh}{9}
 \bibcite{Needham_2019}{10}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{23}{chapter*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{26}{chapter*.26}\protected@file@percent }
 \bibcite{homology_fem_computation}{11}
 \bibcite{tetgen}{12}
 \bibcite{analysis_of_stl}{13}
 \bibcite{computpershom}{14}
 \bibstyle{plain}
 \ttl@finishall
-\newlabel{LastPage}{{}{24}{}{page.24}{}}
-\xdef\lastpage@lastpage{24}
-\xdef\lastpage@lastpageHy{24}
-\gdef \@abspage@last{34}
+\newlabel{LastPage}{{}{27}{}{page.27}{}}
+\xdef\lastpage@lastpage{27}
+\xdef\lastpage@lastpageHy{27}
+\gdef \@abspage@last{36}

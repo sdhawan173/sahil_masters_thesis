@@ -11,7 +11,7 @@ import gudhi
 import pickle
 
 
-def create_base_plot(persistence_points, title, max_dim=2):
+def create_base_plot(persistence_points, title, max_dim=1):
     # Create Plot
     fig, ax = plt.subplots()
     cmap = matplotlib.cm.Set1.colors
@@ -20,6 +20,7 @@ def create_base_plot(persistence_points, title, max_dim=2):
     plt.xlabel('Birth')
     plt.ylabel('Death')
 
+    print('Plotting scatter points of persistence points ...')
     for point in persistence_points:
         ax.scatter(point[1][0], point[1][1], color=cmap[point[0]], alpha=0.75, s=45, zorder=10, clip_on=False)
     ax.set_title('Persistence Diagram of\n{}'.format(title))
@@ -29,13 +30,15 @@ def create_base_plot(persistence_points, title, max_dim=2):
                 color=cmap[dim],
                 label=r'$H_{}$'.format(str(dim))) for dim in list(range(0, max_dim + 1))
         ],
-        loc=4
+        loc=4,
+        handlelength=1,
+        handleheight=1
     )
 
-    # Create frequency labels for overlapping points
+    print('Creating frequency labels for overlapping points ...')
     frequency_values, frequency_coords = persistence_frequencies(persistence_points)
 
-    # Create annotations for overlapping points
+    print('Creating annotations for overlapping points ...')
     for index, annotation in enumerate(frequency_values):
         x_coord, y_coord = frequency_coords[index]
         ax.annotate(annotation, (x_coord, y_coord), xytext=(5, -12), textcoords='offset points', fontsize=12, zorder=11)
@@ -179,13 +182,13 @@ def plot_persdia_main(persistence_points, title, save_dir, show_plot=False):
     """
     print('\nPlotting Persistence Diagram ...')
 
-    # Adjust dimensions to be shown
+    print('Adjust ticks to be shown ...')
     persistence_points, y_max_orig, y_max_tick, y_inf_tick, inf_bool = infinity_handler(persistence_points)
 
-    # Create initial plot
+    print('Creating initial plot ...')
     fig, ax = create_base_plot(persistence_points, title)
 
-    # Assign values for certain ticks
+    print('Assigning values for special ticks ...')
     mpl_tick_handler(ax, y_max_orig, y_max_tick, y_inf_tick, inf_bool)
 
     file_path = save_dir.split('.')[0]
@@ -450,7 +453,7 @@ def visualize_alpha_complexes(x, y, radii):
                      [y[point[0]], y[point[1]], y[point[2]], y[point[0]]], 'k-')
             # fill in triangle
             plt.fill([x[point[0]], x[point[1]], x[point[2]], x[point[0]]],
-                     [y[point[0]], y[point[1]], y[point[2]], y[point[0]]], 'r_squared', alpha=0.625)
+                     [y[point[0]], y[point[1]], y[point[2]], y[point[0]]], c='red', alpha=0.625)
 
         # Calculate Voronoi diagram
         points = np.array([(xp, yp) for xp, yp in zip(x, y)])
@@ -470,14 +473,18 @@ def visualize_alpha_complexes(x, y, radii):
                                alpha=1,
                                zorder=1)
                 )
-            plot_title = ('Alpha Complex, Voronoi Diagram:\n'
-                          'Point Cloud, at $r_squared^2$={}, $r_squared={}$').format(str(round(r_squared, 4)), str(round(math.sqrt(r_squared), 4)))
+            plot_title = (
+                'Alpha Complex, Voronoi Diagram:\n'
+                'Point Cloud, at $r^2$={}, $r={}$').format(
+                str(round(r_squared, 4)),
+                str(round(math.sqrt(r_squared), 4))
+            )
             plot_save_name = os.getcwd() + '/point_cloud_plot_alpha_{}.png'.format(iter_num)
         elif r_squared is None:
             plot_title = ('Alpha Complex, Voronoi Diagram:\n'
                           'Point Cloud (Completed)')
             plot_save_name = os.getcwd() + '/point_cloud_plot_alpha_voronoi.png'
-        plt.title(plot_title, fontsize=15)
+        plt.title(plot_title, fontsize=14)
         plt.savefig(plot_save_name, bbox_inches='tight', dpi=300, format='png')
 
 
@@ -485,31 +492,53 @@ def circumcenter_radius(a, b):
     # Calculate midpoints
     midAB = (a + b) / 2
 
-    # Calculate slopes
-    slope_AB = (b[1] - a[1]) / (b[0] - a[0])
+    # Check if the line is vertical
+    if np.isclose(b[0], a[0]):
+        # If vertical, swap x and y coordinates to avoid division by zero
+        circumcenter = np.array([(a[0] + b[0]) / 2, (a[1] + b[1]) / 2])
+        # Circumradius is the distance between any of the points and the circumcenter
+        circumradius = np.linalg.norm(circumcenter - a)
+    else:
+        # Calculate slopes
+        slope_AB = (b[1] - a[1]) / (b[0] - a[0])
 
-    # Calculate perpendicular bisector slope
-    slope_perpendicular = -1 / slope_AB
+        # Check if the line is horizontal
+        if np.isclose(slope_AB, 0):
+            # If horizontal, swap x and y coordinates to avoid division by zero
+            circumcenter = np.array([(a[0] + b[0]) / 2, (a[1] + b[1]) / 2])
+            # Circumradius is the distance between any of the points and the circumcenter
+            circumradius = np.linalg.norm(circumcenter - a)
+        else:
+            # Calculate perpendicular bisector slope
+            slope_perpendicular = -1 / slope_AB
 
-    # Calculate intercepts
-    intercept_perpendicular = midAB[1] - slope_perpendicular * midAB[0]
+            # Calculate intercepts
+            intercept_perpendicular = midAB[1] - slope_perpendicular * midAB[0]
 
-    # Calculate circumcenter
-    circumcenter_x = (slope_AB * a[0] - slope_perpendicular * midAB[0] + midAB[1] - a[1]) / (
-                slope_AB - slope_perpendicular)
-    circumcenter_y = slope_perpendicular * circumcenter_x + intercept_perpendicular
-    circumcenter = np.array([circumcenter_x, circumcenter_y])
+            # Calculate circumcenter
+            circumcenter_x = (slope_AB * a[0] - slope_perpendicular * midAB[0] + midAB[1] - a[1]) / (
+                    slope_AB - slope_perpendicular)
+            circumcenter_y = slope_perpendicular * circumcenter_x + intercept_perpendicular
+            circumcenter = np.array([circumcenter_x, circumcenter_y])
 
-    # Calculate circumradius
-    circumradius = np.linalg.norm(circumcenter - a)
+            # Calculate circumradius
+            circumradius = np.linalg.norm(circumcenter - a)
 
     return circumcenter, circumradius
 
 
-def gabriel(n=5):
-    min_distance=0.75
-    np.random.seed(666)
-    points = np.random.rand(n, 2)
+def gabriel():
+    min_distance = 0.75
+    points = np.array(
+        [
+            [3, 7],
+            [5, 4],
+            [1, 4],
+            [3, 1],
+            [3, 4]
+        ]
+    )
+    n = points.shape[0]
     for i in range(1, n):
         for j in range(i):
             dist = np.linalg.norm(points[i] - points[j])
@@ -550,14 +579,14 @@ def gabriel(n=5):
                 circumradius,
                 color=edge_colors[i % len(edge_colors)],
                 fill=False,
-                linewidth=2,
+                linewidth=1,
                 zorder=i
             )
         )
         ax.plot(
             [A[0], B[0]], [A[1], B[1]],
             color=edge_colors[i % len(edge_colors)],
-            linewidth=2,
+            linewidth=3,
             zorder=i
         )
 
@@ -571,7 +600,7 @@ def gabriel(n=5):
                     textcoords='offset points',
                     color='black',
                     fontweight='bold',
-                    zorder=len(edges)+3)
+                    zorder=len(edges) + 3)
 
     plt.title('Gabriel Graph of Delaunay Triangulation', fontsize=15)
     plt.axis('equal')
@@ -579,7 +608,81 @@ def gabriel(n=5):
     plt.savefig(plot_save_name, bbox_inches='tight', dpi=300, format='png')
 
 
+def non_gabriel():
+    points = np.array(
+        [
+            [3, 7],
+            [5, 4],
+            [1, 4],
+            [3, 1]
+        ]
+    )
+
+    # Manually add the edge AD
+    points = np.vstack([points, [3, 1]])
+
+    edges = [
+        (0, 1),  # AB
+        (1, 3),  # BD
+        (2, 3),  # CD
+        (0, 2),  # AC
+        (0, 4)  # AD
+    ]
+
+    edge_colors = plt.cm.tab10.colors
+
+    # Plot points
+    fig, ax = plt.subplots()
+    ax.plot(
+        points[:, 0], points[:, 1],
+        'o',
+        color='black',
+        markersize=5,
+        zorder=len(edges) + 2
+    )
+
+    # Plot each edge with a unique color
+    for i, (start, end) in enumerate(edges):
+        A = points[start]
+        B = points[end]
+        circumcenter, circumradius = circumcenter_radius(A, B)
+        ax.add_patch(
+            plt.Circle(
+                circumcenter,
+                circumradius,
+                color=edge_colors[i % len(edge_colors)],
+                fill=False,
+                linewidth=1,
+                zorder=i
+            )
+        )
+        ax.plot(
+            [A[0], B[0]], [A[1], B[1]],
+            color=edge_colors[i % len(edge_colors)],
+            linewidth=3,
+            zorder=i
+        )
+
+    # Annotate points
+    labels = [chr(65 + i) for i in range(len(points))]  # Using chr() to generate uppercase letters
+    for i, label in enumerate(labels):
+        ax.annotate(label,
+                    (points[i][0], points[i][1]),
+                    fontsize=15,
+                    xytext=(5, -6.5),
+                    textcoords='offset points',
+                    color='black',
+                    fontweight='bold',
+                    zorder=len(edges) + 3)
+
+    plt.title('Non-Gabriel Graph of Non-Delaunay Triangulation', fontsize=15)
+    plt.axis('equal')
+    plot_save_name = os.getcwd() + '/non_gabriel_circles.png'
+    plt.savefig(plot_save_name, bbox_inches='tight', dpi=300, format='png')
+
+
 # x_points, y_points = create_point_cloud(scale=0.12, size=5, interval=0.1)
+# visualize_vr_complexes(x_points, y_points)
 # black_hole_example()
 # visualize_delaunay_voronoi(x_points, y_points)
 x_points, y_points = create_point_cloud(scale=0.2, size=1, interval=0.1)
@@ -589,3 +692,4 @@ visualize_alpha_complexes(
     radii=(0, 0.14, 0.23076726048056004, 0.29, 0.30678737722699123, 0.3069246020010885, 0.8045271684187107, None)
 )
 # gabriel()
+# non_gabriel()

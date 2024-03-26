@@ -1,22 +1,27 @@
-\documentclass[xcolor=dvipsnames]{beamer}
+\documentclass[xcolor=dvipsnames, aspectratio=169]{beamer}
 \usetheme{Montpellier}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{subcaption}
+\usepackage{lipsum}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{url}
+
 \author{Sahil Dhawan}
-\title[Analyzing Topological Properties of 3D files]{Analyzing the Topological Properties of 3D STL Files}
-%\setbeamercovered{transparent} 
-%\setbeamertemplate{navigation symbols}{} 
-%\logo{} 
+\title[Analyzing Topological Properties of 3D files]{\resizebox{\textwidth}{!}{Analyzing the Topological Properties of 3D STL Files}}
 \institute[UNC Greensboro]{University of North Carolina at Greensboro} 
 \date{March 12, 2024} 
 
 \setbeamercolor{structure}{fg=red}
-    \setbeamercolor{normal text}{fg=white}
+\setbeamercolor{normal text}{fg=white}
 \setbeamercolor{background canvas}{bg=black}
 \setbeamercolor{local structure}{fg=white}
+
 \begin{document}
 
 \begin{frame}
@@ -129,24 +134,93 @@
 
 \subsection{Rectangular Prism Ring with Cut}
 \begin{frame}{Rectangular Prism Ring with Cut}
-\begin{table}[H]
-\begin{tabular}{cccccc}
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 40 mm cut) persdia.png} &
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 35 mm cut) persdia.png} &  
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 30 mm cut) persdia.png} &
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 25 mm cut) persdia.png} & 
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 20 mm cut) persdia.png} & 
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 15 mm cut) persdia.png} \\
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 10 mm cut) persdia.png} & 
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 05 mm cut) persdia.png} & 
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 03 mm cut) persdia.png} &
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 02 mm cut) persdia.png} &
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 01 mm cut) persdia.png} &
-\includegraphics[width=0.18\textwidth]{Final Run, (rect prism ring 00 mm cut) persdia.png} \\
-\end{tabular}
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 40 mm cut) meshpy plotly screenshot.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 35 mm cut) meshpy plotly screenshot.png} 
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 30 mm cut) meshpy plotly screenshot.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 25 mm cut) meshpy plotly screenshot.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 20 mm cut) meshpy plotly screenshot.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 15 mm cut) meshpy plotly screenshot.png}
+\end{subfigure}
+\\[3pt]
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 10 mm cut) meshpy plotly screenshot.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 05 mm cut) meshpy plotly screenshot.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 03 mm cut) meshpy plotly screenshot.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 02 mm cut) meshpy plotly screenshot.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 01 mm cut) meshpy plotly screenshot.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 00 mm cut) meshpy plotly screenshot.png}
+\end{subfigure}
+\caption{MeshPy Plots displayed with Plotly of a rectangular prism ring with a cut that decreases to the original shape.}
+\label{fig:rect_prism_ring_meshpy plotly screenshot_table}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Rectangular Prism Ring with Cut}
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 40 mm cut) persdia.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 35 mm cut) persdia.png} 
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 30 mm cut) persdia.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 25 mm cut) persdia.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 20 mm cut) persdia.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 15 mm cut) persdia.png}
+\end{subfigure}
+\\[3pt]
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 10 mm cut) persdia.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 05 mm cut) persdia.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 03 mm cut) persdia.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 02 mm cut) persdia.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 01 mm cut) persdia.png}
+\end{subfigure}
+\begin{subfigure}[b]{0.15\textwidth}
+\includegraphics[width=\linewidth]{Final Run, (rect prism ring 00 mm cut) persdia.png}
+\end{subfigure}
 \caption{Persistence Diagrams of a rectangular prism ring with a cut that decreases to the original shape.}
 \label{fig:rect_prism_ring_persdia_table}
-\end{table}
+\end{figure}
 \end{frame}
 
 \section{Conclusion}
@@ -158,4 +232,16 @@
 \begin{frame}{Future Work}
 
 \end{frame}
+
+\section{}
+\begin{frame}{Thank You!}
+\begin{center}
+\noindent \includegraphics[width=0.35\textwidth]{101_IMG_0236 (1) - 2x1 - Compressed.jpg}
+\noindent \includegraphics[width=0.35\textwidth]{101_IMG_0330 (1) - 2x1 - Compressed.jpg}\\
+\vspace{0.04in}
+\noindent \includegraphics[width=0.35\textwidth]{101_IMG_0941 (1) - Compressed.jpg}
+\noindent \includegraphics[width=0.35\textwidth]{101_IMG_0756 (1) - Compressed.jpg}\\
+\end{center}
+\end{frame}
+
 \end{document}

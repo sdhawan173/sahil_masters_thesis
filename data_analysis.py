@@ -1,6 +1,7 @@
 import time
 from datetime import datetime
 import numpy as np
+import math
 import plotly.graph_objects as go
 import stl_mesh_math as smm
 import file_operations as fo
@@ -49,8 +50,8 @@ def list_vertices(object_tuple, unique=True):
 
 
 def plotly_3d(x_points, y_points, z_points, i_val, j_val, k_val,
-              x_camera=None, y_camera=None, z_camera=None,
-              show_mesh=True, show_scatter=True, show_connections=False, show_lines=True):
+              x_camera=1.5, y_camera=1.5, z_camera=3,
+              show_mesh=True, show_scatter=True, show_connections=False, show_lines=True, show_circumspheres=True):
     layout = go.Layout(
         scene=dict(
             aspectmode='data',
@@ -103,18 +104,20 @@ def plotly_3d(x_points, y_points, z_points, i_val, j_val, k_val,
                 text=[str(i) for i in range(len(x_points))]
             )
         )
+
+    triangles = np.vstack((i_val, j_val, k_val)).T
+    vertices = np.vstack((x_points, y_points, z_points)).T
+    tri_points = vertices[triangles]
+
     if show_lines:
         # https://community.plotly.com/t/show-edges-of-the-mesh-in-a-mesh3d-plot/33614/3
-        triangles = np.vstack((i_val, j_val, k_val)).T
-        vertices = np.vstack((x_points, y_points, z_points)).T
-        tri_points = vertices[triangles]
         x_line = []
         y_line = []
         z_line = []
-        for T in tri_points:
-            x_line.extend([T[k % 3][0] for k in range(4)] + [None])
-            y_line.extend([T[k % 3][1] for k in range(4)] + [None])
-            z_line.extend([T[k % 3][2] for k in range(4)] + [None])
+        for triangle in tri_points:
+            x_line.extend([triangle[k % 3][0] for k in range(4)] + [None])
+            y_line.extend([triangle[k % 3][1] for k in range(4)] + [None])
+            z_line.extend([triangle[k % 3][2] for k in range(4)] + [None])
         fig.add_trace(
             go.Scatter3d(
                 x=x_line,
@@ -128,6 +131,92 @@ def plotly_3d(x_points, y_points, z_points, i_val, j_val, k_val,
                 name='Edges'
             )
         )
+
+    if show_circumspheres:
+        random_indices = []
+        while len(random_indices) < 1:
+            index = np.random.randint(len(tri_points))
+            if index not in random_indices:
+                if len(random_indices) == 0 or abs(index - random_indices[-1]) > 1:
+                    random_indices.append(index)
+
+        # Create a new list by selecting the datasets at the random indices
+        selected_triangles = [tri_points[i] for i in random_indices]
+
+        for triangle_points in selected_triangles:
+            print(triangle_points)
+            points = []
+            for vertex in triangle_points:
+                x, y, z = vertex
+                points.append((x, y, z))
+            x_points = []
+            y_points = []
+            z_points = []
+            for point in points:
+                x_points.append(point[0])
+                y_points.append(point[1])
+                z_points.append(point[2])
+
+            # Extracting coordinates
+            x1, y1, z1 = points[0]
+            x2, y2, z2 = points[1]
+            x3, y3, z3 = points[2]
+
+            # Calculate the vectors representing two sides of the triangle
+            vec1 = [x2 - x1, y2 - y1, z2 - z1]
+            vec2 = [x3 - x1, y3 - y1, z3 - z1]
+
+            # Calculate the cross product of the two vectors to find the normal vector of the plane
+            normal = [
+                vec1[1] * vec2[2] - vec1[2] * vec2[1],
+                vec1[2] * vec2[0] - vec1[0] * vec2[2],
+                vec1[0] * vec2[1] - vec1[1] * vec2[0]
+            ]
+
+            # Calculate the midpoints of the sides of the triangle
+            midpoint1 = [(x1 + x2) / 2, (y1 + y2) / 2, (z1 + z2) / 2]
+            midpoint2 = [(x1 + x3) / 2, (y1 + y3) / 2, (z1 + z3) / 2]
+
+            # Calculate the direction vector of the normal line passing through one midpoint
+            dir_vec = [normal[1], -normal[0], 0]
+
+            # Calculate the parameter t
+            t = ((midpoint2[0] - midpoint1[0]) * normal[0] + (midpoint1[1] - midpoint2[1]) * normal[1]) / (
+                        dir_vec[0] * normal[1] - dir_vec[1] * normal[0])
+
+            # Calculate the circumcenter
+            circumcenter = [
+                midpoint1[0] + t * dir_vec[0],
+                midpoint1[1] + t * dir_vec[1],
+                midpoint1[2] + t * dir_vec[2]
+            ]
+
+            # Calculate the radius (distance from circumcenter to any point)
+            radius = math.sqrt((circumcenter[0] - x1) ** 2 + (circumcenter[1] - y1) ** 2 + (circumcenter[2] - z1) ** 2)
+
+            # Create a sphere meshgrid
+            space_size = 30
+            phi = np.linspace(0, np.pi, space_size)
+            theta = np.linspace(0, 2 * np.pi, space_size)
+            phi, theta = np.meshgrid(phi, theta)
+            x_sphere = circumcenter[0] + radius * np.sin(phi) * np.cos(theta)
+            y_sphere = circumcenter[1] + radius * np.sin(phi) * np.sin(theta)
+            z_sphere = circumcenter[2] + radius * np.cos(phi)
+
+            # Plot the sphere
+            fig.add_trace(
+                go.Surface(
+                    x=x_sphere,
+                    y=y_sphere,
+                    z=z_sphere,
+                    opacity=0.5,
+                    colorscale='reds',
+                    showscale=False
+                )
+            )
+            fig.add_trace(
+                go.Scatter3d(x=x_points, y=y_points, z=z_points, mode='markers', marker=dict(size=7, color='black')))
+
     # Update camera view
     if x_camera and y_camera and z_camera is not None:
         fig.update_layout(scene=dict(
@@ -222,7 +311,7 @@ def plotly_from_ast(object_tuple, file_name=None,
 
 
 def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, max_dim, save_orig_plotly, show_orig_plotly,
-                  save_meshpy_plotly, show_meshpy_plotly, complex_type, save_persdia, list_points_persdia,
+                  save_meshpy_plotly, show_meshpy_plotly, save_persdia, list_points_persdia,
                   save_points_persdia, multi_run, final_run=False):
     """
     :param file_index: Int index of file in file list to be run
@@ -234,7 +323,6 @@ def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, max_
     :param show_orig_plotly: Boolean to show the original 3D Plotly plot of the '.ast' file
     :param save_meshpy_plotly: Boolean to save the meshpy 3D Plotly of the meshed '.ast' file
     :param show_meshpy_plotly: Boolean to show the meshpy 3D Plotly of the meshed '.ast' file
-    :param complex_type: String of complex to create, only 'Alpha' supported currently
     :param save_persdia: Boolean to save the persistence diagram of the meshed '.ast' file
     :param max_dim: maximum dimension of points to be shown
     :param list_points_persdia: Boolean to list all points in the persistence diagram
@@ -279,10 +367,12 @@ def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, max_
         smm.plotly_from_meshpy(meshpy_mesh=tet_mesh, file_name=file_name, save_html=save_meshpy_plotly,
                                file_time=time_stamp, save_dir=save_dir, show_plot=show_meshpy_plotly)
 
+    input('wait')
+
     # Create and modify Alpha complex and simplex tree of meshpy mesh with gudhi
-    obj3d_complex, obj3d_smplx_tree = smm.create_gudhi_elements(meshpy_mesh=tet_mesh, complex_type=complex_type)
+    obj3d_complex, obj3d_smplx_tree = smm.create_gudhi_elements(meshpy_mesh=tet_mesh)
     obj3d_smplx_tree = smm.modify_alpha_complex(gudhi_complex=obj3d_complex, gudhi_simplex_tree=obj3d_smplx_tree,
-                                                meshpy_mesh=tet_mesh, complex_type=complex_type, verbose=True)
+                                                meshpy_mesh=tet_mesh, verbose=True)
 
     # Get list of persistence points from simplex tree
     persistence_points = obj3d_smplx_tree.persistence()
@@ -290,7 +380,6 @@ def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, max_
     # Create persistence diagram
     y_max_value = pc.plot_persdia_main(persistence_points=persistence_points,
                                        file_name=file_name,
-                                       meshpy_switch=meshpy_switch,
                                        max_dim=max_dim,
                                        save_plot=save_persdia,
                                        file_time=time_stamp,
