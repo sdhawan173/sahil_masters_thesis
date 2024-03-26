@@ -16,7 +16,7 @@ equil_tri = list(reversed(range(10, 19)))  # equilateral triangle triangle hole
 rect_pris = list(reversed(range(22, 34)))  # rect prism ring
 two_cubes = list(reversed(range(47, 53)))  # two cubes, three pockets each
 # run_list = [equil_tri, rect_pris, two_cubes]
-run_list = [[2]]
+run_list = [[46]]
 
 # chosen_list = []
 # # If no list of indices is provided, choose one

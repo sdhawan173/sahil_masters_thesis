@@ -1,7 +1,7 @@
 import time
 from datetime import datetime
 import numpy as np
-import math
+from sympy import Line3D, Point3D
 import plotly.graph_objects as go
 import stl_mesh_math as smm
 import file_operations as fo
@@ -134,74 +134,98 @@ def plotly_3d(x_points, y_points, z_points, i_val, j_val, k_val,
 
     if show_circumspheres:
         random_indices = []
-        while len(random_indices) < 1:
+        np.random.seed(420)
+        while len(random_indices) < 2:
             index = np.random.randint(len(tri_points))
             if index not in random_indices:
                 if len(random_indices) == 0 or abs(index - random_indices[-1]) > 1:
                     random_indices.append(index)
-
-        # Create a new list by selecting the datasets at the random indices
         selected_triangles = [tri_points[i] for i in random_indices]
 
         for triangle_points in selected_triangles:
             print(triangle_points)
-            points = []
-            for vertex in triangle_points:
-                x, y, z = vertex
-                points.append((x, y, z))
-            x_points = []
-            y_points = []
-            z_points = []
-            for point in points:
-                x_points.append(point[0])
-                y_points.append(point[1])
-                z_points.append(point[2])
+            midpoints = []
+            edge_lengths = []
+            for point_index in range(3):
+                temp_midpoint = []
+                for coord_index in range(3):
+                    temp_midpoint.append((triangle_points[point_index][coord_index] +
+                                          triangle_points[point_index - 1][coord_index]) / 2)
+                midpoints.append(temp_midpoint)
+                edge_lengths.append(np.linalg.norm(triangle_points[point_index] - triangle_points[point_index - 1]))
 
-            # Extracting coordinates
-            x1, y1, z1 = points[0]
-            x2, y2, z2 = points[1]
-            x3, y3, z3 = points[2]
+            longest_edge_index = edge_lengths.index(max(edge_lengths))
+            other_edges = [length for length in edge_lengths if length != edge_lengths[longest_edge_index]]
 
-            # Calculate the vectors representing two sides of the triangle
-            vec1 = [x2 - x1, y2 - y1, z2 - z1]
-            vec2 = [x3 - x1, y3 - y1, z3 - z1]
+            edge_vectors = []
+            edge_vectors.append(triangle_points[1] - triangle_points[0])
+            edge_vectors.append(triangle_points[2] - triangle_points[0])
+            edge_vectors.append(triangle_points[2] - triangle_points[1])
+            right_triangle = False
+            for edge_index in range(3):
+                dot_product = np.dot(edge_vectors[edge_index], edge_vectors[edge_index - 1])
+                print('dotproduct = ', dot_product)
+                if np.isclose(dot_product, 0):
+                    right_triangle = True
+                    print(right_triangle)
+                    break
 
-            # Calculate the cross product of the two vectors to find the normal vector of the plane
-            normal = [
-                vec1[1] * vec2[2] - vec1[2] * vec2[1],
-                vec1[2] * vec2[0] - vec1[0] * vec2[2],
-                vec1[0] * vec2[1] - vec1[1] * vec2[0]
-            ]
+            edge1 = triangle_points[1] - triangle_points[0]
+            edge2 = triangle_points[2] - triangle_points[0]
+            selected_vertex = triangle_points[0]
+            normal_vector = np.cross(edge1, edge2)
+            a, b, c = normal_vector
+            d = -np.dot(normal_vector, selected_vertex)
 
-            # Calculate the midpoints of the sides of the triangle
-            midpoint1 = [(x1 + x2) / 2, (y1 + y2) / 2, (z1 + z2) / 2]
-            midpoint2 = [(x1 + x3) / 2, (y1 + y3) / 2, (z1 + z3) / 2]
+            if len(other_edges) == 2 and (other_edges[0] == other_edges[1] or right_triangle):
+                intersection_point = midpoints[longest_edge_index]
+            else:
+                bisectors = []
+                for i in range(3):
+                    p1 = Point3D(midpoints[i])
+                    p2 = Point3D(midpoints[(i + 1) % 3])
+                    bisector = Line3D(p1, p2).perpendicular_line(p1.midpoint(p2))
+                    bisectors.append(bisector)
 
-            # Calculate the direction vector of the normal line passing through one midpoint
-            dir_vec = [normal[1], -normal[0], 0]
+                intersection_point = None
+                for i in range(3):
+                    for j in range(i + 1, 3):
+                        if bisectors[i].direction.is_zero or bisectors[j].direction.is_zero:
+                            # Handle special cases where bisector direction is zero
+                            # For example, when triangle is parallel to xy, xz, or yz planes
+                            continue
+                        if bisectors[i].intersection(bisectors[j]):
+                            intersection_point = bisectors[i].intersection(bisectors[j])[0]
+                            break
+                    if intersection_point:
+                        break
 
-            # Calculate the parameter t
-            t = ((midpoint2[0] - midpoint1[0]) * normal[0] + (midpoint1[1] - midpoint2[1]) * normal[1]) / (
-                        dir_vec[0] * normal[1] - dir_vec[1] * normal[0])
+                if intersection_point is None:
+                    # Handle case where intersection_point is not found
+                    continue
 
-            # Calculate the circumcenter
-            circumcenter = [
-                midpoint1[0] + t * dir_vec[0],
-                midpoint1[1] + t * dir_vec[1],
-                midpoint1[2] + t * dir_vec[2]
-            ]
+                x, y, z = [float(coord) for coord in intersection_point.args]
+                t = (-a * x - b * y - c * z - d) / (a ** 2 + b ** 2 + c ** 2)
+                intersection_point = [x + a * t, y + b * t, z + c * t]
 
-            # Calculate the radius (distance from circumcenter to any point)
-            radius = math.sqrt((circumcenter[0] - x1) ** 2 + (circumcenter[1] - y1) ** 2 + (circumcenter[2] - z1) ** 2)
+            point_distances = []
+            for point in triangle_points:
+                point_distances.append(np.sqrt(((point[0] - intersection_point[0]) ** 2) +
+                                               ((point[1] - intersection_point[1]) ** 2) +
+                                               ((point[2] - intersection_point[2]) ** 2)
+                                               )
+                                       )
+            radius = sum(point_distances)/len(point_distances)
+            print(radius)
 
             # Create a sphere meshgrid
             space_size = 30
             phi = np.linspace(0, np.pi, space_size)
             theta = np.linspace(0, 2 * np.pi, space_size)
             phi, theta = np.meshgrid(phi, theta)
-            x_sphere = circumcenter[0] + radius * np.sin(phi) * np.cos(theta)
-            y_sphere = circumcenter[1] + radius * np.sin(phi) * np.sin(theta)
-            z_sphere = circumcenter[2] + radius * np.cos(phi)
+            x_sphere = intersection_point[0] + radius * np.sin(phi) * np.cos(theta)
+            y_sphere = intersection_point[1] + radius * np.sin(phi) * np.sin(theta)
+            z_sphere = intersection_point[2] + radius * np.cos(phi)
 
             # Plot the sphere
             fig.add_trace(
@@ -214,8 +238,23 @@ def plotly_3d(x_points, y_points, z_points, i_val, j_val, k_val,
                     showscale=False
                 )
             )
+            x_points = []
+            y_points = []
+            z_points = []
+            for point in triangle_points:
+                x_points.append(point[0])
+                y_points.append(point[1])
+                z_points.append(point[2])
             fig.add_trace(
-                go.Scatter3d(x=x_points, y=y_points, z=z_points, mode='markers', marker=dict(size=7, color='black')))
+                go.Scatter3d(x=x_points,
+                             y=y_points,
+                             z=z_points,
+                             mode='markers',
+                             marker=dict(
+                                 size=7,
+                                 color='black')
+                             )
+            )
 
     # Update camera view
     if x_camera and y_camera and z_camera is not None:
