@@ -1,6 +1,7 @@
 import os
 import shutil
 import numpy as np
+from sympy import Line3D, Point3D
 from meshpy import tet
 import gudhi
 from tqdm import tqdm
@@ -228,3 +229,75 @@ def modify_alpha_complex(gudhi_complex, gudhi_simplex_tree, meshpy_mesh, verbose
         for item in gudhi_simplex_tree.get_filtration():
             print(item)
     return gudhi_simplex_tree
+
+
+def circumsphere_math(triangle_points):
+    midpoints = []
+    edge_lengths = []
+    for point_index in range(3):
+        temp_midpoint = []
+        for coord_index in range(3):
+            temp_midpoint.append((triangle_points[point_index][coord_index] +
+                                  triangle_points[point_index - 1][coord_index]) / 2)
+        midpoints.append(temp_midpoint)
+        edge_lengths.append(np.linalg.norm(triangle_points[point_index] - triangle_points[point_index - 1]))
+
+    longest_edge_index = edge_lengths.index(max(edge_lengths))
+    other_edges = [length for length in edge_lengths if length != edge_lengths[longest_edge_index]]
+
+    edge_vectors = [triangle_points[1] - triangle_points[0],
+                    triangle_points[2] - triangle_points[0],
+                    triangle_points[2] - triangle_points[1]]
+    right_triangle = False
+    for edge_index in range(3):
+        dot_product = np.dot(edge_vectors[edge_index], edge_vectors[edge_index - 1])
+        if np.isclose(dot_product, 0):
+            right_triangle = True
+            break
+
+    edge1 = triangle_points[1] - triangle_points[0]
+    edge2 = triangle_points[2] - triangle_points[0]
+    selected_vertex = triangle_points[0]
+    normal_vector = np.cross(edge1, edge2)
+    a, b, c = normal_vector
+    d = -np.dot(normal_vector, selected_vertex)
+
+    if (len(other_edges) == 2 and other_edges[0] == other_edges[1]) or right_triangle:
+        intersection_point = midpoints[longest_edge_index]
+    else:
+        bisectors = []
+        for i in range(3):
+            p1 = Point3D(midpoints[i])
+            p2 = Point3D(midpoints[(i + 1) % 3])
+            bisector = Line3D(p1, p2).perpendicular_line(p1.midpoint(p2))
+            bisectors.append(bisector)
+
+        intersection_point = None
+        for i in range(3):
+            for j in range(i + 1, 3):
+                if bisectors[i].direction.is_zero or bisectors[j].direction.is_zero:
+                    # Handle special cases where bisector direction is zero
+                    # For example, when triangle is parallel to xy, xz, or yz planes
+                    continue
+                if bisectors[i].intersection(bisectors[j]):
+                    intersection_point = bisectors[i].intersection(bisectors[j])[0]
+                    break
+            if intersection_point:
+                break
+
+        if intersection_point is None:
+            intersection_point = midpoints[longest_edge_index]
+
+        x, y, z = [float(coord) for coord in intersection_point.args]
+        t = (-a * x - b * y - c * z - d) / (a ** 2 + b ** 2 + c ** 2)
+        intersection_point = [x + a * t, y + b * t, z + c * t]
+
+    point_distances = []
+    for point in triangle_points:
+        point_distances.append(np.sqrt(((point[0] - intersection_point[0]) ** 2) +
+                                       ((point[1] - intersection_point[1]) ** 2) +
+                                       ((point[2] - intersection_point[2]) ** 2)
+                                       )
+                               )
+    radius = sum(point_distances) / len(point_distances)
+    return intersection_point, radius

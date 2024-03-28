@@ -36,7 +36,7 @@ for index_list in run_list:
                          save_meshpy_plotly=True,
                          show_meshpy_plotly=True,
                          save_persdia=False,
-                         save_points_persdia=True,
+                         save_points_persdia=False,
                          list_points_persdia=False,
                          final_run=True,
                          multi_run=multi_run

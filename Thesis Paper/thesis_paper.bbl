@@ -9,11 +9,11 @@ Keri~L. Anderson, Jeffrey~S. Anderson, Sourabh Palande, and Bei Wang.
   Cham, 2018. Springer International Publishing.
 \newblock \url{10.1007/978-3-030-00755-3_8}.
 
-\bibitem{chew1987constrained}
-L~Paul Chew.
-\newblock Constrained delaunay triangulations.
-\newblock In {\em Proceedings of the third annual symposium on Computational
-  geometry}, pages 215--222, 1987.
+\bibitem{chung2020smooth}
+Yu-Min Chung, Michael Hull, and Austin Lawson.
+\newblock Smooth summaries of persistence diagrams and texture classification.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition Workshops}, pages 840--841, 2020.
 
 \bibitem{deltri}
 Boris Delaunay et~al.
@@ -62,6 +62,11 @@ Tom Needham.
 \newblock Introduction to applied algebraic topology, 2019.
 \newblock \url{https://sites.google.com/site/tneedhammath/research}.
 
+\bibitem{oballe2021tofu}
+Christopher Oballe, David Boothe, Piotr~J Franaszczuk, and Vasileios Maroulas.
+\newblock Tofu: Topology functional units for deep learning.
+\newblock {\em Foundations of Data Science}, 2021.
+
 \bibitem{homology_fem_computation}
 M.~Pellikka, S.~Suuriniemi, L.~Kettunen, and C.~Geuzaine.
 \newblock Homology and cohomology computation in finite element modeling.
@@ -81,6 +86,12 @@ M.~Szilvśi-Nagy and Gy. Mátyási.
 \newblock {\em Mathematical and Computer Modelling}, 38(7):945--960, 2003.
 \newblock
   \url{https://www.sciencedirect.com/science/article/pii/S0895717703900793}.
+
+\bibitem{zheng2021topological}
+Songzhu Zheng, Yikai Zhang, Hubert Wagner, Mayank Goswami, and Chao Chen.
+\newblock Topological detection of trojaned neural networks.
+\newblock {\em Advances in Neural Information Processing Systems},
+  34:17258--17272, 2021.
 
 \bibitem{computpershom}
 Afra Zomorodian and Gunnar Carlsson.

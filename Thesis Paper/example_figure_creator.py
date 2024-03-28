@@ -7,8 +7,11 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import matplotlib.colors as mcolors
 from scipy.spatial import Delaunay, Voronoi
+import networkx as nx
 import gudhi
 import pickle
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
 def create_base_plot(persistence_points, title, max_dim=1):
@@ -681,15 +684,46 @@ def non_gabriel():
     plt.savefig(plot_save_name, bbox_inches='tight', dpi=300, format='png')
 
 
+def draw_graph(G):
+    pos = nx.planar_layout(G)
+    nx.draw_networkx_nodes(G, pos, node_color='black', node_size=500)
+    nx.draw_networkx_edges(G, pos, edge_color='black')
+
+
+def networkx_shape_graphs():
+    # Create graph for tetrahedron
+    tetrahedron = nx.Graph()
+    tetrahedron.add_edges_from([(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)])
+
+    # Create graph for cube
+    cube = nx.Graph()
+    cube.add_edges_from(
+        [(0, 1), (0, 2), (0, 4), (1, 3), (1, 5), (2, 3), (2, 6), (3, 7), (4, 5), (4, 6), (5, 7), (6, 7)])
+
+    # Plotting tetrahedron
+    plt.title('Network Graph of a Tetrahedron')
+    draw_graph(tetrahedron)
+    plot_save_name = os.getcwd() + '/networkx_tetra.png'
+    plt.savefig(plot_save_name, bbox_inches='tight', dpi=300, format='png')
+    plt.clf()
+
+    # Plotting cube
+    plt.title('Network Graph of a Cube')
+    draw_graph(cube)
+    plot_save_name = os.getcwd() + '/networkx_cube.png'
+    plt.savefig(plot_save_name, bbox_inches='tight', dpi=300, format='png')
+
+
 # x_points, y_points = create_point_cloud(scale=0.12, size=5, interval=0.1)
 # visualize_vr_complexes(x_points, y_points)
 # black_hole_example()
 # visualize_delaunay_voronoi(x_points, y_points)
-x_points, y_points = create_point_cloud(scale=0.2, size=1, interval=0.1)
-visualize_alpha_complexes(
-    x_points,
-    y_points,
-    radii=(0, 0.14, 0.23076726048056004, 0.29, 0.30678737722699123, 0.3069246020010885, 0.8045271684187107, None)
-)
+# x_points, y_points = create_point_cloud(scale=0.2, size=1, interval=0.1)
+# visualize_alpha_complexes(
+#     x_points,
+#     y_points,
+#     radii=(0, 0.14, 0.23076726048056004, 0.29, 0.30678737722699123, 0.3069246020010885, 0.8045271684187107, None)
+# )
 # gabriel()
 # non_gabriel()
+networkx_shape_graphs()

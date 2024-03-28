@@ -1,7 +1,6 @@
 import time
 from datetime import datetime
 import numpy as np
-from sympy import Line3D, Point3D
 import plotly.graph_objects as go
 import stl_mesh_math as smm
 import file_operations as fo
@@ -51,7 +50,7 @@ def list_vertices(object_tuple, unique=True):
 
 def plotly_3d(x_points, y_points, z_points, i_val, j_val, k_val,
               x_camera=1.5, y_camera=1.5, z_camera=3,
-              show_mesh=True, show_scatter=True, show_connections=False, show_lines=True, show_circumspheres=True):
+              show_mesh=True, show_scatter=True, show_connections=False, show_lines=True, show_circumspheres=False):
     layout = go.Layout(
         scene=dict(
             aspectmode='data',
@@ -135,7 +134,7 @@ def plotly_3d(x_points, y_points, z_points, i_val, j_val, k_val,
     if show_circumspheres:
         random_indices = []
         np.random.seed(420)
-        while len(random_indices) < 2:
+        while len(random_indices) < 3:
             index = np.random.randint(len(tri_points))
             if index not in random_indices:
                 if len(random_indices) == 0 or abs(index - random_indices[-1]) > 1:
@@ -143,80 +142,7 @@ def plotly_3d(x_points, y_points, z_points, i_val, j_val, k_val,
         selected_triangles = [tri_points[i] for i in random_indices]
 
         for triangle_points in selected_triangles:
-            print(triangle_points)
-            midpoints = []
-            edge_lengths = []
-            for point_index in range(3):
-                temp_midpoint = []
-                for coord_index in range(3):
-                    temp_midpoint.append((triangle_points[point_index][coord_index] +
-                                          triangle_points[point_index - 1][coord_index]) / 2)
-                midpoints.append(temp_midpoint)
-                edge_lengths.append(np.linalg.norm(triangle_points[point_index] - triangle_points[point_index - 1]))
-
-            longest_edge_index = edge_lengths.index(max(edge_lengths))
-            other_edges = [length for length in edge_lengths if length != edge_lengths[longest_edge_index]]
-
-            edge_vectors = []
-            edge_vectors.append(triangle_points[1] - triangle_points[0])
-            edge_vectors.append(triangle_points[2] - triangle_points[0])
-            edge_vectors.append(triangle_points[2] - triangle_points[1])
-            right_triangle = False
-            for edge_index in range(3):
-                dot_product = np.dot(edge_vectors[edge_index], edge_vectors[edge_index - 1])
-                print('dotproduct = ', dot_product)
-                if np.isclose(dot_product, 0):
-                    right_triangle = True
-                    print(right_triangle)
-                    break
-
-            edge1 = triangle_points[1] - triangle_points[0]
-            edge2 = triangle_points[2] - triangle_points[0]
-            selected_vertex = triangle_points[0]
-            normal_vector = np.cross(edge1, edge2)
-            a, b, c = normal_vector
-            d = -np.dot(normal_vector, selected_vertex)
-
-            if len(other_edges) == 2 and (other_edges[0] == other_edges[1] or right_triangle):
-                intersection_point = midpoints[longest_edge_index]
-            else:
-                bisectors = []
-                for i in range(3):
-                    p1 = Point3D(midpoints[i])
-                    p2 = Point3D(midpoints[(i + 1) % 3])
-                    bisector = Line3D(p1, p2).perpendicular_line(p1.midpoint(p2))
-                    bisectors.append(bisector)
-
-                intersection_point = None
-                for i in range(3):
-                    for j in range(i + 1, 3):
-                        if bisectors[i].direction.is_zero or bisectors[j].direction.is_zero:
-                            # Handle special cases where bisector direction is zero
-                            # For example, when triangle is parallel to xy, xz, or yz planes
-                            continue
-                        if bisectors[i].intersection(bisectors[j]):
-                            intersection_point = bisectors[i].intersection(bisectors[j])[0]
-                            break
-                    if intersection_point:
-                        break
-
-                if intersection_point is None:
-                    # Handle case where intersection_point is not found
-                    continue
-
-                x, y, z = [float(coord) for coord in intersection_point.args]
-                t = (-a * x - b * y - c * z - d) / (a ** 2 + b ** 2 + c ** 2)
-                intersection_point = [x + a * t, y + b * t, z + c * t]
-
-            point_distances = []
-            for point in triangle_points:
-                point_distances.append(np.sqrt(((point[0] - intersection_point[0]) ** 2) +
-                                               ((point[1] - intersection_point[1]) ** 2) +
-                                               ((point[2] - intersection_point[2]) ** 2)
-                                               )
-                                       )
-            radius = sum(point_distances)/len(point_distances)
-            print(radius)
+            intersection_point, radius = smm.circumsphere_math(triangle_points)
 
             # Create a sphere meshgrid
             space_size = 30
@@ -405,8 +331,6 @@ def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, max_
     if show_meshpy_plotly or save_meshpy_plotly:
         smm.plotly_from_meshpy(meshpy_mesh=tet_mesh, file_name=file_name, save_html=save_meshpy_plotly,
                                file_time=time_stamp, save_dir=save_dir, show_plot=show_meshpy_plotly)
-
-    input('wait')
 
     # Create and modify Alpha complex and simplex tree of meshpy mesh with gudhi
     obj3d_complex, obj3d_smplx_tree = smm.create_gudhi_elements(meshpy_mesh=tet_mesh)
