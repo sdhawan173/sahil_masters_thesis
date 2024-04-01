@@ -1,27 +1,27 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Vietoris-Rips complex of a point cloud as radius $r$ increases.\relax }}{7}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Plot of a point cloud and persistence diagram of its Vietoris-Rips complex.\relax }}{7}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Plot of a Delaunay Complex and Voronoi Cells applied to a point cloud.\relax }}{8}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces A Gabriel graph compared to a graph which cannot be Gabriel.\relax }}{9}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Progression of the Alpha complex on a point cloud and the persistence diagram of the completed complex.\relax }}{10}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Plot of a white square with a hole and persistence diagram of its Alpha Complex.\relax }}{11}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces The contents and 3D plot of an ASCII STL file for a tetrahedron.\relax }}{12}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Vietoris-Rips complex of a point cloud as radius $r$ increases.\relax }}{8}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Plot of a point cloud and persistence diagram of its Vietoris-Rips complex.\relax }}{8}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Plot of a Delaunay Complex and Voronoi Cells applied to a point cloud.\relax }}{9}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A Gabriel graph compared to a graph which cannot be Gabriel.\relax }}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Progression of the Alpha complex on a point cloud and the persistence diagram of the completed complex.\relax }}{11}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Plot of a white square with a hole and persistence diagram of its Alpha Complex.\relax }}{12}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces The contents and 3D plot of an ASCII STL file for a tetrahedron.\relax }}{13}{figure.caption.14}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The original input mesh of the data from an ASCII STL file and its Delaunay triangulation mesh.\relax }}{14}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces A triangular prism with a triangular hole, its Delaunay triangulated mesh, and the persistence diagram of the Delaunay triangulated mesh\relax }}{15}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Persistence diagram of a tetrahedron.\relax }}{18}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The original input mesh of the data from an ASCII STL file and its Delaunay triangulation mesh.\relax }}{15}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A triangular prism with a triangular hole, its Delaunay triangulated mesh, and the persistence diagram of the Delaunay triangulated mesh\relax }}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Persistence diagram of a tetrahedron.\relax }}{19}{figure.caption.19}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Cube with three pockets.\relax }}{19}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces MeshPy plots displayed with Plotly of two cubes with three CAD pocket operations that move closer together until combining.\relax }}{19}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Persistence Diagrams of two cubes with three CAD pocket operations that move closer together until combining.\relax }}{20}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces MeshPy plots displayed with Plotly of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }}{21}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Persistence Diagrams of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }}{22}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces MeshPy plots displayed with Plotly of a rectangular prism ring with a cut that decreases to the original shape.\relax }}{23}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Persistence Diagrams of a rectangular prism ring with a cut that decreases to the original shape.\relax }}{24}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Cube with three pockets.\relax }}{20}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces MeshPy plots displayed with Plotly of two cubes with three CAD pocket operations that move closer together until combining.\relax }}{21}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Persistence Diagrams of two cubes with three CAD pocket operations that move closer together until combining.\relax }}{22}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces MeshPy plots displayed with Plotly of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }}{23}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Persistence Diagrams of a cube with an equilateral triangle hole that decreases in size to the original shape.\relax }}{24}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces MeshPy plots displayed with Plotly of a rectangular prism ring with a cut that decreases to the original shape.\relax }}{25}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Persistence Diagrams of a rectangular prism ring with a cut that decreases to the original shape.\relax }}{26}{figure.caption.26}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Network graphs of a non-filled-in tetrahedron and cube.\relax }}{25}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Network graphs of a non-filled-in tetrahedron and cube.\relax }}{27}{figure.caption.27}%
 \addvspace {10\p@ }
 \contentsfinish 
 \contentsfinish 

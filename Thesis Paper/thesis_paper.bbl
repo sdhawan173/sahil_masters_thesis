@@ -9,12 +9,6 @@ Keri~L. Anderson, Jeffrey~S. Anderson, Sourabh Palande, and Bei Wang.
   Cham, 2018. Springer International Publishing.
 \newblock \url{10.1007/978-3-030-00755-3_8}.
 
-\bibitem{chung2020smooth}
-Yu-Min Chung, Michael Hull, and Austin Lawson.
-\newblock Smooth summaries of persistence diagrams and texture classification.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
-  Pattern Recognition Workshops}, pages 840--841, 2020.
-
 \bibitem{deltri}
 Boris Delaunay et~al.
 \newblock Sur la sphere vide.
@@ -66,6 +60,11 @@ Tom Needham.
 Christopher Oballe, David Boothe, Piotr~J Franaszczuk, and Vasileios Maroulas.
 \newblock Tofu: Topology functional units for deep learning.
 \newblock {\em Foundations of Data Science}, 2021.
+
+\bibitem{palfrader2015computing}
+Peter Palfrader and Martin Held.
+\newblock Computing mitered offset curves based on straight skeletons.
+\newblock {\em Computer-Aided Design and Applications}, 12(4):414--424, 2015.
 
 \bibitem{homology_fem_computation}
 M.~Pellikka, S.~Suuriniemi, L.~Kettunen, and C.~Geuzaine.

@@ -5,42 +5,42 @@ The style file: plain.bst
 Database file #1: thesis_bib.bib
 You've used 16 entries,
             2118 wiz_defined-function locations,
-            607 strings with 7218 characters,
-and the built_in function-call counts, 5740 in all, are:
-= -- 561
-> -- 292
-< -- 3
-+ -- 114
-- -- 97
-* -- 411
-:= -- 969
+            610 strings with 7170 characters,
+and the built_in function-call counts, 5591 in all, are:
+= -- 547
+> -- 287
+< -- 2
++ -- 112
+- -- 95
+* -- 408
+:= -- 957
 add.period$ -- 55
 call.type$ -- 16
-change.case$ -- 91
+change.case$ -- 90
 chr.to.int$ -- 0
 cite$ -- 16
-duplicate$ -- 203
-empty$ -- 429
-format.name$ -- 97
-if$ -- 1193
+duplicate$ -- 191
+empty$ -- 415
+format.name$ -- 95
+if$ -- 1150
 int.to.chr$ -- 0
 int.to.str$ -- 16
 missing$ -- 15
 newline$ -- 89
 num.names$ -- 34
-pop$ -- 85
+pop$ -- 79
 preamble$ -- 1
-purify$ -- 77
+purify$ -- 76
 quote$ -- 0
-skip$ -- 150
+skip$ -- 138
 stack$ -- 0
-substring$ -- 358
-swap$ -- 43
-text.length$ -- 3
+substring$ -- 351
+swap$ -- 33
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 62
 warning$ -- 0
-while$ -- 53
+while$ -- 52
 width$ -- 18
 write$ -- 189

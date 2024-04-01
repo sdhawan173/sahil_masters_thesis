@@ -4,7 +4,7 @@ import data_analysis as da
 import persdia_creator as pc
 
 file_ext = '.ast'
-meshpy_switch = 'pq'  # 'pDq'  # 'pq10a100c'  # 'pDqa25'
+meshpy_switch = 'pa'  # 'pDq'  # 'pq10a100c'  # 'pDqa25'
 max_dim = 1
 input_dir = '{}/stl_files'.format(os.getcwd())
 save_dir = '{}/code_output'.format(os.getcwd())
@@ -16,7 +16,7 @@ equil_tri = list(reversed(range(10, 19)))  # equilateral triangle triangle hole
 rect_pris = list(reversed(range(22, 34)))  # rect prism ring
 two_cubes = list(reversed(range(47, 53)))  # two cubes, three pockets each
 # run_list = [equil_tri, rect_pris, two_cubes]
-run_list = [[46]]
+run_list = [[43]]
 
 # chosen_list = []
 # # If no list of indices is provided, choose one
@@ -31,12 +31,12 @@ for index_list in run_list:
             multi_run = True
         multi_run = True
         da.run_main_code(index, file_ext, input_dir, save_dir, meshpy_switch, max_dim,
-                         save_orig_plotly=False,
+                         save_orig_plotly=True,
                          show_orig_plotly=False,
                          save_meshpy_plotly=True,
-                         show_meshpy_plotly=True,
+                         show_meshpy_plotly=False,
                          save_persdia=False,
-                         save_points_persdia=False,
+                         save_points_persdia=True,
                          list_points_persdia=False,
                          final_run=True,
                          multi_run=multi_run

@@ -11,6 +11,7 @@ import networkx as nx
 import gudhi
 import pickle
 import warnings
+
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
@@ -324,10 +325,10 @@ def black_hole_example():
     distance = np.sqrt((x - circle_center[0]) ** 2 + (y - circle_center[1]) ** 2)
 
     # Create image array with white background
-    image = np.ones((height, width), dtype=bool)
+    image = np.ones((height, width), dtype=int)
 
     # Set pixels inside the circle to black
-    image[distance <= circle_radius] = False
+    image[distance <= circle_radius] = 0
 
     plt.imshow(image, cmap='gray')
     # plt.axis('off')
@@ -690,33 +691,9 @@ def draw_graph(G):
     nx.draw_networkx_edges(G, pos, edge_color='black')
 
 
-def networkx_shape_graphs():
-    # Create graph for tetrahedron
-    tetrahedron = nx.Graph()
-    tetrahedron.add_edges_from([(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)])
-
-    # Create graph for cube
-    cube = nx.Graph()
-    cube.add_edges_from(
-        [(0, 1), (0, 2), (0, 4), (1, 3), (1, 5), (2, 3), (2, 6), (3, 7), (4, 5), (4, 6), (5, 7), (6, 7)])
-
-    # Plotting tetrahedron
-    plt.title('Network Graph of a Tetrahedron')
-    draw_graph(tetrahedron)
-    plot_save_name = os.getcwd() + '/networkx_tetra.png'
-    plt.savefig(plot_save_name, bbox_inches='tight', dpi=300, format='png')
-    plt.clf()
-
-    # Plotting cube
-    plt.title('Network Graph of a Cube')
-    draw_graph(cube)
-    plot_save_name = os.getcwd() + '/networkx_cube.png'
-    plt.savefig(plot_save_name, bbox_inches='tight', dpi=300, format='png')
-
-
 # x_points, y_points = create_point_cloud(scale=0.12, size=5, interval=0.1)
 # visualize_vr_complexes(x_points, y_points)
-# black_hole_example()
+black_hole_example()
 # visualize_delaunay_voronoi(x_points, y_points)
 # x_points, y_points = create_point_cloud(scale=0.2, size=1, interval=0.1)
 # visualize_alpha_complexes(
@@ -726,4 +703,4 @@ def networkx_shape_graphs():
 # )
 # gabriel()
 # non_gabriel()
-networkx_shape_graphs()
+# networkx_shape_graphs()

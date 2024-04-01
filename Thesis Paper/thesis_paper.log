@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  27 MAR 2024 22:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  1 APR 2024 00:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -707,8 +707,25 @@ Package: suffix 2006/07/15 1.5a Variant command support
 \c@CPT@numB=\count349
 \CPT@commandatend@toks=\toks36
 )
-\c@theorem=\count350
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 68
+(/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen276
+\ar@mcellbox=\box106
+\extrarowheight=\dimen277
+\NC@list=\toks37
+\extratabsurround=\skip70
+\backup@length=\skip71
+\ar@cellbox=\box107
+)
+\rotheadsize=\dimen278
+\c@nlinenum=\count350
+\TeXr@lab=\toks38
+)
+\c@theorem=\count351
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 69
 .
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
@@ -716,24 +733,24 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (./thesis_paper.aux)
 \openout1 = `thesis_paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -741,7 +758,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 68.
+(lastpage)             ! on input line 69.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -777,18 +794,18 @@ Package lastpage Info: Please have a look at the pageslts package at
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 68.
-Package microtype Info: Applying patch `item' on input line 68.
-Package microtype Info: Applying patch `toc' on input line 68.
-Package microtype Info: Applying patch `eqnum' on input line 68.
-Package microtype Info: Applying patch `footnote' on input line 68.
+LaTeX Info: Redefining \microtypecontext on input line 69.
+Package microtype Info: Applying patch `item' on input line 69.
+Package microtype Info: Applying patch `toc' on input line 69.
+Package microtype Info: Applying patch `eqnum' on input line 69.
+Package microtype Info: Applying patch `footnote' on input line 69.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 68.
+LaTeX Info: Redefining \showhyphens on input line 69.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -798,17 +815,17 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count351
-\scratchdimen=\dimen276
-\scratchbox=\box106
-\nofMPsegments=\count352
-\nofMParguments=\count353
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count354
-\MPscratchDim=\dimen277
-\MPnumerator=\count355
-\makeMPintoPDFobject=\count356
-\everyMPtoPDFconversion=\toks38
+\scratchcounter=\count352
+\scratchdimen=\dimen279
+\scratchbox=\box108
+\nofMPsegments=\count353
+\nofMParguments=\count354
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count355
+\MPscratchDim=\dimen280
+\MPnumerator=\count356
+\makeMPintoPDFobject=\count357
+\everyMPtoPDFconversion=\toks40
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -818,7 +835,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 68.
+Package hyperref Info: Link coloring OFF on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -829,19 +846,19 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count357
+\c@section@level=\count358
 )
-LaTeX Info: Redefining \ref on input line 68.
-LaTeX Info: Redefining \pageref on input line 68.
-LaTeX Info: Redefining \nameref on input line 68.
+LaTeX Info: Redefining \ref on input line 69.
+LaTeX Info: Redefining \pageref on input line 69.
+LaTeX Info: Redefining \nameref on input line 69.
 
 (./thesis_paper.out) (./thesis_paper.out)
 \@outlinefile=\write4
 \openout4 = `thesis_paper.out'.
 
-\c@lstlisting=\count358
+\c@lstlisting=\count359
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--70
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
 
  []
 
@@ -850,36 +867,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--70
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-3.
+4.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-3.
+4.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-73.
+74.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-73.
+74.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 73.
+(Font)              <12> on input line 74.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 73.
+(Font)              <8> on input line 74.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 73.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
+(Font)              <6> on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -888,7 +905,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -897,7 +914,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
 
  []
 
@@ -905,20 +922,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--73
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
-4.
+5.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 \makecopyrightpage
+l.75 \makecopyrightpage
                         [1
 
 ] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
 
  []
 
@@ -956,13 +973,13 @@ Chapter 1.
 [1
 
 
-] [2]
+] [2] [3]
 Chapter 2.
-[3
+[4
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-165.
+164.
  (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -970,180 +987,181 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+ [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
-[6]
-<point_cloud_plot_r0.png, id=340, 318.7107pt x 315.8199pt>
+[7]
+<point_cloud_plot_r0.png, id=344, 318.7107pt x 315.8199pt>
 File: point_cloud_plot_r0.png Graphic file (type png)
 <use point_cloud_plot_r0.png>
-Package pdftex.def Info: point_cloud_plot_r0.png  used on input line 256.
+Package pdftex.def Info: point_cloud_plot_r0.png  used on input line 255.
 (pdftex.def)             Requested size: 95.39693pt x 94.52983pt.
-<point_cloud_plot_r0_25.png, id=342, 318.7107pt x 315.8199pt>
+<point_cloud_plot_r0_25.png, id=346, 318.7107pt x 315.8199pt>
 File: point_cloud_plot_r0_25.png Graphic file (type png)
 <use point_cloud_plot_r0_25.png>
-Package pdftex.def Info: point_cloud_plot_r0_25.png  used on input line 261.
+Package pdftex.def Info: point_cloud_plot_r0_25.png  used on input line 260.
 (pdftex.def)             Requested size: 95.39693pt x 94.52983pt.
-<point_cloud_plot_r0_5.png, id=343, 318.7107pt x 315.8199pt>
+<point_cloud_plot_r0_5.png, id=347, 318.7107pt x 315.8199pt>
 File: point_cloud_plot_r0_5.png Graphic file (type png)
 <use point_cloud_plot_r0_5.png>
-Package pdftex.def Info: point_cloud_plot_r0_5.png  used on input line 266.
+Package pdftex.def Info: point_cloud_plot_r0_5.png  used on input line 265.
 (pdftex.def)             Requested size: 95.39693pt x 94.52983pt.
-<point_cloud_plot_r1_0.png, id=344, 318.7107pt x 315.8199pt>
+<point_cloud_plot_r1_0.png, id=348, 318.7107pt x 315.8199pt>
 File: point_cloud_plot_r1_0.png Graphic file (type png)
 <use point_cloud_plot_r1_0.png>
-Package pdftex.def Info: point_cloud_plot_r1_0.png  used on input line 271.
+Package pdftex.def Info: point_cloud_plot_r1_0.png  used on input line 270.
 (pdftex.def)             Requested size: 95.39693pt x 94.52983pt.
 File: point_cloud_plot_r0_5.png Graphic file (type png)
 <use point_cloud_plot_r0_5.png>
-Package pdftex.def Info: point_cloud_plot_r0_5.png  used on input line 284.
+Package pdftex.def Info: point_cloud_plot_r0_5.png  used on input line 283.
 (pdftex.def)             Requested size: 195.12767pt x 193.35825pt.
-<point_cloud_persdia_vr_0_5.png, id=346, 335.5737pt x 340.8735pt>
+<point_cloud_persdia_vr_0_5.png, id=350, 335.5737pt x 340.8735pt>
 File: point_cloud_persdia_vr_0_5.png Graphic file (type png)
 <use point_cloud_persdia_vr_0_5.png>
-Package pdftex.def Info: point_cloud_persdia_vr_0_5.png  used on input line 289
+Package pdftex.def Info: point_cloud_persdia_vr_0_5.png  used on input line 288
 .
 (pdftex.def)             Requested size: 195.12767pt x 198.21127pt.
- [7 <./point_cloud_plot_r0.png> <./point_cloud_plot_r0_25.png> <./point_cloud_p
+ [8 <./point_cloud_plot_r0.png> <./point_cloud_plot_r0_25.png> <./point_cloud_p
 lot_r0_5.png> <./point_cloud_plot_r1_0.png> <./point_cloud_persdia_vr_0_5.png>]
-<point_cloud_plot_del.png, id=362, 414.1071pt x 425.4294pt>
+<point_cloud_plot_del.png, id=366, 414.1071pt x 425.4294pt>
 File: point_cloud_plot_del.png Graphic file (type png)
 <use point_cloud_plot_del.png>
-Package pdftex.def Info: point_cloud_plot_del.png  used on input line 308.
+Package pdftex.def Info: point_cloud_plot_del.png  used on input line 307.
 (pdftex.def)             Requested size: 151.76964pt x 155.91985pt.
-<gabriel_circles.png, id=364, 386.1627pt x 315.3381pt>
+<gabriel_circles.png, id=368, 386.1627pt x 315.3381pt>
 File: gabriel_circles.png Graphic file (type png)
 <use gabriel_circles.png>
-Package pdftex.def Info: gabriel_circles.png  used on input line 321.
+Package pdftex.def Info: gabriel_circles.png  used on input line 320.
 (pdftex.def)             Requested size: 151.76964pt x 123.93407pt.
-<non_gabriel_circles.png, id=365, 394.1124pt x 315.3381pt>
+<non_gabriel_circles.png, id=369, 394.1124pt x 315.3381pt>
 File: non_gabriel_circles.png Graphic file (type png)
 <use non_gabriel_circles.png>
-Package pdftex.def Info: non_gabriel_circles.png  used on input line 325.
+Package pdftex.def Info: non_gabriel_circles.png  used on input line 324.
 (pdftex.def)             Requested size: 151.76964pt x 121.432pt.
- [8 <./point_cloud_plot_del.png>] [9 <./gabriel_circles.png> <./non_gabriel_cir
-cles.png>]
-<point_cloud_plot_alpha_0.png, id=384, 312.9291pt x 332.9238pt>
+ [9 <./point_cloud_plot_del.png>] [10 <./gabriel_circles.png> <./non_gabriel_ci
+rcles.png>]
+<point_cloud_plot_alpha_0.png, id=390, 312.9291pt x 332.9238pt>
 File: point_cloud_plot_alpha_0.png Graphic file (type png)
 <use point_cloud_plot_alpha_0.png>
-Package pdftex.def Info: point_cloud_plot_alpha_0.png  used on input line 346.
+Package pdftex.def Info: point_cloud_plot_alpha_0.png  used on input line 345.
 (pdftex.def)             Requested size: 112.73882pt x 119.94391pt.
-<point_cloud_plot_alpha_1.png, id=385, 312.9291pt x 332.9238pt>
+<point_cloud_plot_alpha_1.png, id=391, 312.9291pt x 332.9238pt>
 File: point_cloud_plot_alpha_1.png Graphic file (type png)
 <use point_cloud_plot_alpha_1.png>
-Package pdftex.def Info: point_cloud_plot_alpha_1.png  used on input line 349.
+Package pdftex.def Info: point_cloud_plot_alpha_1.png  used on input line 348.
 (pdftex.def)             Requested size: 112.73882pt x 119.94391pt.
-<point_cloud_plot_alpha_2.png, id=386, 312.9291pt x 332.9238pt>
+<point_cloud_plot_alpha_2.png, id=392, 312.9291pt x 332.9238pt>
 File: point_cloud_plot_alpha_2.png Graphic file (type png)
 <use point_cloud_plot_alpha_2.png>
-Package pdftex.def Info: point_cloud_plot_alpha_2.png  used on input line 352.
+Package pdftex.def Info: point_cloud_plot_alpha_2.png  used on input line 351.
 (pdftex.def)             Requested size: 112.73882pt x 119.94391pt.
-<point_cloud_plot_alpha_3.png, id=387, 312.9291pt x 332.9238pt>
+<point_cloud_plot_alpha_3.png, id=393, 312.9291pt x 332.9238pt>
 File: point_cloud_plot_alpha_3.png Graphic file (type png)
 <use point_cloud_plot_alpha_3.png>
-Package pdftex.def Info: point_cloud_plot_alpha_3.png  used on input line 355.
+Package pdftex.def Info: point_cloud_plot_alpha_3.png  used on input line 354.
 (pdftex.def)             Requested size: 112.73882pt x 119.94391pt.
-<point_cloud_plot_alpha_4.png, id=388, 312.9291pt x 332.9238pt>
+<point_cloud_plot_alpha_4.png, id=394, 312.9291pt x 332.9238pt>
 File: point_cloud_plot_alpha_4.png Graphic file (type png)
 <use point_cloud_plot_alpha_4.png>
-Package pdftex.def Info: point_cloud_plot_alpha_4.png  used on input line 358.
+Package pdftex.def Info: point_cloud_plot_alpha_4.png  used on input line 357.
 (pdftex.def)             Requested size: 112.73882pt x 119.94391pt.
-<point_cloud_plot_alpha_5.png, id=389, 312.9291pt x 332.9238pt>
+<point_cloud_plot_alpha_5.png, id=395, 312.9291pt x 332.9238pt>
 File: point_cloud_plot_alpha_5.png Graphic file (type png)
 <use point_cloud_plot_alpha_5.png>
-Package pdftex.def Info: point_cloud_plot_alpha_5.png  used on input line 361.
+Package pdftex.def Info: point_cloud_plot_alpha_5.png  used on input line 360.
 (pdftex.def)             Requested size: 112.73882pt x 119.94391pt.
-<point_cloud_plot_alpha_6.png, id=390, 312.9291pt x 332.9238pt>
+<point_cloud_plot_alpha_6.png, id=396, 312.9291pt x 332.9238pt>
 File: point_cloud_plot_alpha_6.png Graphic file (type png)
 <use point_cloud_plot_alpha_6.png>
-Package pdftex.def Info: point_cloud_plot_alpha_6.png  used on input line 364.
+Package pdftex.def Info: point_cloud_plot_alpha_6.png  used on input line 363.
 (pdftex.def)             Requested size: 112.73882pt x 119.94391pt.
-<point_cloud_plot_alpha_voronoi.png, id=391, 312.9291pt x 330.7557pt>
+<point_cloud_plot_alpha_voronoi.png, id=397, 312.9291pt x 330.7557pt>
 File: point_cloud_plot_alpha_voronoi.png Graphic file (type png)
 <use point_cloud_plot_alpha_voronoi.png>
 Package pdftex.def Info: point_cloud_plot_alpha_voronoi.png  used on input line
- 367.
+ 366.
 (pdftex.def)             Requested size: 112.73882pt x 119.1628pt.
-<point_cloud_persdia_alpha_voronoi.png, id=392, 342.078pt x 340.3917pt>
+<point_cloud_persdia_alpha_voronoi.png, id=398, 342.078pt x 340.3917pt>
 File: point_cloud_persdia_alpha_voronoi.png Graphic file (type png)
 <use point_cloud_persdia_alpha_voronoi.png>
 Package pdftex.def Info: point_cloud_persdia_alpha_voronoi.png  used on input l
-ine 370.
+ine 369.
 (pdftex.def)             Requested size: 112.73882pt x 112.18417pt.
- [10 <./point_cloud_plot_alpha_0.png> <./point_cloud_plot_alpha_1.png> <./point
+ [11 <./point_cloud_plot_alpha_0.png> <./point_cloud_plot_alpha_1.png> <./point
 _cloud_plot_alpha_2.png> <./point_cloud_plot_alpha_3.png> <./point_cloud_plot_a
 lpha_4.png> <./point_cloud_plot_alpha_5.png> <./point_cloud_plot_alpha_6.png> <
 ./point_cloud_plot_alpha_voronoi.png> <./point_cloud_persdia_alpha_voronoi.png>
 ]
-<image_data_plot.png, id=408, 301.125pt x 313.17pt>
+<image_data_plot.png, id=414, 301.125pt x 313.17pt>
 File: image_data_plot.png Graphic file (type png)
 <use image_data_plot.png>
-Package pdftex.def Info: image_data_plot.png  used on input line 387.
+Package pdftex.def Info: image_data_plot.png  used on input line 386.
 (pdftex.def)             Requested size: 195.12767pt x 202.94164pt.
-<image_data_persdia.png, id=409, 355.0866pt x 340.3917pt>
+<image_data_persdia.png, id=415, 355.0866pt x 340.3917pt>
 File: image_data_persdia.png Graphic file (type png)
 <use image_data_persdia.png>
-Package pdftex.def Info: image_data_persdia.png  used on input line 391.
+Package pdftex.def Info: image_data_persdia.png  used on input line 390.
 (pdftex.def)             Requested size: 216.81pt x 207.84119pt.
- [11 <./image_data_plot.png> <./image_data_persdia.png>]
-<tetrahedron_ast_code_and_plot.png, id=418, 733.23938pt x 388.45125pt>
+ [12 <./image_data_plot.png> <./image_data_persdia.png>]
+<tetrahedron_ast_code_and_plot.png, id=424, 733.23938pt x 388.45125pt>
 File: tetrahedron_ast_code_and_plot.png Graphic file (type png)
 <use tetrahedron_ast_code_and_plot.png>
 Package pdftex.def Info: tetrahedron_ast_code_and_plot.png  used on input line 
-403.
+402.
 (pdftex.def)             Requested size: 395.61891pt x 209.58255pt.
- [12 <./tetrahedron_ast_code_and_plot.png>]
+
+[13 <./tetrahedron_ast_code_and_plot.png>]
 Chapter 3.
 <Final Run, (triangular prism - triangle hole) ast plotly screenshot circumsphe
-re.png, id=427, 984.67876pt x 610.28pt>
+re.png, id=433, 984.67876pt x 610.28pt>
 File: Final Run, (triangular prism - triangle hole) ast plotly screenshot circu
 msphere.png Graphic file (type png)
 <use Final Run, (triangular prism - triangle hole) ast plotly screenshot circum
 sphere.png>
 Package pdftex.def Info: Final Run, (triangular prism - triangle hole) ast plot
-ly screenshot circumsphere.png  used on input line 426.
+ly screenshot circumsphere.png  used on input line 425.
 (pdftex.def)             Requested size: 212.47618pt x 131.68256pt.
 <Final Run, (triangular prism - triangle hole) meshpy screenshot circumsphere.p
-ng, id=428, 984.67876pt x 610.28pt>
+ng, id=434, 984.67876pt x 610.28pt>
 File: Final Run, (triangular prism - triangle hole) meshpy screenshot circumsph
 ere.png Graphic file (type png)
 <use Final Run, (triangular prism - triangle hole) meshpy screenshot circumsphe
 re.png>
 Package pdftex.def Info: Final Run, (triangular prism - triangle hole) meshpy s
-creenshot circumsphere.png  used on input line 432.
+creenshot circumsphere.png  used on input line 431.
 (pdftex.def)             Requested size: 212.47618pt x 131.68256pt.
-[13
+[14
 
-] [14 <./Final Run, (triangular prism - triangle hole) ast plotly screenshot ci
+] [15 <./Final Run, (triangular prism - triangle hole) ast plotly screenshot ci
 rcumsphere.png> <./Final Run, (triangular prism - triangle hole) meshpy screens
 hot circumsphere.png>]
-<Final Run, (triangular prism - triangle hole) ast plotly screenshot.png, id=44
-5, 676.5275pt x 685.56125pt>
+<Final Run, (triangular prism - triangle hole) ast plotly screenshot.png, id=45
+2, 676.5275pt x 685.56125pt>
 File: Final Run, (triangular prism - triangle hole) ast plotly screenshot.png G
 raphic file (type png)
 <use Final Run, (triangular prism - triangle hole) ast plotly screenshot.png>
 Package pdftex.def Info: Final Run, (triangular prism - triangle hole) ast plot
-ly screenshot.png  used on input line 456.
+ly screenshot.png  used on input line 455.
 (pdftex.def)             Requested size: 130.08733pt x 131.81665pt.
-<Final Run, (triangular prism - triangle hole) meshpy screenshot.png, id=446, 6
+<Final Run, (triangular prism - triangle hole) meshpy screenshot.png, id=453, 6
 76.5275pt x 685.56125pt>
 File: Final Run, (triangular prism - triangle hole) meshpy screenshot.png Graph
 ic file (type png)
 <use Final Run, (triangular prism - triangle hole) meshpy screenshot.png>
 Package pdftex.def Info: Final Run, (triangular prism - triangle hole) meshpy s
-creenshot.png  used on input line 463.
+creenshot.png  used on input line 462.
 (pdftex.def)             Requested size: 130.08733pt x 131.81665pt.
-<Final Run, (triangular prism - triangle hole) persdia.png, id=447, 335.5737pt 
+<Final Run, (triangular prism - triangle hole) persdia.png, id=454, 335.5737pt 
 x 340.3917pt>
 File: Final Run, (triangular prism - triangle hole) persdia.png Graphic file (t
 ype png)
 <use Final Run, (triangular prism - triangle hole) persdia.png>
 Package pdftex.def Info: Final Run, (triangular prism - triangle hole) persdia.
-png  used on input line 470.
+png  used on input line 469.
 (pdftex.def)             Requested size: 130.08733pt x 131.95755pt.
- [15 <./Final Run, (triangular prism - triangle hole) ast plotly screenshot.png
+ [16 <./Final Run, (triangular prism - triangle hole) ast plotly screenshot.png
 > <./Final Run, (triangular prism - triangle hole) meshpy screenshot.png> <./Fi
 nal Run, (triangular prism - triangle hole) persdia.png>]
 \openout3 = `thesis_paper-1.cpt'.
@@ -1151,9 +1169,9 @@ nal Run, (triangular prism - triangle hole) persdia.png>]
  (./thesis_paper-1.cpt)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 495.
+(hyperref)                removing `\@ifnextchar' on input line 494.
 
-[16]
+[17]
 \openout3 = `thesis_paper-2.cpt'.
 
  (./thesis_paper-2.cpt)
@@ -1165,303 +1183,309 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
  (./thesis_paper-4.cpt)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 523.
+(hyperref)                removing `\@ifnextchar' on input line 520.
 
-[17]
-<tetrahedron persdia.png, id=478, 346.6551pt x 340.3917pt>
+[18]
+<tetrahedron persdia.png, id=485, 346.6551pt x 340.3917pt>
 File: tetrahedron persdia.png Graphic file (type png)
 <use tetrahedron persdia.png>
-Package pdftex.def Info: tetrahedron persdia.png  used on input line 530.
-(pdftex.def)             Requested size: 130.08733pt x 127.74005pt.
- [18 <./tetrahedron persdia.png>]
+Package pdftex.def Info: tetrahedron persdia.png  used on input line 527.
+(pdftex.def)             Requested size: 195.12767pt x 191.60489pt.
+ [19 <./tetrahedron persdia.png>]
 Chapter 4.
-<one cube three pockets each.png, id=485, 527.9725pt x 456.70625pt>
+<one cube three pockets each.png, id=493, 527.9725pt x 456.70625pt>
 File: one cube three pockets each.png Graphic file (type png)
 <use one cube three pockets each.png>
 Package pdftex.def Info: one cube three pockets each.png  used on input line 54
-4.
-(pdftex.def)             Requested size: 91.89708pt x 79.49744pt.
+0.
+(pdftex.def)             Requested size: 195.12767pt x 168.78354pt.
+[20
+
+ <./one cube three pockets each.png>]
 <Final Run, (two cubes, three pockets each, 50 mm apart) MeshPy plotly screensh
-ots.png, id=486, 1294.8375pt x 391.4625pt>
+ots.png, id=498, 1294.8375pt x 391.4625pt>
 File: Final Run, (two cubes, three pockets each, 50 mm apart) MeshPy plotly scr
 eenshots.png Graphic file (type png)
 <use Final Run, (two cubes, three pockets each, 50 mm apart) MeshPy plotly scre
 enshots.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 50 mm apart
-) MeshPy plotly screenshots.png  used on input line 555.
-(pdftex.def)             Requested size: 179.28049pt x 54.2025pt.
+) MeshPy plotly screenshots.png  used on input line 550.
+(pdftex.def)             Requested size: 209.15399pt x 63.23624pt.
 <Final Run, (two cubes, three pockets each, 40 mm apart) MeshPy plotly screensh
-ots.png, id=487, 1294.8375pt x 391.4625pt>
+ots.png, id=499, 1294.8375pt x 391.4625pt>
 File: Final Run, (two cubes, three pockets each, 40 mm apart) MeshPy plotly scr
 eenshots.png Graphic file (type png)
 <use Final Run, (two cubes, three pockets each, 40 mm apart) MeshPy plotly scre
 enshots.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 40 mm apart
-) MeshPy plotly screenshots.png  used on input line 556.
-(pdftex.def)             Requested size: 179.28049pt x 54.2025pt.
+) MeshPy plotly screenshots.png  used on input line 551.
+(pdftex.def)             Requested size: 209.15399pt x 63.23624pt.
 <Final Run, (two cubes, three pockets each, 30 mm apart) MeshPy plotly screensh
-ots.png, id=488, 1294.8375pt x 391.4625pt>
+ots.png, id=500, 1294.8375pt x 391.4625pt>
 File: Final Run, (two cubes, three pockets each, 30 mm apart) MeshPy plotly scr
 eenshots.png Graphic file (type png)
 <use Final Run, (two cubes, three pockets each, 30 mm apart) MeshPy plotly scre
 enshots.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 30 mm apart
-) MeshPy plotly screenshots.png  used on input line 558.
-(pdftex.def)             Requested size: 179.28049pt x 54.2025pt.
+) MeshPy plotly screenshots.png  used on input line 553.
+(pdftex.def)             Requested size: 209.15399pt x 63.23624pt.
 <Final Run, (two cubes, three pockets each, 20 mm apart) MeshPy plotly screensh
-ots.png, id=489, 1294.8375pt x 391.4625pt>
+ots.png, id=501, 1294.8375pt x 391.4625pt>
 File: Final Run, (two cubes, three pockets each, 20 mm apart) MeshPy plotly scr
 eenshots.png Graphic file (type png)
 <use Final Run, (two cubes, three pockets each, 20 mm apart) MeshPy plotly scre
 enshots.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 20 mm apart
-) MeshPy plotly screenshots.png  used on input line 559.
-(pdftex.def)             Requested size: 179.28049pt x 54.2025pt.
+) MeshPy plotly screenshots.png  used on input line 554.
+(pdftex.def)             Requested size: 209.15399pt x 63.23624pt.
 <Final Run, (two cubes, three pockets each, 10 mm apart) MeshPy plotly screensh
-ots.png, id=490, 1294.8375pt x 391.4625pt>
+ots.png, id=502, 1294.8375pt x 391.4625pt>
 File: Final Run, (two cubes, three pockets each, 10 mm apart) MeshPy plotly scr
 eenshots.png Graphic file (type png)
 <use Final Run, (two cubes, three pockets each, 10 mm apart) MeshPy plotly scre
 enshots.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 10 mm apart
-) MeshPy plotly screenshots.png  used on input line 561.
-(pdftex.def)             Requested size: 179.28049pt x 54.2025pt.
+) MeshPy plotly screenshots.png  used on input line 556.
+(pdftex.def)             Requested size: 209.15399pt x 63.23624pt.
 <Final Run, (two cubes, three pockets each, 00 mm apart) MeshPy plotly screensh
-ots.png, id=491, 1294.8375pt x 391.4625pt>
+ots.png, id=503, 1294.8375pt x 391.4625pt>
 File: Final Run, (two cubes, three pockets each, 00 mm apart) MeshPy plotly scr
 eenshots.png Graphic file (type png)
 <use Final Run, (two cubes, three pockets each, 00 mm apart) MeshPy plotly scre
 enshots.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 00 mm apart
-) MeshPy plotly screenshots.png  used on input line 562.
-(pdftex.def)             Requested size: 179.28049pt x 54.2025pt.
-<Final Run, (two cubes, three pockets each, 50 mm apart) persdia.png, id=492, 3
+) MeshPy plotly screenshots.png  used on input line 557.
+(pdftex.def)             Requested size: 209.15399pt x 63.23624pt.
+
+Overfull \hbox (10.28801pt too wide) in paragraph at lines 548--560
+ [] 
+ []
+
+<Final Run, (two cubes, three pockets each, 50 mm apart) persdia.png, id=504, 3
 67.8543pt x 342.3189pt>
 File: Final Run, (two cubes, three pockets each, 50 mm apart) persdia.png Graph
 ic file (type png)
 <use Final Run, (two cubes, three pockets each, 50 mm apart) persdia.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 50 mm apart
-) persdia.png  used on input line 573.
+) persdia.png  used on input line 568.
 (pdftex.def)             Requested size: 180.67499pt x 168.13469pt.
-<Final Run, (two cubes, three pockets each, 40 mm apart) persdia.png, id=493, 3
+<Final Run, (two cubes, three pockets each, 40 mm apart) persdia.png, id=505, 3
 64.7226pt x 342.3189pt>
 File: Final Run, (two cubes, three pockets each, 40 mm apart) persdia.png Graph
 ic file (type png)
 <use Final Run, (two cubes, three pockets each, 40 mm apart) persdia.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 40 mm apart
-) persdia.png  used on input line 574.
+) persdia.png  used on input line 569.
 (pdftex.def)             Requested size: 180.67499pt x 169.57634pt.
-<Final Run, (two cubes, three pockets each, 30 mm apart) persdia.png, id=494, 3
+<Final Run, (two cubes, three pockets each, 30 mm apart) persdia.png, id=506, 3
 64.7226pt x 342.3189pt>
 File: Final Run, (two cubes, three pockets each, 30 mm apart) persdia.png Graph
 ic file (type png)
 <use Final Run, (two cubes, three pockets each, 30 mm apart) persdia.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 30 mm apart
-) persdia.png  used on input line 575.
+) persdia.png  used on input line 570.
 (pdftex.def)             Requested size: 180.67499pt x 169.57634pt.
-<Final Run, (two cubes, three pockets each, 20 mm apart) persdia.png, id=495, 3
+<Final Run, (two cubes, three pockets each, 20 mm apart) persdia.png, id=507, 3
 64.7226pt x 342.3189pt>
 File: Final Run, (two cubes, three pockets each, 20 mm apart) persdia.png Graph
 ic file (type png)
 <use Final Run, (two cubes, three pockets each, 20 mm apart) persdia.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 20 mm apart
-) persdia.png  used on input line 576.
+) persdia.png  used on input line 571.
 (pdftex.def)             Requested size: 180.67499pt x 169.57634pt.
-<Final Run, (two cubes, three pockets each, 10 mm apart) persdia.png, id=496, 3
+<Final Run, (two cubes, three pockets each, 10 mm apart) persdia.png, id=508, 3
 64.7226pt x 342.3189pt>
 File: Final Run, (two cubes, three pockets each, 10 mm apart) persdia.png Graph
 ic file (type png)
 <use Final Run, (two cubes, three pockets each, 10 mm apart) persdia.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 10 mm apart
-) persdia.png  used on input line 577.
+) persdia.png  used on input line 572.
 (pdftex.def)             Requested size: 180.67499pt x 169.57634pt.
-<Final Run, (two cubes, three pockets each, 00 mm apart) persdia.png, id=497, 3
+<Final Run, (two cubes, three pockets each, 00 mm apart) persdia.png, id=509, 3
 64.7226pt x 342.3189pt>
 File: Final Run, (two cubes, three pockets each, 00 mm apart) persdia.png Graph
 ic file (type png)
 <use Final Run, (two cubes, three pockets each, 00 mm apart) persdia.png>
 Package pdftex.def Info: Final Run, (two cubes, three pockets each, 00 mm apart
-) persdia.png  used on input line 578.
+) persdia.png  used on input line 573.
 (pdftex.def)             Requested size: 180.67499pt x 169.57634pt.
-[19
-
- <./one cube three pockets each.png> <./Final Run, (two cubes, three pockets ea
-ch, 50 mm apart) meshpy plotly screenshots.png> <./Final Run, (two cubes, three
- pockets each, 40 mm apart) meshpy plotly screenshots.png> <./Final Run, (two c
-ubes, three pockets each, 30 mm apart) meshpy plotly screenshots.png> <./Final 
-Run, (two cubes, three pockets each, 20 mm apart) meshpy plotly screenshots.png
-> <./Final Run, (two cubes, three pockets each, 10 mm apart) meshpy plotly scre
-enshots.png> <./Final Run, (two cubes, three pockets each, 00 mm apart) meshpy 
-plotly screenshots.png>] [20 <./Final Run, (two cubes, three pockets each, 50 m
-m apart) persdia.png> <./Final Run, (two cubes, three pockets each, 40 mm apart
-) persdia.png> <./Final Run, (two cubes, three pockets each, 30 mm apart) persd
-ia.png> <./Final Run, (two cubes, three pockets each, 20 mm apart) persdia.png>
- <./Final Run, (two cubes, three pockets each, 10 mm apart) persdia.png> <./Fin
-al Run, (two cubes, three pockets each, 00 mm apart) persdia.png>]
+[21 <./Final Run, (two cubes, three pockets each, 50 mm apart) meshpy plotly sc
+reenshots.png> <./Final Run, (two cubes, three pockets each, 40 mm apart) meshp
+y plotly screenshots.png> <./Final Run, (two cubes, three pockets each, 30 mm a
+part) meshpy plotly screenshots.png> <./Final Run, (two cubes, three pockets ea
+ch, 20 mm apart) meshpy plotly screenshots.png> <./Final Run, (two cubes, three
+ pockets each, 10 mm apart) meshpy plotly screenshots.png> <./Final Run, (two c
+ubes, three pockets each, 00 mm apart) meshpy plotly screenshots.png>] [22 <./F
+inal Run, (two cubes, three pockets each, 50 mm apart) persdia.png> <./Final Ru
+n, (two cubes, three pockets each, 40 mm apart) persdia.png> <./Final Run, (two
+ cubes, three pockets each, 30 mm apart) persdia.png> <./Final Run, (two cubes,
+ three pockets each, 20 mm apart) persdia.png> <./Final Run, (two cubes, three 
+pockets each, 10 mm apart) persdia.png> <./Final Run, (two cubes, three pockets
+ each, 00 mm apart) persdia.png>]
 <Final Run, (cube - equilateral triangle hole 8 mm) MeshPy plotly screenshot.pn
-g, id=512, 425.59pt x 403.5075pt>
+g, id=525, 425.59pt x 403.5075pt>
 File: Final Run, (cube - equilateral triangle hole 8 mm) MeshPy plotly screensh
 ot.png Graphic file (type png)
 <use Final Run, (cube - equilateral triangle hole 8 mm) MeshPy plotly screensho
 t.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 8 mm) Mes
-hPy plotly screenshot.png  used on input line 593.
+hPy plotly screenshot.png  used on input line 588.
 (pdftex.def)             Requested size: 126.47249pt x 119.90797pt.
 <Final Run, (cube - equilateral triangle hole 7 mm) MeshPy plotly screenshot.pn
-g, id=513, 425.59pt x 403.5075pt>
+g, id=526, 425.59pt x 403.5075pt>
 File: Final Run, (cube - equilateral triangle hole 7 mm) MeshPy plotly screensh
 ot.png Graphic file (type png)
 <use Final Run, (cube - equilateral triangle hole 7 mm) MeshPy plotly screensho
 t.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 7 mm) Mes
-hPy plotly screenshot.png  used on input line 594.
+hPy plotly screenshot.png  used on input line 589.
 (pdftex.def)             Requested size: 126.47249pt x 119.90797pt.
 <Final Run, (cube - equilateral triangle hole 6 mm) MeshPy plotly screenshot.pn
-g, id=514, 425.59pt x 403.5075pt>
+g, id=527, 425.59pt x 403.5075pt>
 File: Final Run, (cube - equilateral triangle hole 6 mm) MeshPy plotly screensh
 ot.png Graphic file (type png)
 <use Final Run, (cube - equilateral triangle hole 6 mm) MeshPy plotly screensho
 t.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 6 mm) Mes
-hPy plotly screenshot.png  used on input line 595.
+hPy plotly screenshot.png  used on input line 590.
 (pdftex.def)             Requested size: 126.47249pt x 119.90797pt.
 <Final Run, (cube - equilateral triangle hole 5 mm) MeshPy plotly screenshot.pn
-g, id=515, 425.59pt x 403.5075pt>
+g, id=528, 425.59pt x 403.5075pt>
 File: Final Run, (cube - equilateral triangle hole 5 mm) MeshPy plotly screensh
 ot.png Graphic file (type png)
 <use Final Run, (cube - equilateral triangle hole 5 mm) MeshPy plotly screensho
 t.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 5 mm) Mes
-hPy plotly screenshot.png  used on input line 597.
+hPy plotly screenshot.png  used on input line 592.
 (pdftex.def)             Requested size: 126.47249pt x 119.90797pt.
 <Final Run, (cube - equilateral triangle hole 4 mm) MeshPy plotly screenshot.pn
-g, id=516, 425.59pt x 403.5075pt>
+g, id=529, 425.59pt x 403.5075pt>
 File: Final Run, (cube - equilateral triangle hole 4 mm) MeshPy plotly screensh
 ot.png Graphic file (type png)
 <use Final Run, (cube - equilateral triangle hole 4 mm) MeshPy plotly screensho
 t.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 4 mm) Mes
-hPy plotly screenshot.png  used on input line 598.
+hPy plotly screenshot.png  used on input line 593.
 (pdftex.def)             Requested size: 126.47249pt x 119.90797pt.
 <Final Run, (cube - equilateral triangle hole 3 mm) MeshPy plotly screenshot.pn
-g, id=517, 425.59pt x 403.5075pt>
+g, id=530, 425.59pt x 403.5075pt>
 File: Final Run, (cube - equilateral triangle hole 3 mm) MeshPy plotly screensh
 ot.png Graphic file (type png)
 <use Final Run, (cube - equilateral triangle hole 3 mm) MeshPy plotly screensho
 t.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 3 mm) Mes
-hPy plotly screenshot.png  used on input line 599.
+hPy plotly screenshot.png  used on input line 594.
 (pdftex.def)             Requested size: 126.47249pt x 119.90797pt.
 <Final Run, (cube - equilateral triangle hole 2 mm) MeshPy plotly screenshot.pn
-g, id=518, 425.59pt x 403.5075pt>
+g, id=531, 425.59pt x 403.5075pt>
 File: Final Run, (cube - equilateral triangle hole 2 mm) MeshPy plotly screensh
 ot.png Graphic file (type png)
 <use Final Run, (cube - equilateral triangle hole 2 mm) MeshPy plotly screensho
 t.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 2 mm) Mes
-hPy plotly screenshot.png  used on input line 601.
+hPy plotly screenshot.png  used on input line 596.
 (pdftex.def)             Requested size: 126.47249pt x 119.90797pt.
 <Final Run, (cube - equilateral triangle hole 1 mm) MeshPy plotly screenshot.pn
-g, id=519, 425.59pt x 403.5075pt>
+g, id=532, 425.59pt x 403.5075pt>
 File: Final Run, (cube - equilateral triangle hole 1 mm) MeshPy plotly screensh
 ot.png Graphic file (type png)
 <use Final Run, (cube - equilateral triangle hole 1 mm) MeshPy plotly screensho
 t.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 1 mm) Mes
-hPy plotly screenshot.png  used on input line 602.
+hPy plotly screenshot.png  used on input line 597.
 (pdftex.def)             Requested size: 126.47249pt x 119.90797pt.
 <Final Run, (cube - equilateral triangle hole 0 mm) MeshPy plotly screenshot.pn
-g, id=520, 425.59pt x 403.5075pt>
+g, id=533, 425.59pt x 403.5075pt>
 File: Final Run, (cube - equilateral triangle hole 0 mm) MeshPy plotly screensh
 ot.png Graphic file (type png)
 <use Final Run, (cube - equilateral triangle hole 0 mm) MeshPy plotly screensho
 t.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 0 mm) Mes
-hPy plotly screenshot.png  used on input line 603.
+hPy plotly screenshot.png  used on input line 598.
 (pdftex.def)             Requested size: 126.47249pt x 119.90797pt.
 
-Overfull \hbox (27.12782pt too wide) in paragraph at lines 591--606
+Overfull \hbox (29.52779pt too wide) in paragraph at lines 586--601
  [] 
  []
 
-<Final Run, (cube - equilateral triangle hole 8 mm) persdia.png, id=521, 342.07
+<Final Run, (cube - equilateral triangle hole 8 mm) persdia.png, id=534, 342.07
 8pt x 340.3917pt>
 File: Final Run, (cube - equilateral triangle hole 8 mm) persdia.png Graphic fi
 le (type png)
 <use Final Run, (cube - equilateral triangle hole 8 mm) persdia.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 8 mm) per
-sdia.png  used on input line 614.
+sdia.png  used on input line 609.
 (pdftex.def)             Requested size: 135.50624pt x 134.84018pt.
-<Final Run, (cube - equilateral triangle hole 7 mm) persdia.png, id=522, 344.00
+<Final Run, (cube - equilateral triangle hole 7 mm) persdia.png, id=535, 344.00
 52pt x 342.3189pt>
 File: Final Run, (cube - equilateral triangle hole 7 mm) persdia.png Graphic fi
 le (type png)
 <use Final Run, (cube - equilateral triangle hole 7 mm) persdia.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 7 mm) per
-sdia.png  used on input line 615.
+sdia.png  used on input line 610.
 (pdftex.def)             Requested size: 135.50624pt x 134.841pt.
-<Final Run, (cube - equilateral triangle hole 6 mm) persdia.png, id=523, 344.00
+<Final Run, (cube - equilateral triangle hole 6 mm) persdia.png, id=536, 344.00
 52pt x 342.3189pt>
 File: Final Run, (cube - equilateral triangle hole 6 mm) persdia.png Graphic fi
 le (type png)
 <use Final Run, (cube - equilateral triangle hole 6 mm) persdia.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 6 mm) per
-sdia.png  used on input line 616.
+sdia.png  used on input line 611.
 (pdftex.def)             Requested size: 135.50624pt x 134.841pt.
-<Final Run, (cube - equilateral triangle hole 5 mm) persdia.png, id=524, 344.00
+<Final Run, (cube - equilateral triangle hole 5 mm) persdia.png, id=537, 344.00
 52pt x 342.3189pt>
 File: Final Run, (cube - equilateral triangle hole 5 mm) persdia.png Graphic fi
 le (type png)
 <use Final Run, (cube - equilateral triangle hole 5 mm) persdia.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 5 mm) per
-sdia.png  used on input line 617.
+sdia.png  used on input line 612.
 (pdftex.def)             Requested size: 135.50624pt x 134.841pt.
-<Final Run, (cube - equilateral triangle hole 4 mm) persdia.png, id=525, 344.00
+<Final Run, (cube - equilateral triangle hole 4 mm) persdia.png, id=538, 344.00
 52pt x 342.3189pt>
 File: Final Run, (cube - equilateral triangle hole 4 mm) persdia.png Graphic fi
 le (type png)
 <use Final Run, (cube - equilateral triangle hole 4 mm) persdia.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 4 mm) per
-sdia.png  used on input line 618.
+sdia.png  used on input line 613.
 (pdftex.def)             Requested size: 135.50624pt x 134.841pt.
-<Final Run, (cube - equilateral triangle hole 3 mm) persdia.png, id=526, 344.00
+<Final Run, (cube - equilateral triangle hole 3 mm) persdia.png, id=539, 344.00
 52pt x 342.3189pt>
 File: Final Run, (cube - equilateral triangle hole 3 mm) persdia.png Graphic fi
 le (type png)
 <use Final Run, (cube - equilateral triangle hole 3 mm) persdia.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 3 mm) per
-sdia.png  used on input line 619.
+sdia.png  used on input line 614.
 (pdftex.def)             Requested size: 135.50624pt x 134.841pt.
-<Final Run, (cube - equilateral triangle hole 2 mm) persdia.png, id=527, 344.00
+<Final Run, (cube - equilateral triangle hole 2 mm) persdia.png, id=540, 344.00
 52pt x 342.3189pt>
 File: Final Run, (cube - equilateral triangle hole 2 mm) persdia.png Graphic fi
 le (type png)
 <use Final Run, (cube - equilateral triangle hole 2 mm) persdia.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 2 mm) per
-sdia.png  used on input line 620.
+sdia.png  used on input line 615.
 (pdftex.def)             Requested size: 135.50624pt x 134.841pt.
-<Final Run, (cube - equilateral triangle hole 1 mm) persdia.png, id=528, 344.00
+<Final Run, (cube - equilateral triangle hole 1 mm) persdia.png, id=541, 344.00
 52pt x 342.3189pt>
 File: Final Run, (cube - equilateral triangle hole 1 mm) persdia.png Graphic fi
 le (type png)
 <use Final Run, (cube - equilateral triangle hole 1 mm) persdia.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 1 mm) per
-sdia.png  used on input line 621.
+sdia.png  used on input line 616.
 (pdftex.def)             Requested size: 135.50624pt x 134.841pt.
-<Final Run, (cube - equilateral triangle hole 0 mm) persdia.png, id=529, 344.00
+<Final Run, (cube - equilateral triangle hole 0 mm) persdia.png, id=542, 344.00
 52pt x 342.3189pt>
 File: Final Run, (cube - equilateral triangle hole 0 mm) persdia.png Graphic fi
 le (type png)
 <use Final Run, (cube - equilateral triangle hole 0 mm) persdia.png>
 Package pdftex.def Info: Final Run, (cube - equilateral triangle hole 0 mm) per
-sdia.png  used on input line 622.
+sdia.png  used on input line 617.
 (pdftex.def)             Requested size: 135.50624pt x 134.841pt.
 
-Overfull \hbox (8.89876pt too wide) in paragraph at lines 613--624
+Overfull \hbox (8.89876pt too wide) in paragraph at lines 608--619
  [] 
  []
 
-[21 <./Final Run, (cube - equilateral triangle hole 8 mm) meshpy plotly screens
+[23 <./Final Run, (cube - equilateral triangle hole 8 mm) meshpy plotly screens
 hot.png> <./Final Run, (cube - equilateral triangle hole 7 mm) meshpy plotly sc
 reenshot.png> <./Final Run, (cube - equilateral triangle hole 6 mm) meshpy plot
 ly screenshot.png> <./Final Run, (cube - equilateral triangle hole 5 mm) meshpy
@@ -1470,7 +1494,7 @@ eshpy plotly screenshot.png> <./Final Run, (cube - equilateral triangle hole 3
 mm) meshpy plotly screenshot.png> <./Final Run, (cube - equilateral triangle ho
 le 2 mm) meshpy plotly screenshot.png> <./Final Run, (cube - equilateral triang
 le hole 1 mm) meshpy plotly screenshot.png> <./Final Run, (cube - equilateral t
-riangle hole 0 mm) meshpy plotly screenshot.png>] [22 <./Final Run, (cube - equ
+riangle hole 0 mm) meshpy plotly screenshot.png>] [24 <./Final Run, (cube - equ
 ilateral triangle hole 8 mm) persdia.png> <./Final Run, (cube - equilateral tri
 angle hole 7 mm) persdia.png> <./Final Run, (cube - equilateral triangle hole 6
  mm) persdia.png> <./Final Run, (cube - equilateral triangle hole 5 mm) persdia
@@ -1479,209 +1503,209 @@ al Run, (cube - equilateral triangle hole 3 mm) persdia.png> <./Final Run, (cub
 e - equilateral triangle hole 2 mm) persdia.png> <./Final Run, (cube - equilate
 ral triangle hole 1 mm) persdia.png> <./Final Run, (cube - equilateral triangle
  hole 0 mm) persdia.png>]
-<Final Run, (rect prism ring 40 mm cut) MeshPy plotly screenshot.png, id=548, 5
+<Final Run, (rect prism ring 40 mm cut) MeshPy plotly screenshot.png, id=560, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 40 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 40 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 40 mm cut) MeshPy plotly s
-creenshot.png  used on input line 637.
+creenshot.png  used on input line 632.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
-<Final Run, (rect prism ring 35 mm cut) MeshPy plotly screenshot.png, id=549, 5
+<Final Run, (rect prism ring 35 mm cut) MeshPy plotly screenshot.png, id=561, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 35 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 35 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 35 mm cut) MeshPy plotly s
-creenshot.png  used on input line 638.
+creenshot.png  used on input line 633.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
-<Final Run, (rect prism ring 30 mm cut) MeshPy plotly screenshot.png, id=550, 5
+<Final Run, (rect prism ring 30 mm cut) MeshPy plotly screenshot.png, id=562, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 30 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 30 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 30 mm cut) MeshPy plotly s
-creenshot.png  used on input line 639.
+creenshot.png  used on input line 634.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
-<Final Run, (rect prism ring 25 mm cut) MeshPy plotly screenshot.png, id=551, 5
+<Final Run, (rect prism ring 25 mm cut) MeshPy plotly screenshot.png, id=563, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 25 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 25 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 25 mm cut) MeshPy plotly s
-creenshot.png  used on input line 640.
+creenshot.png  used on input line 635.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
-<Final Run, (rect prism ring 20 mm cut) MeshPy plotly screenshot.png, id=552, 5
+<Final Run, (rect prism ring 20 mm cut) MeshPy plotly screenshot.png, id=564, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 20 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 20 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 20 mm cut) MeshPy plotly s
-creenshot.png  used on input line 642.
+creenshot.png  used on input line 637.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
-<Final Run, (rect prism ring 15 mm cut) MeshPy plotly screenshot.png, id=553, 5
+<Final Run, (rect prism ring 15 mm cut) MeshPy plotly screenshot.png, id=565, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 15 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 15 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 15 mm cut) MeshPy plotly s
-creenshot.png  used on input line 643.
+creenshot.png  used on input line 638.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
-<Final Run, (rect prism ring 10 mm cut) MeshPy plotly screenshot.png, id=554, 5
+<Final Run, (rect prism ring 10 mm cut) MeshPy plotly screenshot.png, id=566, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 10 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 10 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 10 mm cut) MeshPy plotly s
-creenshot.png  used on input line 644.
+creenshot.png  used on input line 639.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
-<Final Run, (rect prism ring 05 mm cut) MeshPy plotly screenshot.png, id=555, 5
+<Final Run, (rect prism ring 05 mm cut) MeshPy plotly screenshot.png, id=567, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 05 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 05 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 05 mm cut) MeshPy plotly s
-creenshot.png  used on input line 645.
+creenshot.png  used on input line 640.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
-<Final Run, (rect prism ring 03 mm cut) MeshPy plotly screenshot.png, id=556, 5
+<Final Run, (rect prism ring 03 mm cut) MeshPy plotly screenshot.png, id=568, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 03 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 03 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 03 mm cut) MeshPy plotly s
-creenshot.png  used on input line 647.
+creenshot.png  used on input line 642.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
-<Final Run, (rect prism ring 02 mm cut) MeshPy plotly screenshot.png, id=557, 5
+<Final Run, (rect prism ring 02 mm cut) MeshPy plotly screenshot.png, id=569, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 02 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 02 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 02 mm cut) MeshPy plotly s
-creenshot.png  used on input line 648.
+creenshot.png  used on input line 643.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
-<Final Run, (rect prism ring 01 mm cut) MeshPy plotly screenshot.png, id=558, 5
+<Final Run, (rect prism ring 01 mm cut) MeshPy plotly screenshot.png, id=570, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 01 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 01 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 01 mm cut) MeshPy plotly s
-creenshot.png  used on input line 649.
+creenshot.png  used on input line 644.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
-<Final Run, (rect prism ring 00 mm cut) MeshPy plotly screenshot.png, id=559, 5
+<Final Run, (rect prism ring 00 mm cut) MeshPy plotly screenshot.png, id=571, 5
 33.995pt x 454.69875pt>
 File: Final Run, (rect prism ring 00 mm cut) MeshPy plotly screenshot.png Graph
 ic file (type png)
 <use Final Run, (rect prism ring 00 mm cut) MeshPy plotly screenshot.png>
 Package pdftex.def Info: Final Run, (rect prism ring 00 mm cut) MeshPy plotly s
-creenshot.png  used on input line 650.
+creenshot.png  used on input line 645.
 (pdftex.def)             Requested size: 101.17755pt x 86.15082pt.
 
-Overfull \hbox (19.09032pt too wide) in paragraph at lines 635--653
+Overfull \hbox (22.29027pt too wide) in paragraph at lines 630--648
  [] 
  []
 
-<Final Run, (rect prism ring 40 mm cut) persdia.png, id=560, 359.9046pt x 342.3
+<Final Run, (rect prism ring 40 mm cut) persdia.png, id=572, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 40 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 40 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 40 mm cut) persdia.png  us
-ed on input line 661.
+ed on input line 656.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
-<Final Run, (rect prism ring 35 mm cut) persdia.png, id=561, 359.9046pt x 342.3
+<Final Run, (rect prism ring 35 mm cut) persdia.png, id=573, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 35 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 35 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 35 mm cut) persdia.png  us
-ed on input line 662.
+ed on input line 657.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
-<Final Run, (rect prism ring 30 mm cut) persdia.png, id=562, 359.9046pt x 342.3
+<Final Run, (rect prism ring 30 mm cut) persdia.png, id=574, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 30 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 30 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 30 mm cut) persdia.png  us
-ed on input line 663.
+ed on input line 658.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
-<Final Run, (rect prism ring 25 mm cut) persdia.png, id=563, 359.9046pt x 342.3
+<Final Run, (rect prism ring 25 mm cut) persdia.png, id=575, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 25 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 25 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 25 mm cut) persdia.png  us
-ed on input line 664.
+ed on input line 659.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
-<Final Run, (rect prism ring 20 mm cut) persdia.png, id=564, 359.9046pt x 342.3
+<Final Run, (rect prism ring 20 mm cut) persdia.png, id=576, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 20 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 20 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 20 mm cut) persdia.png  us
-ed on input line 665.
+ed on input line 660.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
-<Final Run, (rect prism ring 15 mm cut) persdia.png, id=565, 359.9046pt x 342.3
+<Final Run, (rect prism ring 15 mm cut) persdia.png, id=577, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 15 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 15 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 15 mm cut) persdia.png  us
-ed on input line 666.
+ed on input line 661.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
-<Final Run, (rect prism ring 10 mm cut) persdia.png, id=566, 359.9046pt x 342.3
+<Final Run, (rect prism ring 10 mm cut) persdia.png, id=578, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 10 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 10 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 10 mm cut) persdia.png  us
-ed on input line 667.
+ed on input line 662.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
-<Final Run, (rect prism ring 05 mm cut) persdia.png, id=567, 359.9046pt x 342.3
+<Final Run, (rect prism ring 05 mm cut) persdia.png, id=579, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 05 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 05 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 05 mm cut) persdia.png  us
-ed on input line 668.
+ed on input line 663.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
-<Final Run, (rect prism ring 03 mm cut) persdia.png, id=568, 359.9046pt x 342.3
+<Final Run, (rect prism ring 03 mm cut) persdia.png, id=580, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 03 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 03 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 03 mm cut) persdia.png  us
-ed on input line 669.
+ed on input line 664.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
-<Final Run, (rect prism ring 02 mm cut) persdia.png, id=569, 359.9046pt x 342.3
+<Final Run, (rect prism ring 02 mm cut) persdia.png, id=581, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 02 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 02 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 02 mm cut) persdia.png  us
-ed on input line 670.
+ed on input line 665.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
-<Final Run, (rect prism ring 01 mm cut) persdia.png, id=570, 359.9046pt x 342.3
+<Final Run, (rect prism ring 01 mm cut) persdia.png, id=582, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 01 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 01 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 01 mm cut) persdia.png  us
-ed on input line 671.
+ed on input line 666.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
-<Final Run, (rect prism ring 00 mm cut) persdia.png, id=571, 359.9046pt x 342.3
+<Final Run, (rect prism ring 00 mm cut) persdia.png, id=583, 359.9046pt x 342.3
 189pt>
 File: Final Run, (rect prism ring 00 mm cut) persdia.png Graphic file (type png
 )
 <use Final Run, (rect prism ring 00 mm cut) persdia.png>
 Package pdftex.def Info: Final Run, (rect prism ring 00 mm cut) persdia.png  us
-ed on input line 672.
+ed on input line 667.
 (pdftex.def)             Requested size: 106.23477pt x 101.04065pt.
 
-Overfull \hbox (39.31914pt too wide) in paragraph at lines 660--674
+Overfull \hbox (39.31914pt too wide) in paragraph at lines 655--669
  [] 
  []
 
-[23 <./Final Run, (rect prism ring 40 mm cut) meshpy plotly screenshot.png> <./
+[25 <./Final Run, (rect prism ring 40 mm cut) meshpy plotly screenshot.png> <./
 Final Run, (rect prism ring 35 mm cut) meshpy plotly screenshot.png> <./Final R
 un, (rect prism ring 30 mm cut) meshpy plotly screenshot.png> <./Final Run, (re
 ct prism ring 25 mm cut) meshpy plotly screenshot.png> <./Final Run, (rect pris
@@ -1692,7 +1716,7 @@ hpy plotly screenshot.png> <./Final Run, (rect prism ring 03 mm cut) meshpy plo
 tly screenshot.png> <./Final Run, (rect prism ring 02 mm cut) meshpy plotly scr
 eenshot.png> <./Final Run, (rect prism ring 01 mm cut) meshpy plotly screenshot
 .png> <./Final Run, (rect prism ring 00 mm cut) meshpy plotly screenshot.png>]
-[24 <./Final Run, (rect prism ring 40 mm cut) persdia.png> <./Final Run, (rect 
+[26 <./Final Run, (rect prism ring 40 mm cut) persdia.png> <./Final Run, (rect 
 prism ring 35 mm cut) persdia.png> <./Final Run, (rect prism ring 30 mm cut) pe
 rsdia.png> <./Final Run, (rect prism ring 25 mm cut) persdia.png> <./Final Run,
  (rect prism ring 20 mm cut) persdia.png> <./Final Run, (rect prism ring 15 mm 
@@ -1702,38 +1726,38 @@ al Run, (rect prism ring 05 mm cut) persdia.png> <./Final Run, (rect prism ring
  <./Final Run, (rect prism ring 01 mm cut) persdia.png> <./Final Run, (rect pri
 sm ring 00 mm cut) persdia.png>]
 Chapter 5.
-<networkx_tetra.png, id=594, 372.9132pt x 296.5479pt>
+<networkx_tetra.png, id=606, 372.9132pt x 301.125pt>
 File: networkx_tetra.png Graphic file (type png)
 <use networkx_tetra.png>
-Package pdftex.def Info: networkx_tetra.png  used on input line 686.
-(pdftex.def)             Requested size: 130.08733pt x 103.44942pt.
-<networkx_cube.png, id=595, 372.9132pt x 296.5479pt>
+Package pdftex.def Info: networkx_tetra.png  used on input line 683.
+(pdftex.def)             Requested size: 130.08733pt x 105.04611pt.
+<networkx_cube.png, id=607, 372.9132pt x 301.125pt>
 File: networkx_cube.png Graphic file (type png)
 <use networkx_cube.png>
-Package pdftex.def Info: networkx_cube.png  used on input line 690.
-(pdftex.def)             Requested size: 130.08733pt x 103.44942pt.
-[25
+Package pdftex.def Info: networkx_cube.png  used on input line 687.
+(pdftex.def)             Requested size: 130.08733pt x 105.04611pt.
+[27
 
- <./networkx_tetra.png> <./networkx_cube.png>] [26] [27]
+ <./networkx_tetra.png> <./networkx_cube.png>] [28] [29] [30]
 Chapter 6.
-[28
+[31
 
-] (./thesis_paper.bbl [29] [30
+] (./thesis_paper.bbl [32] [33
 
-]) [31] 
+]) [34] 
 AED: lastpage setting LastPage
 (./thesis_paper.aux)
 Package rerunfilecheck Info: File `thesis_paper.out' has not changed.
-(rerunfilecheck)             Checksum: E6643CAE234F6DB3010B2CE33E495D2B;5051.
+(rerunfilecheck)             Checksum: F7F09F968B7F6F07412B8BD3FDF4CFDD;5051.
  ) 
 Here is how much of TeX's memory you used:
- 20474 strings out of 480129
- 361903 string characters out of 5893409
- 759960 words of memory out of 5000000
- 37564 multiletter control sequences out of 15000+600000
- 547650 words of font info for 196 fonts, out of 8000000 for 9000
+ 20707 strings out of 480129
+ 365047 string characters out of 5893409
+ 763938 words of memory out of 5000000
+ 37788 multiletter control sequences out of 15000+600000
+ 547507 words of font info for 195 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 70i,19n,77p,1178b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,19n,77p,1585b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1749,10 +1773,10 @@ fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb>
-Output written on thesis_paper.pdf (40 pages, 8783047 bytes).
+Output written on thesis_paper.pdf (43 pages, 8804232 bytes).
 PDF statistics:
- 763 PDF objects out of 1000 (max. 8388607)
- 548 compressed objects within 6 object streams
- 158 named destinations out of 1000 (max. 500000)
+ 799 PDF objects out of 1000 (max. 8388607)
+ 578 compressed objects within 6 object streams
+ 163 named destinations out of 1000 (max. 500000)
  44688 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -325,7 +325,7 @@ def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, max_
                         file_time=time_stamp, save_dir=save_dir, show_plot=show_orig_plotly)
 
     # Create meshpy mesh of '.ast' file
-    tet_mesh = smm.meshpy_from_file(file_name=file_name, file_path=file_path, meshpy_switch=meshpy_switch, verbose=True)
+    tet_mesh = smm.meshpy_from_file(file_name=file_name, file_path=file_path, meshpy_switch=meshpy_switch, verbose=False)
 
     # Create 3D Plotly of meshpy mesh
     if show_meshpy_plotly or save_meshpy_plotly:
@@ -335,7 +335,7 @@ def run_main_code(file_index, file_ext, input_dir, save_dir, meshpy_switch, max_
     # Create and modify Alpha complex and simplex tree of meshpy mesh with gudhi
     obj3d_complex, obj3d_smplx_tree = smm.create_gudhi_elements(meshpy_mesh=tet_mesh)
     obj3d_smplx_tree = smm.modify_alpha_complex(gudhi_complex=obj3d_complex, gudhi_simplex_tree=obj3d_smplx_tree,
-                                                meshpy_mesh=tet_mesh, verbose=True)
+                                                meshpy_mesh=tet_mesh, verbose=False)
 
     # Get list of persistence points from simplex tree
     persistence_points = obj3d_smplx_tree.persistence()
