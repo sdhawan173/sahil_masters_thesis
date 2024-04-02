@@ -93,7 +93,7 @@ the solution to, and cause of, all my problems.
 \section{Related Works}
 \par Although TDA is relatively new as a field of study, it has applications in many areas. We will review related works in the fields of geospatial data, image data, medical/neuroscience, deep learning, and computational geometry.
 \subsubsection{Geospatial Data}
-\par Persistent homology can be used to classify voting precincts by margin of victory for presidential candiate votes using geospatial data \cite{geospatial_voting}. This paper takes voting data from 24,626 California precincts and uses the geographic locations of these precincts to create a point cloud. The classification is done with new methods of creating filtered simplicial complexes: the Adjacency complex and the Level-Set complex.
+\par Persistent homology can be used to classify voting precincts by margin of victory for presidential candiate votes using geospatial data \cite{geospatial_voting}. This paper takes voting data from 24,626 California precincts and uses the geographic locations of these precincts to create a point cloud from an adjancey graph. The classification is done with new methods of creating filtered simplicial complexes: the Adjacency complex and the Level-Set complex.
 \par Geospatial data and persistent homology can also be used to visualize changes in the movement of artic ice \cite{jocelyn_thesis}. This paper uses artic ice binary image data from NASA from 1999 to 2009 with metadata for geographic information. The images were assigned weights by the amount of ice per image. Persistence diagrams were created from the image data to visualize increases and decreases in the amount of artic ice through the death times of connected components, or points in $H_{0}$.
 \subsubsection{Neuroscience}
 \par In the field of Neuroscience, persistent homology can be used to detect differences in cognition and personality with MRI data \cite{TDA_MRI}. Resting state fMRI data of nodes in a brain network was mapped to a point cloud. Each point was assigned a value based on its level of association to other nodes in the network. A distance measure of associativity was mapped to each node in order to have larger correlations create smaller distances. The Vietoris-Rips complex was applied to the metric space of the point cloud to generate persistence barcodes in $H_{0}$ for connected components in the dataset. The persistence parcode showed differences in cognition and personality over the spatial domain.
@@ -675,7 +675,7 @@ A rectangular prism ring was created as a topologically equivalent model of a so
 \label{chap:discussion}
 \section{Two Cubes with Three Pockets Moving Closer}
 \label{sec:two_cubes_discussion}
-\par Section \ref{sec:two_cubes} features a test case of two cubes with three pocket operations on three orthogonal faces. The cubes move closer together until combining to form one object, as shown in Fig \ref{fig:cube_two_cubes_MeshPy_table}. The three pocket operations on the cube may appear to be 6 holes, but similar to how a non-filled-in tetrahedron has three holes, each cube only has five holes. This can be seen in the figure below of topologically equivalent graphs for a tetrahedron and the cube with three pocket operations (or a non-filled-in cube).
+\par Section \ref{sec:two_cubes} features a test case of two cubes with three pocket operations on three orthogonal faces. The cubes move closer together until combining to form one object, as shown in Fig \ref{fig:cube_two_cubes_MeshPy_table}. The three pocket operations on the cube may appear to create 6 holes, but similar to how a non-filled-in tetrahedron has three holes, each cube only has five holes. This can be seen in the figure below of topologically equivalent graphs for a tetrahedron and the cube with three pocket operations (or a non-filled-in cube).
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.3\textwidth}
@@ -688,20 +688,12 @@ A rectangular prism ring was created as a topologically equivalent model of a so
     \end{subfigure}
     \caption{Network graphs of a non-filled-in tetrahedron and cube.}
 \end{figure}
-\par The decreasing distance between the objects and the change in topology which occurs when the objects combine are represented in Fig \ref{fig:cube_two_cubes_persdia_table} as a sequence of persistence diagrams. Initially the two cubes appear as two connected components in $H_{0}$ with birth-death points at (0, 625) and (0, $\infty$). One connected component dies at $r^{2} = 625$. This is equivalent to a Euclidean distance of $r=25$ mm which means the open balls of each connected component intersect at the halfway point of the distance, 50 mm, between each object. The other connected component was chosen by \verb"Gudhi" to be the first point in the complex, so it does not die and has a death time of $r^2=\infty$. As the two cubes move closer together, their distance apart can be found by taking the non-infinity death time of the connected component through the formula 
-\begin{equation}\label{eq:death_to_dist}
-\mathsf{Dist} = 2*\sqrt{\mathsf{Death}}
-\end{equation}
-\par Conversly, the death time of a connected component or hole can by found by passing the radius of the chosen feature into the formula 
-\begin{equation}\label{eq:dist_to_death}
-\mathsf{Death} = \bigg(\frac{\mathsf{Dist}}{2}\bigg)^{2}
-\end{equation}
-\par This explains why of the 10 $H_{1}$ points that represent the holes of the cubes, which are all 5mm-wide squares, have death times of $r^{2}=12.5$, or $\frac{5^{2}}{2}$. The additional $H_{1}$ points on the diagonal are noise and appear when the open balls of vertices between the two inward faces of each cube intersect.
+\par The decreasing distance between the objects and the change in topology which occurs when the objects combine are represented in Fig \ref{fig:cube_two_cubes_persdia_table} as a sequence of persistence diagrams. Initially the two cubes appear as two connected components in $H_{0}$ with birth-death points at (0, 625) and (0, $\infty$). One connected component dies at $r^{2} = 625$. This is equivalent to a Euclidean distance of $r=25$mm which means the open balls of each connected component intersect at the halfway point of the distance, 50mm, between each object. The other connected component was chosen by \verb"Gudhi" to be the first point in the complex, so it does not die and has a death time of $r^2=\infty$. As the two cubes move closer together, we can convert their distance apart to an $H_{0}$ death time by taking the square of their circumradius, which in this case is the shortest distance of two vertices between the two inward faces of each cube: $\mathsf{Death}=(\frac{\mathsf{Dist}}{2})^2$. Conversly, the $H_{0}$ death time of a cube can be used to find the distance between two cubes: $\mathsf{Dist} = 2\sqrt{\mathsf{Death}}$. This also explains the value for the death times of $H_{1}$ points that represent the holes of the cubes. Each hole is a 5mm square and has a death time of $r^{2}=12.5$. This is equivalent to $r^{2}=(\frac{5\sqrt{2}}{2})^{2}$, where $5\sqrt{2}$ is the distance of the diagonal of the squares. The additional $H_{1}$ points on the diagonal are noise and appear when the open balls of vertices between the two inward faces of each cube intersect.
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|}
     \hline
-    \makecell{Distance\\(mm)} & \makecell{Connected Component\\Death Time} \\
+    \makecell{Distance\\(mm)} & \makecell{Connected\\Component\\Death Time} \\
     \hline
     50 & 625 \\
     40 & 400 \\
@@ -711,38 +703,51 @@ A rectangular prism ring was created as a topologically equivalent model of a so
     0 & $\infty$ \\
     \hline
 \end{tabular}
-\caption{Distances between cubes and death times, from Fig \ref{fig:cube_two_cubes_persdia_table}.}
+\caption{Distances between cubes and the corresponding $H_{0}$ death times.}
+\label{tab:two_cubes_death_times}
 \end{table}
 
-\par As the distance shrinks between the two cubes, we can see the death time of the second connected component move closer to 0, while the holes continue to have death times of $r^{2} = 12.5$ throughout the sequence. When the two cubes finally combine, there is only one point in $H_{0}$ with a death time of $\infty$ to represent that there is now only one connected component. The merger of cubes also shows one of the holes no longer exists as there are 9 $H_{1}$ points.
-\par In terms of tolerancing between two 3D parts, we can use Formulas \ref{eq:death_to_dist} and \ref{eq:dist_to_death} to determine which death time would create the optimal tolerance in fabrication and vice versa. For example, if a fabrication method such as 3D printing had a tolerance of 3mm (this is a realistic tolerance for large-scale printers which print car prototyping parts), we can use Formula \ref{eq:dist_to_death} to find that the $H_{0}$ death time of two parts should be no lower than 2.25.
+\par In Table \ref{tab:two_cubes_death_times}, as the distance shrinks between the two cubes, we can see the death time of the second connected component move closer to 0. When the two cubes combine, there is only one point in $H_{0}$ with a death time of $\infty$ because there is only one connected component. The merger of cubes also shows one of the holes no longer exists as there are 9 $H_{1}$ points instead of 10.
+\par In terms of tolerancing between two 3D parts, we can use the base formulas of $d=r^{2}$ and $r=\sqrt{d}$, where $r$ is euclidean radius and $d$ is death time, along with intuition about how to choose the radii for the formula (set radius equal to half the distance apart in this case) to determine which death time would create the optimal tolerance in fabrication and vice versa. For example, if a fabrication method such as 3D printing had a tolerance of 3mm (this is a realistic tolerance for large-scale printers which print car prototyping parts), we can use $d=(\mathsf{\frac{3}{2}})^{2}$ to find that the $H_{0}$ death time of a part feature would need to have a have a margin of error of $\pm 2.25$ to ensure a good fit with other part features in close proximity to it.
 \newpage
 \section{Cube with Equilateral Triangle Hole}
-\par Section \ref{sec:cube_tri_hole} features a test case of a cube with a pocket of an equilateral triangle through the entire object, creating an equilateral triangle hole. The equilateral triangle hole begins with an edge length of 8mm and decreases in length until the hole dissapears. As expected, there is only one connected component as a point in $H_{0}$ with a death time of $\infty$. The hole appears in $H_{0}$ with a death time of $r^{2} = 5.\overline{333}$. The radius of an equilateral triangle can be found by the formula $r = \frac{l}{\sqrt{3}}$, where $l$ is the edge length. This formula gives a radius of $r\approx 4.619$. Using the death time of $5.\overline{333}$ with Formula \ref{eq:death_to_dist}, we also get $4.619$. Although the edge length of 8mm gives results as we expect, this is not the case for the other edge lengths. We can see the rest of the equilateral triangle edge lengths with their corresponding radii and death times below:
+\label{sec:eq_tri_hole}
+\par Section \ref{sec:cube_tri_hole} features a test case of a cube with a pocket of an equilateral triangle through the entire object, creating an equilateral triangle hole. The equilateral triangle hole begins with an edge length of 8mm and decreases in length until the hole dissapears. As expected, there is only one connected component as a point in $H_{0}$ with a death time of $\infty$.
+\par Unfortunately, the nature of how the new refined Delauanay triangulation mesh was generated from the original STL mesh caused problems with the results. The errors between hole death times in Table \ref{tab:eq_tri_hole_table} is a result of miscalculations due to the fineness of the mesh generated by \verb"MeshPy". To understand the reasons why the errors occurred, we will use the formula to find the circumradius of an equilateral triangle: 
+$$r = \frac{l}{\sqrt{3}}\text{, where }l\text{ is the edge length.}$$
+
+We will also use the radius of a triangle's inscribed circle. The inscribed circle of an equilateral triangle exists within the triangle and is tangent to each edge in the triangle. The formula to find the inscribed radius is the following:
+$$r = \frac{l}{2\sqrt{3}}\text{, where }l\text{ is the edge length.}$$
+
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|}
     \hline
-    \makecell{Edge Length\\(mm)} & \makecell{Radius\\(mm)} & \makecell{Expected Hole\\Death Time} & \makecell{Actual Hole\\ Death Time}\\
+    \makecell{Edge\\Length\\(mm)} & \makecell{Circum-\\radius\\(mm), $r_{c}$} & \makecell{Inscribed\\ radius\\ (mm), $r_{i}$} & \makecell{$d=r_{c}^{2}$\\Death\\Time} & \makecell{$d=r_{i}^{2}$\\Death\\Time} & \makecell{Figure \ref{fig:cube_triangle_hole_persdia_table}\\$H_1$ Death\\ Time} & \makecell{Original STL\\$H_{1}$ Death\\Time}\\
     \hline
-    8     & 4.619 & $5.\overline{333}$ & $5.\overline{333}$\\
-    7     & 4.041 & $4.08\overline{3}$ & 4.567 \\
-    6     & 3.464 & 3.000 & 9.000\\
-    5     & 2.887 & $2.08\overline{3}$ & $8.\overline{333}$\\
-    4     & 2.309  & $1.\overline{333}$ & $5.\overline{333}$\\
-    3     & 1.732 & 0.750 & $2.\overline{999}$\\
-    2     & 1.155 & $0.\overline{333}$ & $1.\overline{333}$\\
-    1     & 0.577 & $0.08\overline{3}$ & $0.\overline{333}$\\
+    8     & 4.619 & 2.309 & 21.$\overline{333}$ & $5.\overline{333}$ & $5.\overline{333}$ & 21.$\overline{333}$\\
+    7     & 4.041 & 2.021 & 16.$\overline{333}$ & $4.08\overline{3}$ & 4.567 & 16.$\overline{333}$\\
+    6     & 3.464 & 1.732 & 12.000 & 3.000 & 9.000 & 12.000\\
+    5     & 2.887 & 1.443 & 8.$\overline{333}$ & $2.08\overline{3}$ & $8.\overline{333}$ & 8.$\overline{333}$\\
+    4     & 2.309 & 1.155 & $5.\overline{333}$ & $1.\overline{333}$ & $5.\overline{333}$ & $5.\overline{333}$\\
+    3     & 1.732 & 0.866 & 3.000 & 0.750 & $2.\overline{999}$ & $2.\overline{999}$\\
+    2     & 1.155 & 0.577 & $1.\overline{333}$ & $0.\overline{333}$ & $1.\overline{333}$ & $1.\overline{333}$\\
+    1     & 0.577 & 0.289 & $0.\overline{333}$ & $0.08\overline{3}$ & $0.\overline{333}$ & $0.\overline{333}$\\
     \hline
 \end{tabular}
-\caption{Edge length, radii and expected, and actual death times, from Fig \ref{fig:cube_triangle_hole_persdia_table}.}
+\cprotect\caption{Equilateral triangle hole edge lengths and their corresponding death time comparisons between predictions calculated from triangle circumradius and inradius with observed death times from the \verb"MeshPy" Delaunay triangulation mesh and the original STL file mesh.}
 \label{tab:eq_tri_hole_table}
 \end{table}
-\par Unfortunately, the nature of how the new mesh was generated caused problems with the results. The errors between expected hole death times and actual hole death times in Table \ref{tab:eq_tri_hole_table} is a result of miscalculations due to the fineness of the mesh generated by \verb"MeshPy". Fig \ref{fig:cube_triangle_hole_persdia_table} shows the death time of the triangle hole accurately at 8mm, and although the death time does decrease at 7mm, it is not in line with what we would expect the death time to be based on Formula \ref{eq:dist_to_death}. This is because . For edge lengths 6mm through 1mm, the death time increases from 7mm and then starts to decrease again. The increase in death time is a result of .
+\par The death times of an equilateral triangle is expected to be found from using the square of the circumradius, $r_{c}$, as the Delaunay triangulation ensures the vertices of triangles created in the new mesh are all self-contained on the surface boundary of their respective circumspheres. This means that the expanding circumcircles from each vertex in the plane of an equilateral triangle will meet at the intersection of the three perpendicular bisectors of each triangle edge, and the radius of these circumcircles at the intersection will be equal to the the radius of the triangle's circumsphere. Thus, taking the square of $r_{c}$ will give us the death time of this triangle if it is not "filled-in".
+\par The column of $H_{1}$ death times from persistence diagrams in Fig \ref{fig:cube_triangle_hole_persdia_table} shows the death times for edge lengths 5mm through 1mm all match the death times calculated with $r_{c}$. We can see the reason for this correlation in the sequence of meshes created with \verb"MeshPy" in Fig \ref{fig:cube_triangle_hole_MeshPy_table}: meshes for edge lengths 5mm through 1mm all consist of only three points to create the triangle.
+\par However, for edge lengths 8mm through 6mm, the \verb"MeshPy" switch \verb"-q" caused the mesh to include many new points in close proximity to each other due to the relatively smaller distances between the vertices of the triangle hole and the edges of the top and bottom faces of the cube. The additional points were also added to the triangle hole edges for these lengths, which caused the Alpha complex to form a hole sooner in $r^{2}$ with smaller open metric balls due to the triangles containing more than the minimum three points. This results in the death times of the $H_{1}$ points being much smaller than the calculated death time with $r_{c}$.
+\par The death times from Fig \ref{fig:cube_triangle_hole_persdia_table} for edge lengths ranging 8mm through 6mm all either match the death times calculated from the inscribed radius $r_{i}$ (8mm), are close to the death times from $r_{i}$ (7mm), or are in between the death times from $r_{i}$ or $r_{c}$ (6mm and 7mm). The square of the inscribed radius is the lower bound of possible radii to compute the death time of an equilateral triangle. This is becuase it is possible for the smallest  distance from points on an equilateral triangle edge to the intersection points of perpendicular bisectors of its three edges to be the distance from the midpoint to that intersection point, or $\frac{l}{2\sqrt{3}}$. Therefore the lower bound death time for an equilateral triangle is $r^{2}=(\frac{l}{2\sqrt{3}})^{2}$.
+\par In most cases, more points need to be added to the mesh in order to make the original STL mesh a Delaunay triangulation. However, as we have seen this can create errors in generating the persistence points in $H_{1}$. Table \ref{tab:eq_tri_hole_table} also shows the death times of triangle holes using the original STL mesh as the input for the Alpha complex. In cases such as these, the desired feature of analysis, the triangle hole, is already a Delaunay triangulation, so increasing the fineness of the mesh through \verb"MeshPy" is not necessary because the death times of the ASCII STL mesh all match (taking into account possible floating-point error) the death times calculated with $r_{c}$.
+
 \newpage
 \section{Rectangular Prism Ring with Cut}
 \par Section \ref{sec:rect_prism_ring} features a rectangular prism ring, meant to be a simplified model of a solid torus, which has a portion cut out of it. The cut starts at 40mm wide and decreases in length until the cut dissappears to the final shape of a ring.
-\par The three $H_{1}$ points of holes slightly above the diagonal can be considered noise for the same reason as the noise in Fig \ref{fig:cube_two_cubes_persdia_table} as we discussed in Section \ref{sec:two_cubes_discussion}. However, the $H_{1}$ point which is not noise represents the time it takes for the hole to form once the gap of open spheres in the Alpha complex intersect.
+\par The three $H_{1}$ points of holes slightly above the diagonal can be considered noise for the same reason as the noise in Fig \ref{fig:cube_two_cubes_persdia_table} as we discussed in Section \ref{sec:two_cubes_discussion}. However, the $H_{1}$ point which is not noise represents the time it takes for the hole to form once the gap of open metric balls in the Alpha complex intersect.
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}
@@ -763,13 +768,13 @@ A rectangular prism ring was created as a topologically equivalent model of a so
     0 & 0.0000 & 400.0000 \\
     \hline
 \end{tabular}
-\caption{Cut lengths and the birth and death times of holes, from \ref{fig:rect_prism_ring_persdia_table}.}
+\caption{Cut lengths and the birth and death times of holes, from Fig \ref{fig:rect_prism_ring_persdia_table}.}
 \end{table}
-\par The birth times of the holes are formed through the same type of motion as in Section \ref{sec:two_cubes_discussion} where two features move closer together until combining. This causes the birth times to follow the same pattern as Equations \ref{eq:death_to_dist} and \ref{eq:dist_to_death}. Aside from the cut length of 30mm, the death times also follow a pattern of decreasing from 500 to converge to 400. The death times converge to 400 because the width of the square hole in the rectangular prism ring is 40mm, so we can calculate that 400 should be the death time by Equation \ref{eq:dist_to_death}.
-\par While the birth time or death time could be used for choosing a tolerance or clearance value for a part's design, it would be easier to choose these values based on birth time. The death times also correspond to the length of the cuts, but in order to choose a tolerance value closer to 0.5mm or lower, floating point errors could begin to be a problem with the difference between death time and $r^{2} = 400$.
+\par The birth times of the holes are formed through the same type of motion as in Section \ref{sec:two_cubes_discussion} where two features move closer together until combining. This causes the birth times to follow the same pattern of $\mathsf{Dist} = 2\sqrt{\mathsf{Death}}$. Aside from the cut length of 30mm, the death times also follow a pattern of decreasing from 500 to converge to 400. The death times converge to 400 because the width of the square hole in the rectangular prism ring is 40mm, so we can calculate that 400 should be the death time by $\mathsf{Death}=(\frac{\mathsf{Dist}}{2})^2$.
+\par While the birth time or death time could be used for choosing a tolerance or clearance value for a part's design, it would be easier to choose these values based on birth time. The death times also correspond to the length of the cuts, but in order to choose a tolerance value closer to 0.5mm or lower, floating-point errors could begin to be a problem with the difference between death time and $r^{2} = 400$.
 \chapter{Conclusion}
 
-\section{Findings}\par In this paper we outline a method for analyzing 3D ASCII STL files to determine metrics for when a feature of a part may have a margin of error in its tolerance or clearance which could cause issues in fabrication. We first pass in the data to \verb"MeshPy" to generate a Delaunay triangulation of the surface of the object. This is done to 
+\section{Findings}\par In this paper we outlined a method for analyzing 3D ASCII STL files to determine metrics for when a feature of a part may have a margin of error in its tolerance or clearance which could cause issues in fabrication. We first pass in the STL data to \verb"MeshPy" to generate a Delaunay triangulation of the surface of the object. This is done to ensure features of parts are accurately represented in $H_{0}$ and $H_{1}$ by the Alpha complex filtered simplices. However, depending on the part feature to be analyzed, meshing can cause errors to occur (see Sec \ref{sec:eq_tri_hole}). We then compare the simplices of the Alpha complex to the simplices of the Delaunay triangulation mesh to assign a birth time of 0 to the Alpha complex simplices which were originally in the Delaunay triangulation mesh. Using these modified persistence point values, we visualize the persitent homology of a part with a Persistence Diagram. We then repeat these steps for a sequence of variations of altered part feature measurements as separate STL files to determine potential patterns in the birth and death times of the feature.
 
 \section{Future Work}
 \par For computational efficiency, the implementation could be improved by checking if the mesh originally contained within a 3D object file is Delaunay or not upon parsing to determine if it is necessary to create a new mesh with meshpy. Potentially eliminating this step would reduce the overall computational expense of the program.
