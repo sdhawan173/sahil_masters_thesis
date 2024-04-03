@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  2 APR 2024 00:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  3 APR 2024 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1013,18 +1013,18 @@ File: point_cloud_plot_r1_0.png Graphic file (type png)
 <use point_cloud_plot_r1_0.png>
 Package pdftex.def Info: point_cloud_plot_r1_0.png  used on input line 270.
 (pdftex.def)             Requested size: 95.39693pt x 94.52983pt.
-File: point_cloud_plot_r0_5.png Graphic file (type png)
-<use point_cloud_plot_r0_5.png>
-Package pdftex.def Info: point_cloud_plot_r0_5.png  used on input line 283.
+File: point_cloud_plot_r1_0.png Graphic file (type png)
+<use point_cloud_plot_r1_0.png>
+Package pdftex.def Info: point_cloud_plot_r1_0.png  used on input line 283.
 (pdftex.def)             Requested size: 195.12767pt x 193.35825pt.
-<point_cloud_persdia_vr_0_5.png, id=350, 335.5737pt x 340.8735pt>
-File: point_cloud_persdia_vr_0_5.png Graphic file (type png)
-<use point_cloud_persdia_vr_0_5.png>
-Package pdftex.def Info: point_cloud_persdia_vr_0_5.png  used on input line 288
-.
+<point_cloud_persdia_vr1_0.png, id=350, 335.5737pt x 340.8735pt>
+File: point_cloud_persdia_vr1_0.png Graphic file (type png)
+<use point_cloud_persdia_vr1_0.png>
+Package pdftex.def Info: point_cloud_persdia_vr1_0.png  used on input line 288.
+
 (pdftex.def)             Requested size: 195.12767pt x 198.21127pt.
  [8 <./point_cloud_plot_r0.png> <./point_cloud_plot_r0_25.png> <./point_cloud_p
-lot_r0_5.png> <./point_cloud_plot_r1_0.png> <./point_cloud_persdia_vr_0_5.png>]
+lot_r0_5.png> <./point_cloud_plot_r1_0.png> <./point_cloud_persdia_vr1_0.png>]
 <point_cloud_plot_del.png, id=366, 414.1071pt x 425.4294pt>
 File: point_cloud_plot_del.png Graphic file (type png)
 <use point_cloud_plot_del.png>
@@ -1111,8 +1111,7 @@ File: tetrahedron_ast_code_and_plot.png Graphic file (type png)
 Package pdftex.def Info: tetrahedron_ast_code_and_plot.png  used on input line 
 402.
 (pdftex.def)             Requested size: 395.61891pt x 209.58255pt.
-
-[13 <./tetrahedron_ast_code_and_plot.png>]
+ [13 <./tetrahedron_ast_code_and_plot.png>]
 Chapter 3.
 <Final Run, (triangular prism - triangle hole) ast plotly screenshot circumsphe
 re.png, id=433, 984.67876pt x 610.28pt>
@@ -1756,7 +1755,7 @@ Package rerunfilecheck Info: File `thesis_paper.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  20714 strings out of 480129
- 365168 string characters out of 5893409
+ 365161 string characters out of 5893409
  769870 words of memory out of 5000000
  37789 multiletter control sequences out of 15000+600000
  547594 words of font info for 196 fonts, out of 8000000 for 9000
@@ -1777,7 +1776,7 @@ blic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb>
-Output written on thesis_paper.pdf (44 pages, 8807743 bytes).
+Output written on thesis_paper.pdf (44 pages, 8803533 bytes).
 PDF statistics:
  794 PDF objects out of 1000 (max. 8388607)
  574 compressed objects within 6 object streams

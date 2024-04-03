@@ -271,11 +271,10 @@ def create_point_cloud(scale=0.12, size=5, interval=0.1, make_plot=False):
 
 def vr_point_cloud(x, y, r, title, save_name):
     # noinspection PyUnresolvedReferences
-    vr_complex = gudhi.RipsComplex(points=zip(x, y), max_edge_length=r)
-    vr_simplex_tree = vr_complex.create_simplex_tree(max_dimension=3)
+    vr_complex = gudhi.RipsComplex(points=zip(x, y))
+    vr_simplex_tree = vr_complex.create_simplex_tree(max_dimension=2)
     vr_persistence = vr_simplex_tree.persistence()
     plot_persdia_main(vr_persistence, title, os.getcwd() + '/' + save_name + '.png')
-    # plt.show()
 
 
 def visualize_vr_complexes(x, y, radii=(0, 0.25, 0.5, 1.0)):
@@ -304,10 +303,10 @@ def visualize_vr_complexes(x, y, radii=(0, 0.25, 0.5, 1.0)):
                     bbox_inches='tight', dpi=300, format='png')
         # plt.show()
 
-        if r == 0.5:
+        if r == 1.0:
             vr_point_cloud(x, y, r,
                            'Sample Data Point Cloud VR Complex, $r$={}'.format(str(r)),
-                           'point_cloud_persdia_vr_0_5')
+                           'point_cloud_persdia_vr1_0')
 
 
 def black_hole_example():
@@ -691,9 +690,9 @@ def draw_graph(G):
     nx.draw_networkx_edges(G, pos, edge_color='black')
 
 
-# x_points, y_points = create_point_cloud(scale=0.12, size=5, interval=0.1)
-# visualize_vr_complexes(x_points, y_points)
-black_hole_example()
+x_points, y_points = create_point_cloud(scale=0.12, size=5, interval=0.1)
+visualize_vr_complexes(x_points, y_points)
+# black_hole_example()
 # visualize_delaunay_voronoi(x_points, y_points)
 # x_points, y_points = create_point_cloud(scale=0.2, size=1, interval=0.1)
 # visualize_alpha_complexes(
