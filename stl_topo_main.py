@@ -16,7 +16,7 @@ equil_tri = list(reversed(range(10, 19)))  # equilateral triangle triangle hole
 rect_pris = list(reversed(range(22, 34)))  # rect prism ring
 two_cubes = list(reversed(range(47, 53)))  # two cubes, three pockets each
 # run_list = [equil_tri, rect_pris, two_cubes]
-run_list = [[43]]
+run_list = [[00]]
 
 # chosen_list = []
 # # If no list of indices is provided, choose one
@@ -36,7 +36,7 @@ for index_list in run_list:
                          save_meshpy_plotly=True,
                          show_meshpy_plotly=False,
                          save_persdia=False,
-                         save_points_persdia=True,
+                         save_points_persdia=False,
                          list_points_persdia=False,
                          final_run=True,
                          multi_run=multi_run

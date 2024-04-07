@@ -1,12 +1,12 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{List of Figures}{vii}{chapter*.2}%
+\contentsline {chapter}{List of Tables}{viii}{chapter*.3}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Related Works}{2}{section.1.1}%
-\contentsline {subsubsection}{Geospatial Data}{2}{subsubsection*.3}%
-\contentsline {subsubsection}{Neuroscience}{2}{subsubsection*.4}%
-\contentsline {subsubsection}{Deep Learning}{2}{subsubsection*.5}%
-\contentsline {subsubsection}{Computational Geometry}{3}{subsubsection*.6}%
-\contentsline {subsubsection}{Finite Element Modeling (FEM) and Meshing}{3}{subsubsection*.7}%
+\contentsline {subsubsection}{Geospatial Data}{2}{subsubsection*.4}%
+\contentsline {subsubsection}{Neuroscience}{2}{subsubsection*.5}%
+\contentsline {subsubsection}{Deep Learning}{2}{subsubsection*.6}%
+\contentsline {subsubsection}{Computational Geometry, Finite Element Modeling (FEM) and Meshing}{3}{subsubsection*.7}%
 \contentsline {chapter}{\numberline {2}Background}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Simplicial Homology}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Persistent Homology}{7}{section.2.2}%
