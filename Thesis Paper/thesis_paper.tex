@@ -111,6 +111,7 @@ the solution to, and cause of, all my problems.
 \par Homology is used to detect the holes present in a shape through the use of simplicial complexes. Before defining a simplex and simplicial complex, fundamental preliminary definitions need to be recalled to understand simplicial homology and persistent homology \cite{Needham_2019}.
 
 \begin{definition}[Field]
+\label{def:field}
 A field is a set $\mathbb{F}$ endowed with operations addition, $+$, and multiplication, $\bullet$, respectively satisfying the following axioms for all $a,b,c\in\mathbb{F}$:
 \begin{enumerate}
 \item (Identity) $\exists$ an \textit{additive identity}, $0_{\mathbb{F}}$ s.t. $a+0_{\mathbb{F}}=a$ and a \textit{multiplicative identity} denoted $1_{\mathbb{F}}$ s.t. $1_{\mathbb{F}}\bullet a = a$.
@@ -130,6 +131,10 @@ A field is a set $\mathbb{F}$ endowed with operations addition, $+$, and multipl
 \item $a \bullet (b+c) = (a \bullet b) + (a \bullet c)$
 \end{itemize}
 \end{enumerate}
+\end{definition}
+
+\begin{definition}[Field over $\mathbb{F}_{2}$]
+\par $\mathbb{F}_{2}$ is a field with two elements, 0 and 1, with modulo 2 applied to addition and multiplication.
 \end{definition}
 
 \begin{definition}[Free Vector Space]
@@ -223,14 +228,14 @@ $$\partial_{k}(\sigma)=\sum^{k}_{j=0}\big\{\tau \mid \tau \text{ is a }(k-1)\tex
 
 \begin{definition}[Persistence Diagram]
 \label{def:persdia}
-\par The Fundamental Theorem of Persistent Homology \cite{computpershom}, states that an input of a filtered simplicial complex, $K_t$,  $K_{1} \subseteq K_{2} \subseteq ... \subseteq K_{t}$ where $0\leq t_{1} \leq ... \leq t_{n} $, gives a basis of homology groups, $H_{K}$, $H_{K}(K_{1}) \rightarrow H_{K}(K_{2}) \rightarrow ...\rightarrow H_{K}(K_{t})$ with induced maps on homology $i_{1*}, ..., i_{t*}$ such that each basis element has a well-defined birth time, $b$, and death time, $d$.
+\par The Fundamental Theorem of Persistent Homology \cite{computpershom}, states that an input of a filtered simplicial complex, $K_{r_{1}} \subseteq K_{r_{2}} \subseteq ... \subseteq K_{r_{t}}$ gives a basis of homology groups $H_{k}(K_{r_{1}}) \rightarrow H_{k}(K_{r_{2}}) \rightarrow ...\rightarrow H_{k}(K_{r_{t}})$ with induced maps on homology $i_{1*}, ..., i_{t*}$ such that each basis element has a well-defined birth time, $b$, and death time, $d$.
 \par The \textit{persistence diagram} is obtained from the multiset of these births and deaths, $\{(b_{j},d_{j})\}^{M}_{j=1}$, by plotting each point in the xy-plane (recording multiplicity as necessary). Since $b_{j} < d_{j}$ for each j, the points all appear above the diagonal line $x=y$.
 \end{definition}
 
-\par There are many different ways to create a filtered simplicial complex. We will define four methods we can use in order to create the complex. The Čech complex is the base complex we will build off of.
+\par There are many different ways to create a filtered simplicial complex. We will define three methods we can use in order to create the complex. The Čech complex is the base complex we will build off of.
 
 \begin{definition}[Čech Complex]
-Let $X$ be a finite metric space. The \textit{Čech complex}, $\mathsf{C}_r$, can be applied tos $X$, where open metric balls grow around points of the metric space. With each intersection of $k+1$ balls, add a $k$\textit{-dimensional} simplex to the filtered simplicial complex.\\
+Let $X$ be a finite metric space. The \textit{Čech complex}, $\mathsf{C}_r$, can be applied to $X$, where open metric balls grow around points of the metric space. With each intersection of $k+1$ balls, add a $k$\textit{-dimensional} simplex to the filtered simplicial complex.\\
 $$\mathsf{C}_{r}(X) = \{\sigma \subseteq X \mid \cap_{x \in \sigma} B_{r}(X) \not= \emptyset\}$$
 \end{definition}
 
