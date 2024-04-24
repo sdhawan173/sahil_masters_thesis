@@ -5,8 +5,8 @@ The style file: plain.bst
 Database file #1: thesis_bib.bib
 You've used 16 entries,
             2118 wiz_defined-function locations,
-            610 strings with 7170 characters,
-and the built_in function-call counts, 5591 in all, are:
+            611 strings with 7183 characters,
+and the built_in function-call counts, 5592 in all, are:
 = -- 547
 > -- 287
 < -- 2
@@ -16,7 +16,7 @@ and the built_in function-call counts, 5591 in all, are:
 := -- 957
 add.period$ -- 55
 call.type$ -- 16
-change.case$ -- 90
+change.case$ -- 91
 chr.to.int$ -- 0
 cite$ -- 16
 duplicate$ -- 191
@@ -28,11 +28,11 @@ int.to.str$ -- 16
 missing$ -- 15
 newline$ -- 89
 num.names$ -- 34
-pop$ -- 79
+pop$ -- 80
 preamble$ -- 1
 purify$ -- 76
 quote$ -- 0
-skip$ -- 138
+skip$ -- 137
 stack$ -- 0
 substring$ -- 351
 swap$ -- 33

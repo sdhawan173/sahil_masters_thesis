@@ -18,11 +18,11 @@ two_cubes = list(reversed(range(47, 53)))  # two cubes, three pockets each
 # run_list = [equil_tri, rect_pris, two_cubes]
 run_list = [[00]]
 
-# chosen_list = []
-# # If no list of indices is provided, choose one
-# if len(chosen_list) == 0:
-#     index = int(input('Choose ' + file_ext + ' file by entering the corresponding number:\n'))
-#     run_list = [[index]]
+chosen_list = []
+# If no list of indices is provided, choose one
+if len(chosen_list) == 0:
+    index = int(input('Choose ' + file_ext + ' file by entering the corresponding number:\n'))
+    run_list = [[index]]
 
 for index_list in run_list:
     multi_run = False
@@ -31,11 +31,11 @@ for index_list in run_list:
             multi_run = True
         multi_run = True
         da.run_main_code(index, file_ext, input_dir, save_dir, meshpy_switch, max_dim,
-                         save_orig_plotly=True,
+                         save_orig_plotly=False,
                          show_orig_plotly=False,
-                         save_meshpy_plotly=True,
+                         save_meshpy_plotly=False,
                          show_meshpy_plotly=False,
-                         save_persdia=False,
+                         save_persdia=True,
                          save_points_persdia=False,
                          list_points_persdia=False,
                          final_run=True,

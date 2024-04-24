@@ -484,8 +484,7 @@ def visualize_alpha_complexes(x, y, radii):
             )
             plot_save_name = os.getcwd() + '/point_cloud_plot_alpha_{}.png'.format(iter_num)
         elif r_squared is None:
-            plot_title = ('Alpha Complex, Voronoi Diagram:\n'
-                          'Point Cloud (Completed)')
+            plot_title = 'Alpha Complex,\nDelaunay Triangulation of Point Cloud'
             plot_save_name = os.getcwd() + '/point_cloud_plot_alpha_voronoi.png'
         plt.title(plot_title, fontsize=14)
         plt.savefig(plot_save_name, bbox_inches='tight', dpi=300, format='png')
@@ -690,16 +689,16 @@ def draw_graph(G):
     nx.draw_networkx_edges(G, pos, edge_color='black')
 
 
-x_points, y_points = create_point_cloud(scale=0.12, size=5, interval=0.1)
-visualize_vr_complexes(x_points, y_points)
+# x_points, y_points = create_point_cloud(scale=0.12, size=5, interval=0.1)
+# visualize_vr_complexes(x_points, y_points)
 # black_hole_example()
 # visualize_delaunay_voronoi(x_points, y_points)
-# x_points, y_points = create_point_cloud(scale=0.2, size=1, interval=0.1)
-# visualize_alpha_complexes(
-#     x_points,
-#     y_points,
-#     radii=(0, 0.14, 0.23076726048056004, 0.29, 0.30678737722699123, 0.3069246020010885, 0.8045271684187107, None)
-# )
+x_points, y_points = create_point_cloud(scale=0.2, size=1, interval=0.1)
+visualize_alpha_complexes(
+    x_points,
+    y_points,
+    radii=(0, 0.14, 0.23076726048056004, 0.29, 0.30678737722699123, 0.3069246020010885, 0.8045271684187107, None)
+)
 # gabriel()
 # non_gabriel()
 # networkx_shape_graphs()
